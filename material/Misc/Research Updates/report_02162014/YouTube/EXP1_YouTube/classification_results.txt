@@ -1,0 +1,24 @@
+./Results/Trained_Networks/EXP1_YouTube_nets/gsc_0.5
+22. Train Error: 28.3% Val Error: 47.15% Test Error: 61.12%
+./Results/Trained_Networks/EXP1_YouTube_nets/gsc_1
+28. Train Error: 19.8725% Val Error: 47.23% Test Error: 65.94%
+./Results/Trained_Networks/EXP1_YouTube_nets/gsc_1.5
+16. Train Error: 34.8375% Val Error: 48.19% Test Error: 70.96%
+./Results/Trained_Networks/EXP1_YouTube_nets/gsc_2
+20. Train Error: 30.215% Val Error: 48.42% Test Error: 75.81%
+./Results/Trained_Networks/EXP1_YouTube_nets/gsc_2.5
+24. Train Error: 26.7975% Val Error: 50.02% Test Error: 76.93%
+./Results/Trained_Networks/EXP1_YouTube_nets/gsc_3
+28. Train Error: 27.345% Val Error: 51.34% Test Error: 73.47%
+./Results/Trained_Networks/EXP1_YouTube_nets/sf_0_2
+20. Train Error: 34.925% Val Error: 53.18% Test Error: 69.51%
+./Results/Trained_Networks/EXP1_YouTube_nets/sf_0.5_3
+23. Train Error: 21.88% Val Error: 50.86% Test Error: 68.45%
+./Results/Trained_Networks/EXP1_YouTube_nets/sf_1_2
+11. Train Error: 35.265% Val Error: 47.1% Test Error: 58.42%
+./Results/Trained_Networks/EXP1_YouTube_nets/sf_1_3
+18. Train Error: 30.0325% Val Error: 48.83% Test Error: 77.22%
+./Results/Trained_Networks/EXP1_YouTube_nets/sf_2_1
+14. Train Error: 35.275% Val Error: 47.51% Test Error: 70.9%
+./Results/Trained_Networks/EXP1_YouTube_nets/sf_2_2
+20. Train Error: 31.34% Val Error: 47.08% Test Error: 73.22%

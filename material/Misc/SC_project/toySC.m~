@@ -1,0 +1,25 @@
+clc; 
+clear all; 
+close all; 
+
+npoints = 20;
+nbasis = 30; 
+
+% x = [-1:1/npoints:1; -1:1/npoints:1]';
+% x(end,:)=[]; 
+
+x = rand(npoints, 2
+
+% x = x + 0.2*(rand(2*npoints,2) - 0.5* ones(2*npoints,2)); 
+
+figure(1); 
+plot(x(:,1),x(:,2),'.'); 
+axis([-1 1 -1 1]); 
+grid on; 
+hold on; 
+
+
+w = rand(2, nbasis); 
+w = w - 0.5 * ones(size(w));
+
+quiver(zeros(1,nbasis), zeros(1,nbasis), w(1,:), w(2,:)); 

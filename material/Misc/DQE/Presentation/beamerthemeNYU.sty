@@ -1,0 +1,45 @@
+\ProvidesPackage{beamerthemeNYU}[2011/11/02]
+\def\beamertrondheim@version{0.1}
+
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\ifx\beamer@version\beamertrondheim@version
+\else
+  \PackageWarningNoLine{beamerthemeNYU}{This version of beamerthemeNYU (\beamertrondheim@version ) might not work with detected beamer class \beamer@version}
+\fi
+
+\mode<presentation>
+
+% variables ??
+\newif\ifbeamer@minimal
+\newif\ifbeamer@nonav
+\newif\ifbeamer@numbers
+\newif\ifbeamer@shadow
+\newif\ifbeamer@logo
+
+% Default options
+\beamer@minimalfalse
+\beamer@nonavfalse
+\beamer@numbersfalse
+\beamer@shadowtrue
+\beamer@logotrue
+
+\DeclareOptionBeamer{compress}{\beamer@compresstrue}
+\DeclareOptionBeamer{minimal}{\beamer@minimaltrue}
+\DeclareOptionBeamer{nonav}{\beamer@nonavtrue}
+\DeclareOptionBeamer{numbers}{\beamer@numberstrue}
+\DeclareOptionBeamer{noshadow}{\beamer@shadowfalse}
+
+\DeclareOptionBeamer{nologo}{\beamer@logofalse}
+
+\ProcessOptionsBeamer
+
+\useoutertheme{NYU}
+\usecolortheme{NYUdefault}
+
+
+\setbeamerfont{block title}{size={}}
+
+\mode
+<all>

@@ -1,0 +1,128 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bengio et~al.(2012)Bengio, Courville, and Vincent]{Bengio2012}
+Bengio, Yoshua, Courville, Aaron~C., and Vincent, Pascal.
+\newblock Representation learning: A review and new perspectives.
+\newblock Technical report, University of Montreal, 2012.
+
+\bibitem[Bruna \& Mallat(2013)Bruna and Mallat]{JoanScat}
+Bruna, Joan and Mallat, St{\'e}phane.
+\newblock Invariant scattering convolution networks.
+\newblock \emph{Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 35\penalty0 (8):\penalty0 1872--1886, 2013.
+
+\bibitem[Bruna et~al.(2014)Bruna, Szlam, and LeCun]{JoanPooling}
+Bruna, Joan, Szlam, Arthur, and LeCun, Yann.
+\newblock Signal recovery from pooling representations.
+\newblock In \emph{ICML}, 2014.
+
+\bibitem[Cadieu \& Olshausen(2012)Cadieu and Olshausen]{Cadieu}
+Cadieu, Charles~F. and Olshausen, Bruno~A.
+\newblock Learning intermediate-level representations of form and motion from
+  natural movies.
+\newblock \emph{Neural Computation}, 2012.
+
+\bibitem[Goodfellow et~al.(2013)Goodfellow, Warde-Farley, Mirza, Courville, and
+  Bengio]{MaxOut}
+Goodfellow, Ian~J., Warde-Farley, David, Mirza, Mehdi, Courville, Aaron, and
+  Bengio, Yoshua.
+\newblock Maxout networks.
+\newblock In \emph{ICML}, 2013.
+
+\bibitem[Goroshin \& LeCun(2013)Goroshin and LeCun]{SATAE}
+Goroshin, Rostislav and LeCun, Yann.
+\newblock Saturating auto-encoders.
+\newblock In \emph{ICLR}, 2013.
+
+\bibitem[Gregor \& LeCun(2010)Gregor and LeCun]{LISTA}
+Gregor, Karol and LeCun, Yann.
+\newblock Learning fast approximations of sparse coding.
+\newblock In \emph{ICML'2010}, 2010.
+
+\bibitem[Hadsell et~al.(2006)Hadsell, Chopra, and LeCun]{DrLIM}
+Hadsell, Raia, Chopra, Soumit, and LeCun, Yann.
+\newblock Dimensionality reduction by learning an invariant mapping.
+\newblock In \emph{CVPR}, 2006.
+
+\bibitem[Hyv{\"a}rinen et~al.(2004)Hyv{\"a}rinen, Aapo, Karhunen, Juha, Oja,
+  and Erkki]{Huyvarinen}
+Hyv{\"a}rinen, Aapo, Karhunen, Juha, Oja, and Erkki.
+\newblock \emph{Independent component analysis}, volume~46.
+\newblock John Wiley \& Sons, 2004.
+
+\bibitem[Kavukcuoglu et~al.(2009)Kavukcuoglu, Ranzato, Fergus, and
+  LeCun]{groupSparsity}
+Kavukcuoglu, Koray, Ranzato, Marc’Aurelio, Fergus, Rob, and LeCun, Yann.
+\newblock Learning invariant features through topographic filter maps.
+\newblock In \emph{CVPR}, 2009.
+
+\bibitem[Kayser et~al.(2001)Kayser, Einhauser, Dummer, Konig, and Kding]{SSA}
+Kayser, Christoph, Einhauser, Wolfgang, Dummer, Olaf, Konig, Peter, and Kding,
+  Konrad.
+\newblock Extracting slow subspaces from natural videos leads to complex cells.
+\newblock In \emph{ICANN'2001}, 2001.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{ImageNet}
+Krizhevsky, Alex, Sutskever, Ilya, and Hinton, Geoffrey~E.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In \emph{NIPS}, volume~1, pp.\ ~4, 2012.
+
+\bibitem[LeCun et~al.(1998)LeCun, Bottou, Bengio, and Haffner]{LeCun1998}
+LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P.
+\newblock Gradient-based learning applied to document recognition.
+\newblock \emph{Proc. IEEE}, 86\penalty0 (11):\penalty0 2278--2324, 1998.
+
+\bibitem[Lies et~al.(2014)Lies, Hafner, and Bethge]{complexCells}
+Lies, Jorn-Philipp, Hafner, Ralf~M, and Bethge, Matthias.
+\newblock Slowness and sparseness have diverging effects on complex cell
+  learning.
+\newblock 10, 2014.
+
+\bibitem[Mobahi et~al.(2009)Mobahi, Collobert, and Weston]{DrLIMVideo}
+Mobahi, Hossein, Collobert, Ronana, and Weston, Jason.
+\newblock Deep learning from temporal coherence in video.
+\newblock In \emph{ICML}, 2009.
+
+\bibitem[Olshausen \& Field(1997)Olshausen and Field]{olshausen}
+Olshausen, Bruno~A and Field, David~J.
+\newblock Sparse coding with an overcomplete basis set: A strategy employed by
+  v1?
+\newblock \emph{Vision research}, 37\penalty0 (23):\penalty0 3311--3325, 1997.
+
+\bibitem[Ranzato et~al.(2007)Ranzato, Boureau, and LeCun]{SAE}
+Ranzato, M.A, Boureau, Y-Lan, and LeCun, Yann.
+\newblock Sparse feature learning for deep belief networks.
+\newblock \emph{Advances in neural information processing systems},
+  20:\penalty0 1185--1192, 2007.
+
+\bibitem[Rifai et~al.(2011)Rifai, Vincent, Muller, Galrot, and Bengio]{CAE}
+Rifai, Salah, Vincent, Pascal, Muller, Xavier, Galrot, Xavier, and Bengio,
+  Yoshua.
+\newblock Contractive auto-encoders: Explicit invariance during feature
+  extraction.
+\newblock In \emph{ICML}, 2011.
+
+\bibitem[Simoncelli \& Olshausen(2001)Simoncelli and
+  Olshausen]{simoncelli2001natural}
+Simoncelli, Eero~P and Olshausen, Bruno~A.
+\newblock Natural image statistics and neural representation.
+\newblock \emph{Annual review of neuroscience}, 24\penalty0 (1):\penalty0
+  1193--1216, 2001.
+
+\bibitem[Vincent et~al.(2008)Vincent, Larochelle, Bengio, and Manzagol]{DAE}
+Vincent, Pascal, Larochelle, Hugo, Bengio, Yoshua, and Manzagol,
+  Pierre-Antoine.
+\newblock Extracting and composing robust features with denoising autoencoders.
+\newblock Technical report, University of Montreal, 2008.
+
+\bibitem[Wiskott \& Sejnowski(2002)Wiskott and Sejnowski]{SFA}
+Wiskott, Laurenz and Sejnowski, Terrence~J.
+\newblock Slow feature analysis: Unsupervised learning of invariances.
+\newblock \emph{Neural Computation}, 2002.
+
+\end{thebibliography}

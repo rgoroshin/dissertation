@@ -1,0 +1,8 @@
+Installation:
+
+Place the sty files into a directory of your convenience. From such directory, run 
+(eventually with superuser permissions, or with sudo):
+
+texhash 
+
+so latex updates the locations where it will look for the theme.
