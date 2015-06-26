@@ -10,17 +10,131 @@
 \@writefile{toc}{\defcounter{refsection}{0}}
 \@writefile{toc}{\contentsline {section}{Abstract}{iv}}
 \@writefile{toc}{\defcounter{refsection}{0}}
-\@writefile{toc}{\contentsline {section}{List of Figures}{vi}}
+\@writefile{toc}{\contentsline {section}{List of Figures}{vii}}
 \@writefile{toc}{\defcounter{refsection}{0}}
-\@writefile{toc}{\contentsline {section}{List of Tables}{vii}}
+\@writefile{toc}{\contentsline {section}{List of Tables}{ix}}
 \@writefile{toc}{\defcounter{refsection}{0}}
-\@writefile{toc}{\contentsline {chapter}{Related Work}{1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chaper:introduction}{{1}{1}}
 \@writefile{toc}{\defcounter{refsection}{0}}
-\@writefile{toc}{\contentsline {part}{I\hspace  {1em}Regularized Auto-Encoders and Dictionary Learning}{2}}
-\newlabel{part:one}{{I}{3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Related Work}{2}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:related_work}{{2}{2}}
+\citation{DHS}
+\citation{SC}
+\citation{LISTA}
+\citation{SAE1}
+\citation{SAE2}
+\citation{CAE}
+\citation{DAE}
+\citation{DHS}
+\citation{CAE}
+\citation{SAE1}
+\citation{SAE2}
+\citation{bengio_new}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Saturating Auto-Encoders}{3}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:SATAE}{{3}{3}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{3}}
+\citation{SAE1}
+\citation{SAE2}
+\citation{CAE}
+\citation{CAE}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Latent State Regularization}{4}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Saturating Auto-Encoder through Complementary Nonlinearities}{5}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Three nonlinearities (top) with their associated complementary regularization functions(bottom).\relax }}{7}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:nonlin}{{3.1}{7}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Effect of the Saturation Regularizer}{8}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Visualizing the Energy Landscape}{8}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Energy surfaces for unregularized (left), and regularized (right) solutions obtained on SATAE-shrink and 10 basis vectors. Black corresponds to low reconstruction energy. Training points lie on a one-dimensional manifold shown in yellow.\relax }}{9}}
+\newlabel{fig:toyshrink}{{3.2}{9}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{9}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces SATAE-SL toy example with two basis elements. Top Row: three randomly initialized solutions obtained with no regularization. Bottom Row: three randomly initialized solutions obtained with regularization.\relax }}{10}}
+\newlabel{fig:toysatlinear}{{3.3}{10}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{10}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Evolution of two filters with increasing saturation regularization for a SATAE-SL trained on CIFAR-10. Filters corresponding to larger values of $\alpha $ were initialized using the filter corresponding to the previous $\alpha $. The regularization parameter was varied from 0.1 to 0.5 (left to right) in the top five images and 0.5 to 1 in the bottom five \relax }}{11}}
+\newlabel{fig:horse}{{3.4}{11}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces \relax \fontsize  {10.95}{13.6}\selectfont  \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Basis elements learned by the SATAE using different nonlinearities on: 28x28 binary MNIST digits, 12x12 gray scale natural image patches, and CIFAR-10. (a) SATAE-shrink trained on MNIST, (b) SATAE-saturated-linear trained on MNIST, (c) SATAE-shrink trained on natural image patches, (d) SATAE-saturated-linear trained on natural image patches, (e)-(f) SATAE-shrink trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.5$, respectively, (g)-(h) SATAE-SL trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.6$, respectively. \relax }}{12}}
+\newlabel{fig:results}{{3.5}{12}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{13}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Experimental Details}{14}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Discussion}{15}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{15}}
+\citation{CAE}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Illustration of the complimentary function ($f_c$) as defined by Equation 3 for a non-monotonic activation function ($f$). The absolute derivative of $f$ is shown for comparison.\relax }}{17}}
+\newlabel{fig:diff_cc}{{3.6}{17}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{17}}
+\citation{LISTA}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{18}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{19}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:LISTA}{{4}{19}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{20}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:slow}{{5}{20}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{21}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:error}{{6}{21}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{22}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:uncertainty}{{7}{22}}
+\@writefile{toc}{\defcounter{refsection}{0}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusion}{23}}
+\@writefile{lof}{\defcounter{refsection}{0}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter{refsection}{0}}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter:conclusion}{{8}{23}}
 \@writefile{toc}{\defcounter{refsection}{0}}
 \@writefile{toc}{\setcounter {tocdepth}{+1}}
 \@writefile{toc}{\defcounter{refsection}{0}}
-\@writefile{toc}{\contentsline {chapter}{Conclusions}{3}}
+\@writefile{toc}{\contentsline {chapter}{Conclusions}{24}}
 \@writefile{toc}{\defcounter{refsection}{0}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{4}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{25}}

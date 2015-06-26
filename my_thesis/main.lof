@@ -1,1 +1,29 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Three nonlinearities (top) with their associated complementary regularization functions(bottom).\relax }}{7}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Energy surfaces for unregularized (left), and regularized (right) solutions obtained on SATAE-shrink and 10 basis vectors. Black corresponds to low reconstruction energy. Training points lie on a one-dimensional manifold shown in yellow.\relax }}{9}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces SATAE-SL toy example with two basis elements. Top Row: three randomly initialized solutions obtained with no regularization. Bottom Row: three randomly initialized solutions obtained with regularization.\relax }}{10}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Evolution of two filters with increasing saturation regularization for a SATAE-SL trained on CIFAR-10. Filters corresponding to larger values of $\alpha $ were initialized using the filter corresponding to the previous $\alpha $. The regularization parameter was varied from 0.1 to 0.5 (left to right) in the top five images and 0.5 to 1 in the bottom five \relax }}{11}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Basis elements learned by the SATAE using different nonlinearities on: 28x28 binary MNIST digits, 12x12 gray scale natural image patches, and CIFAR-10. (a) SATAE-shrink trained on MNIST, (b) SATAE-saturated-linear trained on MNIST, (c) SATAE-shrink trained on natural image patches, (d) SATAE-saturated-linear trained on natural image patches, (e)-(f) SATAE-shrink trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.5$, respectively, (g)-(h) SATAE-SL trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.6$, respectively. \relax }}{12}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Illustration of the complimentary function ($f_c$) as defined by Equation 3 for a non-monotonic activation function ($f$). The absolute derivative of $f$ is shown for comparison.\relax }}{17}
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\addvspace {10\p@ }

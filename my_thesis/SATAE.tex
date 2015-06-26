@@ -1,38 +1,3 @@
-\documentclass{article} % For LaTeX2e
-\usepackage{nips12submit_e,times}
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{caption} 
-\usepackage{cite} 
-\usepackage{subcaption} 
-\usepackage[pdftex]{graphicx}
-\nipsfinalcopy
-
-\title{Saturating Auto-Encoders} 
-
-\author{
-Rostislav Goroshin \thanks{The authors thank Joan Bruna and David Eigen for
-their useful suggestions and comments.} \\ Courant Institute of Mathematical
-Science\\ New York University \\ \texttt{goroshin@cs.nyu.edu} \\ \And Yann
-LeCun \\ Courant Institute of Mathematical Science\\ New York University \\
-\texttt{yann@cs.nyu.edu} \\ \date{} }
-
-
-\begin{document} \maketitle
-
-\begin{abstract} We introduce a simple new regularizer for auto-encoders whose
-hidden-unit activation functions contain at least one zero-gradient (saturated)
-region. This regularizer explicitly encourages activations in the saturated
-region(s) of the corresponding activation function. We call these Saturating
-Auto-Encoders (SATAE). We show that the saturation regularizer explicitly
-limits the SATAE's ability to reconstruct inputs which are not near the data
-manifold. Furthermore, we show that a wide variety of features can be learned
-when different activation functions are used. Finally, connections are
-established with the Contractive and Sparse Auto-Encoders.    
-
-\end{abstract} 
 
 \section{Introduction} An auto-encoder is a conceptually simple
 neural network used for obtaining useful data representations through
@@ -138,7 +103,7 @@ we define $f_c(z)$ as:
 
 \begin{equation} f_c(z) = \inf_ {z' \in S} |z-z'|.   \end{equation}   
 
-\begin{figure} \centering \includegraphics[scale=0.6]{.//compliments.png}
+\begin{figure} \centering \includegraphics[scale=0.6]{./figures/SATAE/compliments.png}
 \caption{Three nonlinearities (top) with their associated complementary
 regularization functions(bottom).}  \label{fig:nonlin} \end{figure} 
 
@@ -196,15 +161,15 @@ derived using Equation 1 is given by: \begin{equation} \nonumber shrink_c(x) =
 \begin{cases} abs(x), \text{ } |x| > \lambda\\ 0, \text{ elsewhere}
 \end{cases}.  \end{equation} 
 
-\begin{figure} \centering \includegraphics[scale=0.25]{.//toy_shrink.png}
+\begin{figure} \centering \includegraphics[scale=0.25]{./figures/SATAE/toy_shrink.png}
 \caption{Energy surfaces for unregularized (left), and regularized (right)
 solutions obtained on SATAE-shrink and 10 basis vectors. Black corresponds to
 low reconstruction energy. Training points lie on a one-dimensional manifold
 shown in yellow.}  \label{fig:toyshrink} \end{figure} 
 
 \begin{figure} \centering
-\includegraphics[scale=0.25]{.//toy_sat_linear_noreg.png}
-\includegraphics[scale=0.25]{.//toy_sat_linear_reg.png} \caption{SATAE-SL toy
+\includegraphics[scale=0.25]{./figures/SATAE/toy_sat_linear_noreg.png}
+\includegraphics[scale=0.25]{./figures/SATAE/toy_sat_linear_reg.png} \caption{SATAE-SL toy
 example with two basis elements. Top Row: three randomly initialized solutions
 obtained with no regularization. Bottom Row: three randomly initialized
 solutions obtained with regularization.}  \label{fig:toysatlinear} \end{figure} 
@@ -227,54 +192,58 @@ function with an encoding bias behaves as a positive only shrink function,
 similarly the complementary function is equivalent to a positive only $L_1$
 penalty on the activations.          
 
-
-\begin{figure} \centering \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//strokes_full.png} \caption{}
+\afterpage{
+\clearpage
+\thispagestyle{empty}
+\begin{figure} 
+\centering \begin{subfigure}[b]{0.225\textwidth} \centering
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/strokes_full.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//MNIST_sat_linear_full.png}
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/MNIST_sat_linear_full.png}
 \caption{} \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//gabors_full.png} \caption{}
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/gabors_full.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//patches_sat_linear_full.png}
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/patches_sat_linear_full.png}
 \caption{} \end{subfigure} \\ \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//CIFAR_shrink01.png} \caption{}
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_shrink01.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//CIFAR_shrink05.png} \caption{}
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_shrink05.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//CIFAR_sat_linear300_1.png}
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_sat_linear300_1.png}
 \caption{} \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{.//CIFAR_sat_linear300_6.png}
-\caption{} \end{subfigure} \caption{Basis elements learned by the SATAE using
+\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_sat_linear300_6.png}
+\caption{} \end{subfigure} \caption{\small Basis elements learned by the SATAE using
 different nonlinearities on: 28x28 binary MNIST digits, 12x12 gray scale
 natural image patches, and CIFAR-10. (a) SATAE-shrink trained on MNIST, (b)
 SATAE-saturated-linear trained on MNIST, (c) SATAE-shrink trained on natural
 image patches, (d) SATAE-saturated-linear trained on natural image patches,
 (e)-(f) SATAE-shrink trained on CIFAR-10 with $\alpha=0.1$ and $\alpha=0.5$,
 respectively, (g)-(h) SATAE-SL trained on CIFAR-10 with $\alpha=0.1$ and
-$\alpha=0.6$, respectively.  } \label{fig:results} \end{figure} 
+$\alpha=0.6$, respectively.  } \label{fig:results} \end{figure}
+\clearpage} 
 
 \begin{figure} \centering \begin{subfigure}[b]{0.15\textwidth} \centering
-\includegraphics[scale=2]{./1.png}\\ \includegraphics[scale=2]{./horse1.png} 
+\includegraphics[scale=2]{./figures/SATAE/1.png}\\ \includegraphics[scale=2]{./figures/SATAE/horse1.png} 
         %\includegraphics[scale=2]{.//objects/red/0.png} \\
         %\caption{$\alpha=0$}
     \end{subfigure} \begin{subfigure}[b]{0.15\textwidth} \centering
-    \includegraphics[scale=2]{./2.png} \\
-    \includegraphics[scale=2]{./horse2.png} 
+    \includegraphics[scale=2]{./figures/SATAE/2.png} \\
+    \includegraphics[scale=2]{./figures/SATAE/horse2.png} 
         %\includegraphics[scale=2]{.//objects/red/1.png} \\
         %\caption{$\alpha=0.1$}
     \end{subfigure} \begin{subfigure}[b]{0.15\textwidth} \centering
-    \includegraphics[scale=2]{./3.png}\\
-    \includegraphics[scale=2]{./horse3.png} 
+    \includegraphics[scale=2]{./figures/SATAE/3.png}\\
+    \includegraphics[scale=2]{./figures/SATAE/horse3.png} 
         %\includegraphics[scale=2]{.//objects/red/2.png} \\
 		
         %\caption{$\alpha=0.2$}
     \end{subfigure} \begin{subfigure}[b]{0.15\textwidth} \centering
-    \includegraphics[scale=2]{./4.png} \\
-    \includegraphics[scale=2]{./horse4.png} 
+    \includegraphics[scale=2]{./figures/SATAE/4.png} \\
+    \includegraphics[scale=2]{./figures/SATAE/horse4.png} 
         %\includegraphics[scale=2]{.//objects/red/3.png} \\
         %\caption{$\alpha=0.5$}
     \end{subfigure} \begin{subfigure}[b]{0.15\textwidth} \centering
-    \includegraphics[scale=2]{./5.png} \includegraphics[scale=2]{./horse5.png}
+    \includegraphics[scale=2]{./figures/SATAE/5.png} \includegraphics[scale=2]{./figures/SATAE/horse5.png}
     \\
         %\includegraphics[scale=2]{./objects/red/4.png} \\
 		
@@ -406,7 +375,7 @@ direction, respectively. We define the complimentary function $f_c(x)$ as:
 
 \begin{equation} f_c(x) = min(M^+f(x),M^-f(x)).  \end{equation} 
 
-\begin{figure} \centering \includegraphics[scale=0.43]{./diff_cc.png}
+\begin{figure} \centering \includegraphics[scale=0.43]{./figures/SATAE/diff_cc.png}
 \caption{Illustration of the complimentary function ($f_c$) as defined by
 Equation 3 for a non-monotonic activation function ($f$). The absolute
 derivative of $f$ is shown for comparison.}  \label{fig:diff_cc} \end{figure} 
@@ -448,59 +417,3 @@ are a generalization of sparse auto-encoders. Like the sparsity penalty, the
 saturation penalty can be applied at any point in a deep network for the same
 computational cost. However, unlike the sparsity penalty the saturation penalty
 is adapted to the nonlinearity of the particular layer to which it is applied. 
-
-\subsection{Future Work} We intend to experimentally demonstrate that the
-representations learned by SATAEs are useful as features for learning common
-tasks such as classification and denoising. We will also address several open
-questions, namely: (i) how to select (or learn) the width parameter ($\lambda$)
-of the nonlinearity, and (ii) how to methodically constrain the weights. We
-will also explore SATAEs that use a wider class of non-linearities and
-architectures. 
- 
-\begin{thebibliography}{1}
-
-\bibitem{SAE1} Marc'Aurelio Ranzato, Christopher Poultney, Sumit Chopra and
-Yann LeCun. Efficient Learning of Sparse Representations with an Energy-
-Based Model, in J. Platt et al. (Eds), {\em Advances in Neural Information
-Processing Systems (NIPS 2006)}, 19, MIT Press, 2006.
-
-\bibitem{SAE2} Marc'Aurelio Ranzato, Fu-Jie Huang, Y-Lan Boureau and Yann
-LeCun: Unsupervised Learning of Invariant Feature Hierarchies with Applications
-to Object Recognition, Proc. {\em Computer Vision and Pattern Recognition
-Conference (CVPR'07)}, IEEE Press, 2007
- 
-\bibitem{CAE} Rifai, S. and Vincent, P. and Muller, X. and Glorot, X. and
-Bengio, Y. Contractive auto-encoders: Explicit invariance during feature
-extraction, {\em Proceedings of the Twenty-eight International Conference on
-Machine Learning,  ICML 2011}
-
-\bibitem{DAE} P. Vincent, H. Larochelle, Y. Bengio, P.A. Manzagol. Extracting
-and Composing Robust Features with Denoising Autoencoders {\em Proceedings of
-the 25th International Conference on Machine Learning (ICML'2008)}, 2008.
-
-\bibitem{DHS} R.O. Duda, P.E. Hart, and D.G. Stork, Pattern Classification, New
-York: John Wiley \& Sons, 2001, pp. xx + 654, ISBN: 0-471-05669-3
-
-\bibitem{SC} Olhausen, Bruno A.; Field, David J. (1997). Sparse Coding with an
-Overcomplete Basis Set: A Strategy Employed by V1?. {\em Vision Research 37
-(23): 3311-3325.}
-
-\bibitem{LISTA} Karol Gregor and Yann LeCun: Learning Fast Approximations of
-Sparse Coding, Proc. {\em International Conference on Machine learning
-(ICML'10)}, 2010
-
-\bibitem{bengio_new} Guillaume Alain and Yoshua Bengio, What Regularized
-Auto-Encoders Learn from the Data Generating Distribution. arXiv:1211.4246v3
-[cs.LG] 
-
-\end{thebibliography}
-
-\end{document} 
-
-
-
-
-
-
-
-

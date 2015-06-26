@@ -6,16 +6,54 @@
 \defcounter {refsection}{0}
 \contentsline {section}{Abstract}{iv}
 \defcounter {refsection}{0}
-\contentsline {section}{List of Figures}{vi}
+\contentsline {section}{List of Figures}{vii}
 \defcounter {refsection}{0}
-\contentsline {section}{List of Tables}{vii}
+\contentsline {section}{List of Tables}{ix}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Related Work}{1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
 \defcounter {refsection}{0}
-\contentsline {part}{I\hspace {1em}Regularized Auto-Encoders and Dictionary Learning}{2}
+\contentsline {chapter}{\numberline {2}Related Work}{2}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {3}Saturating Auto-Encoders}{3}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {3.1}Introduction}{3}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {3.2}Latent State Regularization}{4}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.2.1}Saturating Auto-Encoder through Complementary Nonlinearities}{5}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {3.3}Effect of the Saturation Regularizer}{8}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.3.1}Visualizing the Energy Landscape}{8}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{9}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{10}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{13}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {3.4}Experimental Details}{14}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {3.5}Discussion}{15}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{15}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{17}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{18}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{19}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{20}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{21}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{22}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {8}Conclusion}{23}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Conclusions}{3}
+\contentsline {chapter}{Conclusions}{24}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Bibliography}{4}
+\contentsline {chapter}{Bibliography}{25}
