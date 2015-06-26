@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.bbl
+*.blg
+*.lof
+*.lot
+*.toc
+main-blx.bib
+*.apx
+*.xml
+main_separate_abstract-blx.bib

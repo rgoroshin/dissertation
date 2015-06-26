@@ -1,0 +1,124 @@
+
+%% Use the first of the following lines during production to
+%% easily spot "overfull boxes" in the output. Use the second
+%% line for the final version.
+%\documentclass[12pt,draft,letterpaper]{report}
+\documentclass[12pt,letterpaper]{report}
+
+% for debugging
+%\usepackage{showframe}
+
+% Fncychap is used for fancy chapter headings, but it also gives the formatting commands I needed to define the new 
+% \appendixchapter command. You should look at its documentation and pick a nice style to use.
+\usepackage{fncychap}
+\sloppy
+
+% Appendix allows the inclusion of a line for "appendices", which otherwise won't get the right page number. You must
+% use the [toc] option.
+\usepackage[toc]{appendix}
+
+% Tocloft is used to create the new list of appendices. You must use the [titles] option.
+\usepackage[titles]{tocloft}
+
+% Number the subsubsections and include them in the TOC
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Create list of appendices, and don't include appendices in the table of contents
+\newlistof{appendixchapter}{apx}{List of Appendices}
+
+\newcommand{\appendixchapter}[1]{%
+    \refstepcounter{appendixchapter}%
+    \refstepcounter{chapter}%
+    \renewcommand{\DOTIS}[1]{\DOCH \DOTI{#1}}
+    \chapter*{#1}
+    \addcontentsline{apx}{appendixchapter}{Appendix \protect\numberline{\theappendixchapter}#1}\par%
+    \vspace {-1.47cm}}
+    
+\renewcommand{\theappendixchapter}{\Alph{appendixchapter}}
+
+\newcommand{\appendixsection}[1]{%
+    \refstepcounter{section}%
+    \section*{\protect{\thesection}\hspace{2.6ex}#1}}
+    
+\newcommand{\appendixsubsection}[1]{%
+    \refstepcounter{subsection}%
+    \subsection*{\protect{\thesubsection}\hspace{2.5ex}#1}}
+
+
+%% Replace the title, name, advisor name, graduation date and dedication below with
+%% your own. Graduation months must be January, May or September.
+\newcommand{\thesistitle}{Localization of Humans in Images Using Convolutional Networks}
+\newcommand{\thesisauthor}{Jonathan James Richard Tompson}
+\newcommand{\thesisadvisor}{Professor Christoph Bregler}
+\newcommand{\graddate}{May 2015}
+
+\renewcommand*\contentsname{Table of Contents}
+
+%% The following makes chapters and sections, but not subsections,
+%% appear in the TOC (table of contents). Increase to 2 or 3 to
+%% make subsections or subsubsections appear, respectively. It seems
+%% to be usual to use the "1" setting, however.
+\setcounter{tocdepth}{1}
+
+%% Sectional units up to subsubsections are numbered. To number
+%% subsections, but not subsubsections, decrease this counter to 2.
+\setcounter{secnumdepth}{3}
+
+%% Page layout (customized to letter paper and NYU requirements):
+\setlength{\oddsidemargin}{.6in}
+\setlength{\textwidth}{5.8in}
+\setlength{\topmargin}{.1in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{8.3in}
+\setlength{\footskip}{.5in}
+
+%% Use the following commands, if desired, during production.
+%% Comment them out for final version.
+%\usepackage{layout} % defines the \layout command, see below
+%\setlength{\hoffset}{-.75in} % creates a large right margin for notes and \showlabels
+
+%% Controls spacing between lines (\doublespacing, \onehalfspacing, etc.):
+\usepackage{setspace}
+
+%% Allows me to rotate anything
+
+%% Use the line below for official NYU version, which requires
+%% double line spacing. For all other uses, this is unnecessary,
+%% so the line can be commented out.
+\doublespacing % requires package setspace, invoked above
+
+%% Each of the following lines defines the \com command, which produces
+%% a comment (notes for yourself, for instance) in the output file.
+%% Example:    \com{this will appear as a comment in the output}
+%% Choose (uncomment) only one of the three forms:
+%\newcommand{\com}[1]{[/// {#1} ///]}       % between [/// and ///].
+\newcommand{\com}[1]{\marginpar{\tiny #1}} % as (tiny) margin notes
+%\newcommand{\com}[1]{}                     % suppress all comments.
+
+%% This inputs your auxiliary file with \usepackage's and \newcommand's:
+%% It is assumed that that file is called "definitions.tex".
+\input{definitions}
+\usepackage{indentfirst}
+
+%% Cross-referencing utilities. Use one or the other--whichever you prefer--
+%% but comment out both lines for final version.
+%\usepackage{showlabels}
+%\usepackage{showkeys}
+
+\begin{document}
+\thispagestyle{empty}
+  \begin{center}
+    Abstract of the Dissertation
+
+    \textbf{\thesistitle}
+
+    \thesisauthor,   Advisor: \thesisadvisor
+  \end{center}
+ \bigskip
+\vspace{-0.6cm}
+
+\input{abstract}
+
+\end{document}

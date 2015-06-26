@@ -1,0 +1,157 @@
+Bib-it CHANGE LOG:
+===============================================================
+WHAT'S NEW IN 1.4
+===============================================================
+-	A few fixes for error cases
+-	A ton of code documentation
+===============================================================
+WHAT'S NEW IN 1.3
+===============================================================
+-	More errors/warnings during start-up and parsing is reported
+	in message boxes rather than to console (wich is'nt allways 
+	visible) including a rather important message that
+	did not appear anywhere earlier: the message that informs
+	you if the Style.ini is not found or can't be read.
+-	A lot of small fixes including: language/translation errors,
+	a few small bugs or weaknesses and removal of a lot of
+	redundant code and more code-documentation. The removal of 
+	code should of course be invisible to an ordinary user, 
+	except maybe for slight	performance improvement. 
+---------------------------------------------------------------
+This is mainly a bug-fix release, no new "features" this time
+(well, there might actually be a few new features that I've forgot
+that I've done since August :).
+I decided to release this anyway because I'm getting bugreports
+about things that might allready be fixed.
+(Stein Strindhaug)
+
+===============================================================
+
+   EARLIER RELEASES OF BIBIT
+
+===============================================================
+
+WHAT'S NEW IN 1.2
+===============================================================
+-	Abbrevs (that are defined) will allways be expanded 
+	before parsing persons (eg. Author / Editor) fields.
+-	Added an option to expand abbrevations in the other 
+	fields when comparing them for duplicates.
+	(The dup-search may be a bit slower when many 
+	abbrevations are defined, but its more accurate).
+-	Added Simplified Chinese and Spanish translations.
+-	Cleaned up the source, fixing all type-safety warnings,
+	and removing a lot of unused code. Now you won't get
+	annoying warnings about "unchecked" when compiling from
+	source!
+-	Replaced several icons with prettier and more 
+	informative ones. 
+	(see no/hig/bibit/images/AboutCopyright.txt for icon
+	copyright details)
+---------------------------------------------------------------
+
+WHAT'S NEW IN 1.1
+===============================================================
+- Improved and "generified" Duplicate-search.
+- Minor changes to the style configfiles (xxxStyle.ini)
+---------------------------------------------------------------
+
+WHAT'S NEW IN 1.0
+===============================================================
+-	Lots of small fixes
+
+TODO: add more here
+I'll update this file sometime later... (Stein "qvasi" Strindhaug)
+---------------------------------------------------------------
+
+WHAT'S NEW IN 0.4.0 / 0.4.1
+===============================================================
+1.	Generate bibtexstyles (natbib-compatible)
+TODO
+
+BUG FIXES AND CHANGES in the 0.4.1 release: TODO
+---------------------------------------------------------------
+
+WHAT'S NEW IN 0.3.1
+===============================================================
+-	Duplicate references view improved. Possible to 
+	edit/delete entries in the duplicate view.
+-	Possible to open help files from the application
+-	Files can be opened read-only
+-	A dialog to edit @preamble commands
+---------------------------------------------------------------
+
+WHAT'S NEW IN 0.2.2
+===============================================================
+-	Undo/Redo functionality (not yet implemented for the duplicate references tab)
+-	Searching for potential duplicate references (with info of percentual similarity between references)
+-	Merging several bib-files (doesn't give notice if references are duplicate yet)
+-	Merging multiple persons in person list to one and change name of person in person list. 	
+-	Drag&drop between person list and author/editor field of a reference.
+-	Changing a bibtex-key in a reference that has crossreferences, results in changing the bibtex-keys in the crossreferences also.
+---------------------------------------------------------------
+
+WHAT'S NEW IN 0.2.1
+===============================================================
+-	Search in one or more fields (standard search, exact search, regexp search)
+-	Person search: select a person in the 'Person' tab and get a listing of all 
+	works by this person
+-	Adding/removing table columns
+-	Edit entries in 'form mode'
+-	Add/remove custom fields in an entry
+-	Find non-unique entries (that is entries with equal bibtex keys)
+-	autogenerate bibtex keys
+-	Prompting to save bib-file upon exiting
+
+In this release only the GUI application is available, later releases will also include 
+a command line application. 
+
+BUG FIXES AND CHANGES in the 0.3.1 release:
+---------------------------------------------------------------
+1.	Redifinitions of @Strings are detected during parsing. The parsing is
+	canceled if redefinitions exists.
+2.	Fixed bugs in abbrevation interpretation.
+3.	Open/save file functionality improved, file filter added in save/open dialog.
+4.	In earlier versions you could search for references by an editor/author by 
+	selecting his/hers name in the Person List, now you have to double click
+	or press enter to perform the search.
+---------------------------------------------------------------	
+
+
+BUG FIXES AND CHANGES in the 0.2.1 release:
+===============================================================
+1.	Several bugs in editing a person on an entry are fixed. 
+	In previous releases the change in a persons name was reflected 
+	in all entries with this person as an author/editor.
+	When editing a person in an entry, changes should only appear on the 
+	entry in question. 
+	Also when editing a person in an entry, this persons name was removed from
+	the list and placed at the end of the list after beeing edited, if the list 
+	contained several persons.
+2.	Problems with crossreferencing entries fixed. (see issues in 0.1.1 release):
+	You may call your crossref field whatever you like, but the name of
+	the field with the type 'crossref' must be included in the style-ini-file
+	(see plainStyle.ini). Still; the exact bibtexkey of the entry which 
+	it references should be the value of the crossref-field. 
+
+
+
+BUG FIXES AND CHANGES in the 0.1.1 release:
+===============================================================
+1.	The parser is optimized.
+2.	Bug in parsing entries with crossreferences fixed.
+3.	Small usability improvments.
+
+Some of the key features of this prerelease are as follow:
+-	parsing bib files of unlimited size (theoretically, the amount of available RAM is the 
+	only size limiting factor).
+-	Save file (to bibtex format). 
+-	Presenting the bib file as a normalized bibliography database.
+-	Sorting by virtually anything available as a field in the database.
+-	Add new entry.
+-	Delete entry.
+-	Change the order in which the authors/editors on one entry are displayed and saved.
+-	Add / delete / edit a co. author/editor in an entry.
+-	Adding and removing crossreferencing entries (in parent/children hierarchies) and
+	hiding/showing crossreferencing entries. This feature is experimental and not fully 
+	implemented yet, see issues for more details.	

@@ -1,0 +1,362 @@
+\chapter{Overview\label{chap:4_efficient_body_tracking_overview}}
+
+\section{Motivation and Pooling Overview}
+
+A common characteristic of recent ConvNet architectures used for human body pose detection~\cite{tompsonnips2014, arjunaccv2014, deeppose, chennips2014} to date, including the architectures presented in Parts~\ref{part:one}, \ref{part:two} and \ref{part:three}, is that they make use of internal strided-pooling layers. These layers reduce the spatial resolution by computing a summary statistic over a local spatial region (typically a max operation in the case of the commonly used Max-Pooling layer). The main motivation behind the use of these layers is to promote invariance to local input transformations (particularly translations) since their outputs are invariant to spatial location within the pooling region. This is particularly important for image classification where local image transformations obfuscate object identity. Therefore pooling (followed by spatial decimation or sub-sampling) plays a vital role in preventing over-training while reducing computational complexity for classification tasks.
+
+As we will show in Section~\ref{chap:4_efficient_body_tracking_experimental}, the spatial invariance achieved by pooling layers comes at the price of limiting spatial localization accuracy. As such, by adjusting the amount of pooling in the network, for localization tasks a trade-off is made between generalization performance, model size and spatial accuracy.
+
+In Part~\ref{part:four} we present a ConvNet architecture for efficient localization of human skeletal joints in monocular RGB images that achieves high spatial accuracy without significant computational overhead. This model allows us to use increased amounts of pooling for computational efficiency, while retaining high spatial precision.
+
+We begin by presenting a ConvNet architecture to perform coarse body part localization that is based off the model presented in Section~\ref{chap:2_body_tracking_archiecture}. This network outputs a low resolution, per-pixel heat-map, describing the likelihood of a joint occurring in each spatial location. We use this architecture as a platform to discuss and empirically evaluate the role of Max-pooling layers in convolutional architectures for dimensionality reduction and improving invariance to noise and local image transformations. We then present a novel network architecture that reuses hidden-layer convolution features from the coarse heat-map regression model in order to improve localization accuracy. By jointly-training these models, we show that our model outperforms recent state-of-the-art on standard human body pose datasets~\cite{andriluka14cvpr, modec}.
+
+\chapter{Architecture\label{chap:4_efficient_body_tracking_archiecture}}
+
+\section{Coarse Heat-Map Regression Model}
+
+For the experimental results of Part~\ref{part:four}, we use the multi-resolution ConvNet architecture shown in Figure~\ref{fig:model} on the FLIC~\cite{modec} dataset, and a similarly structured, albeit deeper and wider, ConvNet model for the MPII~\cite{andriluka14cvpr} dataset. Both these models are an extension of the model from Section~\ref{chap:2_body_tracking_archiecture}. For brevity, in Section~\ref{sec:heatmapmodel} we will only discuss the relevant extensions and refer readers to Section~\ref{chap:2_body_tracking_archiecture} for more details regarding the higher-level network architecture.
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures_4_efficient_body_tracking/one_shot_multires_ours.pdf}
+   \caption{Multi-resolution Sliding Window Detector With Overlapping Contexts (model used on FLIC dataset)}
+\label{fig:model}
+\end{figure*}
+
+\subsection{Model Architecture}
+\label{sec:heatmapmodel}
+
+The network architecture of Figure~\ref{fig:model} includes more features per convolution layer and more layers than the architecture from Section~\ref{chap:2_body_tracking_archiecture}.  This is possible for 2 reasons. Firstly, the Convolution and ReLU layers are implemented as a single layer, which significantly reduces the GPU memory required to FPROP and BPROP the network.  This is possible because the output of the convolution layer is not needed when back-propagating the output derivative through the ReLU layer; the output derivative is simply `zeroed' for the pixel locations for which the output of the ReLU is zero and this zeroed derivative map is then back-propagated through the convolution layer. Therefore, we can use temporary memory for storing the intermediate output and gradient which reduces overall memory usage.  Secondly, we have added a new regularization mechanism, \textit{SpatialDropout} (discussed in Section~\ref{sec:spatialdropout}), which allows us to add more features (thus increasing learning capacity and performance) without over-training.
+
+We use an input resolution of 320x240 and 256x256 pixels for the FLIC~\cite{modec} and MPII~\cite{andriluka14cvpr} datasets respectively.
+
+\subsection{\textbf{\textit{SpatialDropout}}}
+\label{sec:spatialdropout}
+
+As mentioned above, we improve upon the model of Section~\ref{chap:2_body_tracking_archiecture} (\cite{tompsonnips2014}), by adding an additional dropout layer before the first 1x1 convolution layer in Figure~\ref{fig:model}. The role of dropout is to improve generalization performance by preventing activations from becoming strongly correlated~\cite{hinton2012improving}, which in turn leads to over-training. In the standard dropout implementation, network activations are ``dropped-out'' (by zeroing the activation for that neuron) during training with independent probability $p_{\text{drop}}$. At test time all activations are used, but a gain of $1-p_{\text{drop}}$ is multiplied to the neuron activations to account for the increase in expected bias.
+
+In initial experiments, we found that applying standard dropout (where each convolution feature map activation is ``dropped-out'' independently) before the $1\times1$ convolution layer generally increased training time but did not prevent over-training. Since our network is fully convolutional and natural images exhibit strong spatial correlation, the feature map activations are also strongly correlated, and in this setting standard dropout fails. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{figures_4_efficient_body_tracking/standard_dropout.pdf}
+   \caption{Standard Dropout after a 1D convolution layer}
+\label{fig:dropout}
+\end{figure}
+
+Standard dropout at the output of a 1D convolution is illustrated in Figure~\ref{fig:dropout}. The top two rows of pixels represent the convolution kernels for feature maps 1 and 2, and the bottom row represents the output features of the previous layer. During back-propagation, the center pixel of the $W_2$ kernel receives gradient contributions from both $f_{2a}$ and $f_{2b}$ as the convolution kernel $W_2$ is translated over the input feature $F_2$. In this example $f_{2b}$ was randomly dropped out (so the activation was set to zero) while $f_{2a}$ was not. Since $F_2$ and $F_1$ are the output of a convolution layer we expect $f_{2a}$ and $f_{2b}$ to be strongly correlated: i.e. $f_{2a}\approx f_{2b}$ and $\nicefrac{de}{df_{2a}}\approx \nicefrac{de}{df_{2b}}$ (where $e$ is the error function to minimize). While the gradient contribution from $f_{2b}$ is zero, the strongly correlated $f_{2a}$ gradient remains. In essence, the effective learning rate is scaled by the dropout probability $p$, but independence is not enhanced.
+
+Instead we formulate a new dropout method which we call \textit{SpatialDropout}. For a given convolution feature tensor of size $n_{\text{feats}}\times\text{height}\times\text{width}$, we perform only $n_{\text{feats}}$ dropout trials and extend the dropout value across the entire feature map. Therefore, adjacent pixels in the dropped-out feature map are either all $0$ (dropped-out) or all active as illustrated in Figure~\ref{fig:dropout_ours}. We have found this modified dropout implementation improves performance, especially on the FLIC dataset, where the training set size is small.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{figures_4_efficient_body_tracking/our_dropout.pdf}
+   \caption{\textit{SpatialDropout} after a 1D convolution layer}
+\label{fig:dropout_ours}
+\end{figure}
+
+\subsection{Training and Data Augmentation}
+ 
+We train the model in Figure~\ref{fig:model} by minimizing the Mean-Squared-Error (MSE) distance of our predicted heat-map to a target heat-map. The target is a 2D Gaussian of constant variance ($\sigma \approx 1.5$ pixels) centered at the ground-truth $(x,y)$ joint location. The objective function is:
+
+\begin{equation}
+E_1=\frac{1}{N}\sum_{j=1}^{N}{\sum_{xy}{\left\|H_{j}^\prime\left(x,y\right)-H_{j}\left(x,y\right)\right\|^2}}
+\label{eq:objfuc}
+\end{equation}
+
+Where $H^\prime_j$ and $H_j$ are the predicted and ground truth heat-maps respectively for the $j$th joint.
+
+During training, each input image is randomly rotated ($r\in[-20^{\circ},+20^{\circ}]$), scaled ($s\in[0.5,1.5]$) and flipped (with probability 0.5) in order to improve generalization performance on the validation-set.  Additionally we use the spatial model from Section~\ref{sec:spatialmodel} (\cite{tompsonnips2014}) to discriminate between multiple people in each frame using the approximate torso position supplied at test time for the FLIC and MPII datasets.
+
+%-------------------------------------------------------------------------
+\section{Fine Heat-Map Regression Model}
+\label{sec:fine_regression_model}
+
+In essence, the goal of Part~\ref{part:four} is to recover the spatial accuracy lost due to pooling of the model in Part~\ref{part:two} by using an additional ConvNet to refine the localization result of the coarse heat-map. However, unlike a standard cascade of models, as in the work of Toshev et al.~\cite{deeppose}, we reuse existing convolution features. This not only reduces the number of trainable parameters in the cascade, but also acts as a regularizer for the coarse heat-map model since the coarse and fine models are trained jointly.
+
+\subsection{Model Architecture}
+
+The full system architecture is shown in Figure~\ref{fig:reg_overview}. It consists of the heat-map-based parts model from Section~\ref{sec:heatmapmodel} for coarse localization, a module to sample and crop the convolution features at a specified $(x,y)$ location for each joint, as well as an additional convolutional model for fine tuning.
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/reg_overview.pdf}
+   \caption{Overview of our Cascaded Architecture}
+\label{fig:reg_overview}
+\end{figure*}
+
+Joint inference from an input image is as follows: we forward-propagate (FPROP) through the coarse heat-map model then infer all joint $(x,y)$ locations from the maximal value in each joint's heat-map. We then use this coarse $(x,y)$ location to sample and crop the first 2 convolution layers (for all resolution banks) at each of the joint locations. We then FPROP these features through a fine heat-map model to produce a $(\Delta x,\Delta y)$ offset within the cropped sub-window. Finally, we add the position refinement to the coarse location to produce a final $(x,y)$ localization for each joint.
+
+Figure~\ref{fig:sampler} shows the crop module functionality for a single joint. We simply crop out a window centered at the coarse joint $(x,y)$ location in each resolution feature map, however we do so by keeping the contextual size of the window constant by scaling the cropped area at each higher resolution level. Note that back-propagation (BPROP) through this module from output feature to input feature is trivial; output gradients from the cropped image are simply added to the output gradients of the convolution stages in the coarse heat-map model at the sampled pixel locations.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{figures_4_efficient_body_tracking/sampler.pdf}
+   \caption{Crop module functionality for a single joint}
+\label{fig:sampler}
+\end{figure}
+
+The fine heat-map model is a Siamese network~\cite{bromley1993signature} of 7 instances (14 for the MPII dataset), where the weights and biases of each module are shared (i.e. replicated across all instances and updated together during BPROP). Since the sample location for each joint is different, the convolution features do not share the same spatial context and so the convolutional sub-networks must be applied to each joint independently. However, we use parameter sharing amongst each of the 7 instances to substantially reduce the number of shared parameters and to prevent over-training. At the output of each of the 7 sub-networks we then perform a 1x1 Convolution, with no weight sharing to output a detailed-resolution heat-map for each joint. The purpose of this last layer is to perform the final detection for each joint.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\columnwidth]{figures_4_efficient_body_tracking/reg_network_siamese.pdf}
+   \caption{Fine heat-map model: 14 joint Siamese network}
+\label{fig:reg_network_siamese}
+\end{figure}
+
+Note we are potentially performing redundant computations in the Siamese network. If two cropped sub-windows overlap and since the convolutional weights are shared, the same convolution maybe applied multiple times to the same spatial locations. However, we have found in practice this is rare. Joints are infrequently co-located, and the spatial context size is chosen such that there is little overlap between cropped sub-regions (note that the context of the cropped images shown in Figures~\ref{fig:reg_overview} and ~\ref{fig:reg_network} are exaggerated for clarity).
+
+Each instance of the sub-network in Figure~\ref{fig:reg_network_siamese} is a ConvNet of 4 layers, as shown in Figure~\ref{fig:reg_network}. Since the input images are different resolutions and originate from varying depths in the coarse heat-map model, we treat the input features as separate resolution banks and apply a similar architecture strategy as used in Section~\ref{sec:heatmapmodel}. That is we apply the same size convolutions to each bank, upscale the lower-resolution features to bring them into canonical resolution, add the activations across feature maps then apply 1x1 convolutions to the output features.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\columnwidth]{figures_4_efficient_body_tracking/reg_network.pdf}
+   \caption{The fine heat-map network for a single joint}
+\label{fig:reg_network}
+\end{figure}
+
+It should be noted that this cascaded architecture can be extended further as is possible to have multiple cascade levels each with less and less pooling. However, in practice we have found that a single layer provides sufficient accuracy, and in particular within the level of label noise on the FLIC dataset (as we show in Section~\ref{sec:results_efficient}).
+
+\subsection{Joint Training}
+
+We jointly train both the coarse and fine heat-map models together by minimizing the following objective function:
+
+\begin{equation}
+E_2=E_1 + \lambda\frac{1}{N}\sum_{j=1}^{N}{\sum_{x,y}{\left\|G_{j}^\prime\left(x,y\right)-G_{j}\left(x,y\right)\right\|^2}}
+\end{equation}
+
+Where $G^\prime$ and $G$ are the set of predicted and ground truth heat-maps respectively for the fine heat-map model, $\lambda$ is a constant used to trade-off the relative importance of both sub-tasks and $E_1$ is the coarse heat-map model contribution from Equation~\ref{eq:objfuc}. We treat $\lambda$ as another network hyper-parameter and is chosen to optimize performance over our validation set (we use $\lambda=0.1$). Ideally, a more direct optimization function would attempt to measure the $argmax$ of both heat-maps and therefore directly minimize the final $(x,y)$ prediction. However, since the $argmax$ function is not differentiable we instead reformulate the problem as a regression to a set of target heat-maps and minimize the distance to those heat-maps.
+
+\chapter{Experimental Results\label{chap:4_efficient_body_tracking_experimental}}
+
+\section{Results}
+\label{sec:results_efficient}
+
+The ConvNet architecture for Part~\ref{part:four} was again implemented within the Torch7~\cite{torch7} framework and evaluation is performed on the FLIC~\cite{modec} and MPII-Human-Pose~\cite{andriluka14cvpr} datasets. Since the FLIC poses are predominantly front-facing and upright, FLIC is considered to be less challenging. However the small number of training examples makes the dataset a good indicator for generalization performance, which is a evaluation test for our \textit{SpatialDropout} layer. On the other-hand the MPII dataset is very challenging and it includes a wide variety of full-body pose annotations within the 28,821 training and 11,701 test examples. For evaluation of our model on the FLIC dataset we use again the standard PCK~\cite{modec} measure used in Parts~\ref{part:two} and \ref{part:three} and we use the PCKh measure of \cite{andriluka14cvpr} for evaluation on the MPII dataset.
+
+Figure~\ref{fig:pooling} shows the PCK test-set performance of our coarse heat-map model (Section~\ref{sec:heatmapmodel}) when various amounts of pooling are used within the network (keeping the number of convolution features constant). Figure~\ref{fig:pooling} results show quite clearly the expected effect of coarse quantization in $(x,y)$ and therefore the impact of pooling on spatial precision; when more pooling is used the performance of detections within small distance thresholds is reduced.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{figures_4_efficient_body_tracking/pooling_test_face.pdf}
+   \caption{Pooling impact on FLIC test-set Average Joint Accuracy for the coarse heat-map model}
+\label{fig:pooling}
+\end{figure}
+
+For joints where the ground-truth label is ambiguous and difficult for the human mechanical-turkers to label, we do not expect our cascaded network to do better than the expected variance in the user-generated labels. To measure this variance (and thus estimate the upper bound of performance) we performed the following informal experiment: we showed 13 users 10 random images from the FLIC training set with annotated ground-truth labels as a reference so that the users could familiarize themselves with the desired anatomical location of each joint. The users then annotated a consistent set of 10 random images from the FLIC test-set for the face, left-wrist, left-shoulder and left-elbow joints. Figure~\ref{fig:jnt_labels} shows the resultant joint annotations for 2 of the images.
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+   % trim=l b r t
+    \includegraphics[trim=250 100 60 65,clip,width=\textwidth]{figures_4_efficient_body_tracking/predictions_battle-cry-00060081_01180_jpg.pdf}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[trim=190 100 120 65,clip,width=\textwidth]{figures_4_efficient_body_tracking/predictions_funny-girl-dvd-video-00017751_01909_jpg.pdf}
+  \end{subfigure}
+  \caption{User generated joint annotations}
+  \label{fig:jnt_labels}
+\end{figure}
+
+To estimate joint annotation noise we calculate the standard deviation ($\sigma$) across user annotations in $x$ for each of the 10 images separately and then average the $\sigma$ across the 10 sample images to obtain an aggregate $\sigma$ for each joint. Since we down-sample the FLIC images by a factor of 2 for use with our model we divide the $\sigma$ values by the same down-sample ratio. The result is shown in Table~\ref{tab:noise}:
+
+\begin{table}[ht]
+\centering
+\begin{footnotesize} % small, footnotesize, scriptsize, tiny
+%\setlength{\tabcolsep}{0.2pt}
+%\begin{tabular}{ l x{0.7cm} x{1.3cm} x{0.85cm} x{0.75cm} } % Dimensions from the paper
+\begin{tabular}{ l c c c c }
+  \hline
+  \noalign{\vskip 1mm}
+  
+                                    & Face & Shoulder & Elbow & Wrist \\
+  \noalign{\vskip 1mm}
+  \hline
+  \noalign{\vskip 1mm}
+                     Label Noise (10 images) & 0.65 & 2.46     & 2.14  & 1.57 \\
+                     This work 4x (test-set)  & 1.09 & 2.43     & 2.59  & 2.82 \\
+                     This work 8x (test-set)   & 1.46 & 2.72     & 2.49  & 3.41 \\
+                     This work 16x (test-set)  & 1.45 & 2.78     & 3.78  & 4.16 \\                 
+  \noalign{\vskip 1mm}
+  \hline
+\end{tabular}
+\end{footnotesize}
+\caption{$\sigma$ of $(x,y)$ pixel annotations on FLIC test-set images (at $360\times240$ resolution)}
+\label{tab:noise}
+\end{table}
+
+\interfootnotelinepenalty=10000
+The histogram of the coarse heat-map model pixel error (in the $x$ dimension) on the FLIC test-set when using an 8x internal pooling is shown in Figure~\ref{fig:histogram_before} (for the face and shoulder joints). For demonstration purposes, we quote the error in the pixel coordinates of the input image to the network (which for FLIC is $360\times240$), not the original resolution. As expected, in these coordinates there is an approximately uniform uncertainty due to quantization of the heat-map within -4 to +4 pixels. In contrast to this, the histogram of the cascaded network is shown in Figure~\ref{fig:histogram_after} and is close to the measured label noise\footnote{When calculating $\sigma$ for our model, we remove all outliers with $\text{error}>20$ and $\text{error}<-20$. These outliers represent samples where our weak spatial model chose the wrong person's joint and so do not represent an accurate indication of the spatial accuracy of our model.}.
+\interfootnotelinepenalty=100 % Back to default
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/u_error_part_face_4x.pdf}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/u_error_cascade_face_4x.pdf}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/u_error_part_lsho_4x.pdf}
+        \caption{Coarse model only}
+        \label{fig:histogram_before}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/u_error_cascade_lsho_4x.pdf}
+        \caption{Cascaded model}
+        \label{fig:histogram_after}
+  \end{subfigure}
+  \caption{Histogram of X error on FLIC test-set}
+  \label{fig:histogram}
+\end{figure}
+
+PCK performance on FLIC for face and wrist are shown in Figures~\ref{fig:before_after_face} and \ref{fig:before_after_wrist} respectively. For the face, the performance improvement is significant, especially for the $8\times$ and $16\times$ pooling part models.
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/before_after_face.pdf}
+        \caption{Face}
+        \label{fig:before_after_face}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/before_after_lwri.pdf}
+        \caption{Wrist}
+        \label{fig:before_after_wrist}
+  \end{subfigure}
+  \caption{Performance improvement from cascaded model}
+  \label{fig:before_after}
+\end{figure}
+
+The FPROP time for a single image (using an Nvidia-K40 GPU) for each of our models is shown in Table~\ref{tab:times}; using the $8\times$ pooling cascaded network, we are able to perform close to the level of label noise with a significant improvement in computation time over the $4\times$ network.
+
+\begin{table}
+\centering
+\begin{footnotesize} % small, footnotesize, scriptsize, tiny
+%\setlength{\tabcolsep}{0.2pt}
+%\begin{tabular}{ l x{1cm} x{1cm} x{1cm}} % dimensions from paper
+\begin{tabular}{ l c c c}
+  \hline
+  \noalign{\vskip 1mm}
+  
+                                           & 4x pool & 8x pool & 16x pool \\
+  \noalign{\vskip 1mm}
+  \hline
+  \noalign{\vskip 1mm}
+                     Coarse-Model          & 140.0   & 74.9    & 54.7     \\
+                     Fine-Model            & 17.2    & 19.3    & 15.9     \\
+                     Cascade               & 157.2   & 94.2    & 70.6     \\
+  \noalign{\vskip 1mm}
+  \hline
+\end{tabular}
+\end{footnotesize}
+\caption{Forward-Propagation time (seconds) for each of our FLIC trained models}
+\label{tab:times}
+\end{table}
+
+The performance improvement for wrist is also significant but only for the $8\times$ and $16\times$ pooling models. Our empirical experiments suggest that wrist detection (as one of the hardest to detect joints) requires learning features with a large amount of spatial context. This is because the wrist joint undergoes larger amounts of skeletal deformation than the shoulder or face, and typically has high input variability due to clothing and wrist accessories. Therefore, with limited convolution sizes and sampling context in the fine heat-map regression network, the cascaded network does not improve wrist accuracy beyond the coarse approximation.
+
+To evaluate the effectiveness of the use of shared features for our cascaded network we trained a fine heat-map model that takes it's inputs from a cropped version of the input image rather than the first and second layer convolution feature maps of our coarse heat-map model. This comparison model is a greedily-trained cascade, where the coarse and fine models are trained independently. Additionally, since the network in Figure~\ref{fig:reg_overview} has a higher capacity than the comparison model, we add an additional convolution layer such that the number of trainable parameters is the same. Figures~\ref{fig:stdreg_lelb} and \ref{fig:stdreg_lwri} shows that our 4x pooling network outperforms this comparison model. We attribute this to the regularizing effect of joint training; the fine heat-map model term in the objective function prevents over-training of the coarse model and vice-versa.
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.49\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/stdreg_lelb.pdf}
+        \caption{Elbow}
+        \label{fig:stdreg_lelb}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/stdreg_lwri.pdf}
+        \caption{Wrist}
+        \label{fig:stdreg_lwri}
+  \end{subfigure}
+  \caption{FLIC performance of our shared-features cascade vs an independently trained cascade}
+  \label{fig:stdreg}
+\end{figure}
+
+Figure~\ref{fig:flic_results_efficient} compares the PCK performance averaged for the wrist and elbow joints for the detector of Section~\ref{sec:fine_regression_model} with previous work . Our model outperforms the previous state-of-the-art results, including the Part and Spatial model baseline architecture from Section~\ref{chap:2_body_tracking_archiecture} (\cite{tompsonnips2014}), for large distances, due to our use of \textit{SpatialDropout}. In the high precision region the cascaded network is able to out-perform all state-of-the-art by a significant margin. The PCK performance at a normalized distance of 0.05 for each joint is shown in Table~\ref{tab:flic}. 
+
+\begin{figure}[ht]
+  \centering
+    \begin{subfigure}[b]{0.6\linewidth}
+         % Trim is left, bottom, right, top
+          \begin{flushright}
+                  \includegraphics[trim=0.0cm 0.4cm 0.2cm 0.4cm, clip=true, width=\textwidth]{figures_4_efficient_body_tracking/flic_legend.pdf}
+          \end{flushright}
+    \end{subfigure}
+  \begin{subfigure}[b]{0.6\linewidth}
+        \includegraphics[width=\textwidth]{figures_4_efficient_body_tracking/best_flic_ave_wri_elb.pdf}
+  \end{subfigure}
+  \caption{FLIC - average PCK for wrist and elbow}
+  \label{fig:flic_results_efficient}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{footnotesize} % small, footnotesize, scriptsize, tiny
+%\setlength{\tabcolsep}{0.2pt}
+%\begin{tabular}{ l x{0.7cm} x{1.3cm} x{0.85cm} x{0.75cm} } % dimensions from paper
+\begin{tabular}{ l c c c c }
+  \hline
+  \noalign{\vskip 1mm}
+  
+                     & Head & Shoulder & Elbow & Wrist \\
+  \noalign{\vskip 1mm}
+  \hline
+  \noalign{\vskip 1mm}
+Yang et al. & - & - & 22.6 & 15.3 \\
+Sapp et al. & - & - & 6.4 & 7.9 \\
+Eichner et al. & - & - & 11.1 & 5.2 \\
+MODEC et al. & - & - & 28.0 & 22.3 \\
+Toshev et al. & - & - & 25.2 & 26.4 \\
+Jain et al. & - & 42.6 & 24.1 & 22.3 \\
+Tompson et al. & 90.7 & 70.4 & 50.2 & 55.4 \\
+This work 4x & \textbf{92.6} & 73.0 & \textbf{57.1} & \textbf{60.4} \\
+This work 8x & 92.1 & \textbf{75.8} & 55.6 & 56.6 \\
+This work 16x & 91.6 & 73.0 & 47.7 & 45.5 \\
+  \noalign{\vskip 1mm}
+  \hline
+\end{tabular}
+\end{footnotesize}
+\caption{Comparison with prior-art on FLIC (PCK @ 0.05)}
+\label{tab:flic}
+\end{table}
+
+Finally, Figure~\ref{fig:mpi_results} shows the PCKh performance of our model on the MPII human pose dataset. Similarity, table~\ref{tab:mpii} shows a comparison of the PCKh performance of our model and previous state-of-the-art at a normalized distance of 0.5.  Our model out-performs all existing methods by a considerable margin.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\columnwidth]{figures_4_efficient_body_tracking/best_mpii_average_test.pdf}
+   \caption{MPII - average PCKh for all joints}
+\label{fig:mpi_results}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{small} % small, footnotesize, scriptsize, tiny
+%\setlength{\tabcolsep}{0.2pt}
+\resizebox{\linewidth}{!}{%
+%\begin{tabular}{ l x{0.6cm} x{1.2cm} x{0.75cm} x{0.65cm} x{0.7cm} x{0.6cm} x{0.8cm} x{0.75cm} x{0.6cm} } % dimensions from paper
+\begin{tabular}{ l c c c c c c c c c }
+  \hline
+  \noalign{\vskip 1mm}
+  
+                     & Head & Shoulder & Elbow & Wrist &  Hip & Knee & Ankle & Upper Body & Full Body \\
+  \noalign{\vskip 1mm}
+  \hline
+  \noalign{\vskip 1mm}
+  Gkioxari et al.    &    - &     36.3 &  26.1 &  15.3 &    - &    - &     - &       25.9 &         - \\
+  Sapp \& Taskar     &    - &     38.0 &  26.3 &  19.3 &    - &    - &     - &       27.9 &         - \\
+  Yang \& Ramanan    & 73.2 &     56.2 &  41.3 &  32.1 & 36.2 & 33.2 &  34.5 &       43.2 &      44.5 \\
+  Pishchulin et al.  & 74.2 &     49.0 &  40.8 &  34.1 & 36.5 & 34.4 &  35.1 &       41.3 &      44.0 \\
+  This work 4x       & \textbf{96.0} & \textbf{91.9} & \textbf{83.9} & \textbf{77.7} & \textbf{80.9} & \textbf{72.2} & \textbf{64.8} & \textbf{84.5} & \textbf{82.0} \\ % from Leonid 11/10/2014
+  \noalign{\vskip 1mm}
+  \hline
+\end{tabular}
+} % end resize box
+\end{small}
+\caption{Comparison with prior-art: MPII (PCKh @ 0.5)}
+\label{tab:mpii}
+\end{table}

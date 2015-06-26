@@ -1,0 +1,72 @@
+% !TEX root = thesis.tex
+
+% Graphics:
+\usepackage[final]{graphicx}
+%\usepackage{graphicx} % use this line instead of the above to suppress graphics in draft copies
+%\usepackage{graphpap} % \defines the \graphpaper command
+
+% Indent first line of each section:
+\usepackage{indentfirst}
+
+% Good AMS stuff:
+\usepackage{amsthm} % facilities for theorem-like environments
+\usepackage[tbtags]{amsmath} % a lot of good stuff!
+
+% Fonts and symbols:
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{txfonts}
+\usepackage{graphicx}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{mdwlist}
+\usepackage{graphics}
+\usepackage{rotating}
+\usepackage{pdfpages}
+\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage[backend=bibtexu, style=numeric, maxnames=99, backref=false]{biblatex}
+
+% Added by me (Jonathan):
+\usepackage{adjustbox}
+\usepackage{xfrac}
+\usepackage[font=small]{subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{nicefrac}
+\usepackage{tabularx}
+\usepackage{placeins}
+
+\setlength{\bibitemsep}{\baselineskip}
+\bibliography{references}
+
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\emptyset}{\ensuremath{\varnothing}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\T}{\ensuremath{\mathbb{T}}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
+
+\long\def\tbl#1#2
+{
+ \setbox\tempbox\hbox{\tablefont #2}%
+ \tabledim\hsize\advance\tabledim by -\wd\tempbox
+ \tempdimen\wd\tempbox
+	\global\divide\tabledim\tw@
+ \caption{#1}
+	\centerline{\box\tempbox}
+}
+
+%\setlength{\intextsep}{0.6\baselineskip}
+%\setlength{\belowcaptionskip}{-1ex} % remove extra space above and below in-line float
+%\setlength{\belowcaptionskip}{-0.5\baselineskip} \addtolength{\belowcaptionskip}{1.5ex}
+\setlength{\intextsep}{3ex plus 2pt minus 2pt}
