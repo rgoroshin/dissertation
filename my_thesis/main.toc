@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}
 \contentsline {section}{List of Figures}{vii}
 \defcounter {refsection}{0}
-\contentsline {section}{List of Tables}{ix}
+\contentsline {section}{List of Tables}{x}
 \defcounter {refsection}{0}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \defcounter {refsection}{0}
@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}
 \contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{9}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{10}
+\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{13}
 \defcounter {refsection}{0}
 \contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{13}
 \defcounter {refsection}{0}
@@ -36,24 +36,40 @@
 \defcounter {refsection}{0}
 \contentsline {section}{\numberline {3.5}Discussion}{15}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{15}
+\contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{16}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{17}
+\contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{18}
 \defcounter {refsection}{0}
 \contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{18}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{19}
+\contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{20}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{20}
+\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{21}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{21}
+\contentsline {section}{\numberline {5.1}Introduction}{21}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{22}
+\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{23}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {8}Conclusion}{23}
+\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{25}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{27}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{29}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{30}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {5.5}Experimental Results}{31}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {5.6}Conclusion}{37}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{39}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{40}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {8}Conclusion}{41}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Conclusions}{24}
+\setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Bibliography}{25}
+\contentsline {chapter}{Bibliography}{42}

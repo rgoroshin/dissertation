@@ -7,7 +7,7 @@ using the hidden representation as its input. Training consists of minimizing a
 reconstruction cost such as $L_2$ error. However this cost is merely a proxy
 for the true objective: to obtain a useful latent representation. Auto-encoders
 can  implement many dimensionality reduction techniques such as PCA and Sparse
-Coding (SC) \cite{DHS}\cite{SC}\cite{LISTA}. This makes the study of
+Coding (SC) ~\cite{DHS}~\cite{SC}~\cite{LISTA}. This makes the study of
 auto-encoders very appealing from a theoretical standpoint. In recent years,
 renewed interest in auto-encoders networks has mainly been due to their
 empirical success in unsupervised feature learning
@@ -222,6 +222,11 @@ respectively, (g)-(h) SATAE-SL trained on CIFAR-10 with $\alpha=0.1$ and
 $\alpha=0.6$, respectively.  } \label{fig:results} \end{figure}
 \clearpage} 
 
+\begin{figure} \centering \includegraphics[scale=0.5]{./figures/SATAE/viz_nonlin.png}
+\caption{Geometric visualization of non-linearities}
+\end{figure} 
+
+
 \begin{figure} \centering \begin{subfigure}[b]{0.15\textwidth} \centering
 \includegraphics[scale=2]{./figures/SATAE/1.png}\\ \includegraphics[scale=2]{./figures/SATAE/horse1.png} 
         %\includegraphics[scale=2]{.//objects/red/0.png} \\
@@ -403,7 +408,6 @@ encourages operation in the saturation regime. Computing the Jacobian, however,
 can be cumbersome for deep networks. Furthermore, the complexity of computing
 the Jacobian is $O(d \times d_h)$, although a more efficient implementation is
 possible \cite{CAE}, compared to the $O(d_h)$ for the saturation penalty.  
-
  
 \subsection{Relationship with the Sparse Auto-Encoder} In Section 3.2 it was
 shown that SATAEs with shrink or rectified-linear activation functions are

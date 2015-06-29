@@ -107,6 +107,7 @@
 %\usepackage{showkeys}
 
 \begin{document}
+\bibliographystyle{plain}
 %% Produces a test "layout" page, for "debugging" purposes only.
 %% Comment out for final version.
 %\layout % requires package layout (see above, on this same file)
@@ -204,6 +205,7 @@ Parents and friends
 \label{chapter:LISTA} 
 \chapter{Learning Spatiotemporally Coherent Metrics}
 \label{chapter:slow} 
+\input{slow}
 \chapter{Learning to Linearize under Uncertainty}
 \label{chapter:error} 
 \chapter{Adversarial Inpainting}
@@ -215,9 +217,6 @@ Parents and friends
 \clearpage
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{+1}}
-\addcontentsline{toc}{chapter}{Conclusions}
-\section*{Conclusions}
-%\input{conclusions}
 
 %\begin{appendices}
 %\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
@@ -228,9 +227,8 @@ Parents and friends
 \FloatBarrier
 \newpage
 
-%\addtocontents{toc}{\protect\setcounter{tocdepth}{+1}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{+1}}
 \addcontentsline{toc}{chapter}{Bibliography}
-
 \singlespacing
 \printbibliography
 \end{document}

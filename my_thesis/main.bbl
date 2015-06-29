@@ -1,0 +1,766 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 0.8i $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{bengio_new}{article}{}
+  \name{author}{2}{%
+    {{Alain}{A.}%
+     {Guillaume}{G.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {JMLR. org}%
+  }
+  \field{journaltitle}{The Journal of Machine Learning Research}
+  \strng{namehash}{AGBY1}
+  \strng{fullhash}{AGBY1}
+  \field{sortinit}{A}
+  \field{number}{1}
+  \field{pages}{3563\bibrangedash 3593}
+  \field{title}{What regularized auto-encoders learn from the data-generating
+  distribution}
+  \field{volume}{15}
+  \field{year}{2014}
+\endentry
+
+\entry{Bengio2012}{report}{}
+  \name{author}{3}{%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Courville}{C.}%
+     {Aaron~C.}{A.~C.}%
+     {}{}%
+     {}{}}%
+    {{Vincent}{V.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{institution}{1}{%
+    {University of Montreal}%
+  }
+  \field{type}{techreport}
+  \strng{namehash}{BYCACVP1}
+  \strng{fullhash}{BYCACVP1}
+  \field{sortinit}{B}
+  \field{title}{Representation Learning: A Review and New Perspectives}
+  \field{volume}{abs/1206.5538}
+  \field{year}{2012}
+\endentry
+
+\entry{siamese}{article}{}
+  \name{author}{8}{%
+    {{Bromley}{B.}%
+     {Jane}{J.}%
+     {}{}%
+     {}{}}%
+    {{Bentz}{B.}%
+     {James~W}{J.~W.}%
+     {}{}%
+     {}{}}%
+    {{Bottou}{B.}%
+     {L{\'e}on}{L.}%
+     {}{}%
+     {}{}}%
+    {{Guyon}{G.}%
+     {Isabelle}{I.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Moore}{M.}%
+     {Cliff}{C.}%
+     {}{}%
+     {}{}}%
+    {{S{\"a}ckinger}{S.}%
+     {Eduard}{E.}%
+     {}{}%
+     {}{}}%
+    {{Shah}{S.}%
+     {Roopak}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {World Scientific}%
+  }
+  \field{journaltitle}{International Journal of Pattern Recognition and
+  Artificial Intelligence}
+  \strng{namehash}{BJBJWBLGILYMCSESR1}
+  \strng{fullhash}{BJBJWBLGILYMCSESR1}
+  \field{sortinit}{B}
+  \field{number}{04}
+  \field{pages}{669\bibrangedash 688}
+  \field{title}{Signature verification using a “Siamese” time delay neural
+  network}
+  \field{volume}{7}
+  \field{year}{1993}
+\endentry
+
+\entry{JoanScat}{article}{}
+  \name{author}{2}{%
+    {{Bruna}{B.}%
+     {Joan}{J.}%
+     {}{}%
+     {}{}}%
+    {{Mallat}{M.}%
+     {St{\'e}phane}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \field{journaltitle}{Pattern Analysis and Machine Intelligence, IEEE
+  Transactions on}
+  \strng{namehash}{BJMS1}
+  \strng{fullhash}{BJMS1}
+  \field{sortinit}{B}
+  \field{number}{8}
+  \field{pages}{1872\bibrangedash 1886}
+  \field{title}{Invariant scattering convolution networks}
+  \field{volume}{35}
+  \field{year}{2013}
+\endentry
+
+\entry{JoanPooling}{inproceedings}{}
+  \name{author}{3}{%
+    {{Bruna}{B.}%
+     {Joan}{J.}%
+     {}{}%
+     {}{}}%
+    {{Szlam}{S.}%
+     {Arthur}{A.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BJSALY1}
+  \strng{fullhash}{BJSALY1}
+  \field{sortinit}{B}
+  \field{booktitle}{ICML}
+  \field{title}{Signal Recovery from Pooling Representations}
+  \field{year}{2014}
+\endentry
+
+\entry{Cadieu}{article}{}
+  \name{author}{2}{%
+    {{Cadieu}{C.}%
+     {Charles~F.}{C.~F.}%
+     {}{}%
+     {}{}}%
+    {{Olshausen}{O.}%
+     {Bruno~A.}{B.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{Neural Computation}
+  \strng{namehash}{CCFOBA1}
+  \strng{fullhash}{CCFOBA1}
+  \field{sortinit}{C}
+  \field{title}{Learning Intermediate-Level Representations of Form and Motion
+  from Natural Movies}
+  \field{year}{2012}
+\endentry
+
+\entry{DHS}{book}{}
+  \name{author}{3}{%
+    {{Duda}{D.}%
+     {Richard~O}{R.~O.}%
+     {}{}%
+     {}{}}%
+    {{Hart}{H.}%
+     {Peter~E}{P.~E.}%
+     {}{}%
+     {}{}}%
+    {{Stork}{S.}%
+     {David~G}{D.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Wiley \& Sons}%
+  }
+  \strng{namehash}{DROHPESDG1}
+  \strng{fullhash}{DROHPESDG1}
+  \field{sortinit}{D}
+  \field{title}{Pattern classification}
+  \field{year}{2012}
+\endentry
+
+\entry{MaxOut}{inproceedings}{}
+  \name{author}{5}{%
+    {{Goodfellow}{G.}%
+     {Ian~J.}{I.~J.}%
+     {}{}%
+     {}{}}%
+    {{Warde-Farley}{W.-F.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{Mirza}{M.}%
+     {Mehdi}{M.}%
+     {}{}%
+     {}{}}%
+    {{Courville}{C.}%
+     {Aaron}{A.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GIJWFDMMCABY1}
+  \strng{fullhash}{GIJWFDMMCABY1}
+  \field{sortinit}{G}
+  \field{booktitle}{ICML}
+  \field{title}{Maxout Networks}
+  \field{year}{2013}
+\endentry
+
+\entry{SATAE}{inproceedings}{}
+  \name{author}{2}{%
+    {{Goroshin}{G.}%
+     {Rostislav}{R.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GRLY1}
+  \strng{fullhash}{GRLY1}
+  \field{sortinit}{G}
+  \field{booktitle}{ICLR}
+  \field{title}{Saturating Auto-Encoders}
+  \field{year}{2013}
+\endentry
+
+\entry{LISTA}{inproceedings}{}
+  \name{author}{2}{%
+    {{Gregor}{G.}%
+     {Karol}{K.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GKLY1}
+  \strng{fullhash}{GKLY1}
+  \field{sortinit}{G}
+  \field{booktitle}{Proceedings of the 27th International Conference on Machine
+  Learning (ICML-10)}
+  \field{pages}{399\bibrangedash 406}
+  \field{title}{Learning fast approximations of sparse coding}
+  \field{year}{2010}
+\endentry
+
+\entry{DrLIM}{inproceedings}{}
+  \name{author}{3}{%
+    {{Hadsell}{H.}%
+     {Raia}{R.}%
+     {}{}%
+     {}{}}%
+    {{Chopra}{C.}%
+     {Soumit}{S.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HRCSLY1}
+  \strng{fullhash}{HRCSLY1}
+  \field{sortinit}{H}
+  \field{booktitle}{CVPR}
+  \field{title}{Dimensionality Reduction by Learning an Invariant Mapping}
+  \field{year}{2006}
+\endentry
+
+\entry{Huyvarinen}{book}{}
+  \name{author}{6}{%
+    {{Hyv{\"a}rinen}{H.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Aapo}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Karhunen}{K.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Juha}{J.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Oja}{O.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Erkki}{E.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Wiley \& Sons}%
+  }
+  \strng{namehash}{HAKJOE1}
+  \strng{fullhash}{HAKJOE1}
+  \field{sortinit}{H}
+  \field{title}{Independent component analysis}
+  \field{volume}{46}
+  \field{year}{2004}
+\endentry
+
+\entry{hyvarinen2003bubbles}{article}{}
+  \name{author}{3}{%
+    {{Hyv{\"a}rinen}{H.}%
+     {Aapo}{A.}%
+     {}{}%
+     {}{}}%
+    {{Hurri}{H.}%
+     {Jarmo}{J.}%
+     {}{}%
+     {}{}}%
+    {{V{\"a}yrynen}{V.}%
+     {Jaakko}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Optical Society of America}%
+  }
+  \field{journaltitle}{JOSA A}
+  \strng{namehash}{HAHJVJ1}
+  \strng{fullhash}{HAHJVJ1}
+  \field{sortinit}{H}
+  \field{number}{7}
+  \field{pages}{1237\bibrangedash 1252}
+  \field{title}{Bubbles: a unifying framework for low-level statistical
+  properties of natural image sequences}
+  \field{volume}{20}
+  \field{year}{2003}
+\endentry
+
+\entry{groupSparsity}{inproceedings}{}
+  \name{author}{4}{%
+    {{Kavukcuoglu}{K.}%
+     {Koray}{K.}%
+     {}{}%
+     {}{}}%
+    {{Ranzato}{R.}%
+     {Marc’Aurelio}{M.}%
+     {}{}%
+     {}{}}%
+    {{Fergus}{F.}%
+     {Rob}{R.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KKRMFRLY1}
+  \strng{fullhash}{KKRMFRLY1}
+  \field{sortinit}{K}
+  \field{booktitle}{CVPR}
+  \field{title}{Learning Invariant Features through Topographic Filter Maps}
+  \field{year}{2009}
+\endentry
+
+\entry{SSA}{inproceedings}{}
+  \name{author}{5}{%
+    {{Kayser}{K.}%
+     {Christoph}{C.}%
+     {}{}%
+     {}{}}%
+    {{Einhauser}{E.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+    {{Dummer}{D.}%
+     {Olaf}{O.}%
+     {}{}%
+     {}{}}%
+    {{Konig}{K.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+    {{Kding}{K.}%
+     {Konrad}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KCEWDOKPKK1}
+  \strng{fullhash}{KCEWDOKPKK1}
+  \field{sortinit}{K}
+  \field{booktitle}{ICANN'2001}
+  \field{title}{Extracting Slow Subspaces from Natural Videos Leads to Complex
+  Cells}
+  \field{year}{2001}
+\endentry
+
+\entry{alexthesis}{thesis}{}
+  \name{author}{1}{%
+    {{Krizhevsky}{K.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{institution}{1}{%
+    {University of Toronto}%
+  }
+  \field{type}{mathesis}
+  \strng{namehash}{KA1}
+  \strng{fullhash}{KA1}
+  \field{sortinit}{K}
+  \field{title}{Learning Multiple Layers of Features from Tiny Images}
+  \field{year}{2009}
+  \warn{* Invalid format of field 'month'}
+\endentry
+
+\entry{ImageNet}{inproceedings}{}
+  \name{author}{3}{%
+    {{Krizhevsky}{K.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+    {{Sutskever}{S.}%
+     {Ilya}{I.}%
+     {}{}%
+     {}{}}%
+    {{Hinton}{H.}%
+     {Geoffrey~E}{G.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KASIHGE1}
+  \strng{fullhash}{KASIHGE1}
+  \field{sortinit}{K}
+  \field{booktitle}{NIPS}
+  \field{number}{2}
+  \field{pages}{4}
+  \field{title}{ImageNet Classification with Deep Convolutional Neural
+  Networks.}
+  \field{volume}{1}
+  \field{year}{2012}
+\endentry
+
+\entry{LeCun1998}{article}{}
+  \name{author}{4}{%
+    {{LeCun}{L.}%
+     {Y.}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Bottou}{B.}%
+     {L.}{L.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Y.}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Haffner}{H.}%
+     {P.}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{Proc. IEEE}
+  \strng{namehash}{LYBLBYHP1}
+  \strng{fullhash}{LYBLBYHP1}
+  \field{sortinit}{L}
+  \field{number}{11}
+  \field{pages}{2278\bibrangedash 2324}
+  \field{title}{Gradient-Based Learning Applied to Document Recognition}
+  \field{volume}{86}
+  \field{year}{1998}
+\endentry
+
+\entry{complexCells}{article}{}
+  \name{author}{3}{%
+    {{Lies}{L.}%
+     {Jorn-Philipp}{J.-P.}%
+     {}{}%
+     {}{}}%
+    {{Hafner}{H.}%
+     {Ralf~M}{R.~M.}%
+     {}{}%
+     {}{}}%
+    {{Bethge}{B.}%
+     {Matthias}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LJPHRMBM1}
+  \strng{fullhash}{LJPHRMBM1}
+  \field{sortinit}{L}
+  \field{booktitle}{PLOS Computational Biology}
+  \field{issue}{3}
+  \field{title}{Slowness and Sparseness Have Diverging Effects on Complex Cell
+  Learning}
+  \field{volume}{10}
+  \field{year}{2014}
+\endentry
+
+\entry{DrLIMVideo}{inproceedings}{}
+  \name{author}{3}{%
+    {{Mobahi}{M.}%
+     {Hossein}{H.}%
+     {}{}%
+     {}{}}%
+    {{Collobert}{C.}%
+     {Ronan}{R.}%
+     {}{}%
+     {}{}}%
+    {{Weston}{W.}%
+     {Jason}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MHCRWJ1}
+  \strng{fullhash}{MHCRWJ1}
+  \field{sortinit}{M}
+  \field{booktitle}{ICML}
+  \field{title}{Deep Learning from Temporal Coherence in Video}
+  \field{year}{2009}
+\endentry
+
+\entry{SC}{article}{}
+  \name{author}{2}{%
+    {{Olshausen}{O.}%
+     {Bruno~A}{B.~A.}%
+     {}{}%
+     {}{}}%
+    {{Field}{F.}%
+     {David~J}{D.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \field{journaltitle}{Vision research}
+  \strng{namehash}{OBAFDJ1}
+  \strng{fullhash}{OBAFDJ1}
+  \field{sortinit}{O}
+  \field{number}{23}
+  \field{pages}{3311\bibrangedash 3325}
+  \field{title}{Sparse coding with an overcomplete basis set: A strategy
+  employed by V1?}
+  \field{volume}{37}
+  \field{year}{1997}
+\endentry
+
+\entry{SAE1}{inproceedings}{}
+  \true{moreauthor}
+  \name{author}{3}{%
+    {{Poultney}{P.}%
+     {Christopher}{C.}%
+     {}{}%
+     {}{}}%
+    {{Chopra}{C.}%
+     {Sumit}{S.}%
+     {}{}%
+     {}{}}%
+    {{Cun}{C.}%
+     {Yann~L}{Y.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PCCSCYL+1}
+  \strng{fullhash}{PCCSCYL+1}
+  \field{sortinit}{P}
+  \field{booktitle}{Advances in neural information processing systems}
+  \field{pages}{1137\bibrangedash 1144}
+  \field{title}{Efficient learning of sparse representations with an
+  energy-based model}
+  \field{year}{2006}
+\endentry
+
+\entry{SAE2}{inproceedings}{}
+  \name{author}{4}{%
+    {{Ranzato}{R.}%
+     {Marc~Aurelio}{M.~A.}%
+     {}{}%
+     {}{}}%
+    {{Huang}{H.}%
+     {Fu~Jie}{F.~J.}%
+     {}{}%
+     {}{}}%
+    {{Boureau}{B.}%
+     {Y-Lan}{Y.-L.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{RMAHFJBYLLY1}
+  \strng{fullhash}{RMAHFJBYLLY1}
+  \field{sortinit}{R}
+  \field{booktitle}{Computer Vision and Pattern Recognition, 2007. CVPR'07.
+  IEEE Conference on}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{Unsupervised learning of invariant feature hierarchies with
+  applications to object recognition}
+  \field{year}{2007}
+\endentry
+
+\entry{CAE}{inproceedings}{}
+  \name{author}{5}{%
+    {{Rifai}{R.}%
+     {Salah}{S.}%
+     {}{}%
+     {}{}}%
+    {{Vincent}{V.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+    {{Muller}{M.}%
+     {Xavier}{X.}%
+     {}{}%
+     {}{}}%
+    {{Glorot}{G.}%
+     {Xavier}{X.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RSVPMXGXBY1}
+  \strng{fullhash}{RSVPMXGXBY1}
+  \field{sortinit}{R}
+  \field{booktitle}{Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}
+  \field{pages}{833\bibrangedash 840}
+  \field{title}{Contractive auto-encoders: Explicit invariance during feature
+  extraction}
+  \field{year}{2011}
+\endentry
+
+\entry{DAE}{inproceedings}{}
+  \name{author}{4}{%
+    {{Vincent}{V.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+    {{Larochelle}{L.}%
+     {Hugo}{H.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Manzagol}{M.}%
+     {Pierre-Antoine}{P.-A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{VPLHBYMPA1}
+  \strng{fullhash}{VPLHBYMPA1}
+  \field{sortinit}{V}
+  \field{booktitle}{Proceedings of the 25th international conference on Machine
+  learning}
+  \field{pages}{1096\bibrangedash 1103}
+  \field{title}{Extracting and composing robust features with denoising
+  autoencoders}
+  \field{year}{2008}
+\endentry
+
+\entry{SFA}{article}{}
+  \name{author}{2}{%
+    {{Wiskott}{W.}%
+     {Laurenz}{L.}%
+     {}{}%
+     {}{}}%
+    {{Sejnowski}{S.}%
+     {Terrence~J.}{T.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{Neural Computation}
+  \strng{namehash}{WLSTJ1}
+  \strng{fullhash}{WLSTJ1}
+  \field{sortinit}{W}
+  \field{title}{Slow Feature Analysis: Unsupervised Learning of Invariances}
+  \field{year}{2002}
+\endentry
+
+\entry{zou2012deep}{inproceedings}{}
+  \name{author}{4}{%
+    {{Zou}{Z.}%
+     {Will}{W.}%
+     {}{}%
+     {}{}}%
+    {{Zhu}{Z.}%
+     {Shenghuo}{S.}%
+     {}{}%
+     {}{}}%
+    {{Yu}{Y.}%
+     {Kai}{K.}%
+     {}{}%
+     {}{}}%
+    {{Ng}{N.}%
+     {Andrew~Y}{A.~Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZWZSYKNAY1}
+  \strng{fullhash}{ZWZSYKNAY1}
+  \field{sortinit}{Z}
+  \field{booktitle}{Advances in Neural Information Processing Systems}
+  \field{pages}{3212\bibrangedash 3220}
+  \field{title}{Deep learning of invariant features via simulated fixations in
+  video}
+  \field{year}{2012}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

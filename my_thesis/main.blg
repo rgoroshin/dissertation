@@ -1,46 +1,62 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: main.aux
-I found no \citation commands---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            84 strings with 492 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
+The style file: biblatex.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: main-blx.bib
+Database file #2: references.bib
+Repeated entry---line 266 of file references.bib
+ : @inproceedings{LISTA
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 303 of file references.bib
+ : @inproceedings{CAE
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 347 of file references.bib
+ : @techreport{DAE
+ :                ,
+I'm skipping whatever remains of this entry
+Biblatex version: 0.8i
+Warning--Invalid format of field 'month' in entry 'alexthesis'
+You've used 28 entries,
+            5526 wiz_defined-function locations,
+            1270 strings with 13692 characters,
+and the built_in function-call counts, 94706 in all, are:
+= -- 3143
+> -- 4320
+< -- 964
++ -- 1497
+- -- 1912
+* -- 9170
+:= -- 6607
 add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+call.type$ -- 28
+change.case$ -- 408
+chr.to.int$ -- 41
+cite$ -- 56
+duplicate$ -- 9914
+empty$ -- 8736
+format.name$ -- 2651
+if$ -- 21399
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 65
 missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+newline$ -- 747
+num.names$ -- 1284
+pop$ -- 7618
+preamble$ -- 1
+purify$ -- 564
 quote$ -- 0
-skip$ -- 0
+skip$ -- 5429
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 1744
+swap$ -- 3102
+text.length$ -- 1038
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+top$ -- 1
+type$ -- 1000
+warning$ -- 1
+while$ -- 548
 width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+write$ -- 718
+(There were 3 error messages)

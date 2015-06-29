@@ -1,0 +1,10 @@
+\begin{thebibliography}{1}
+
+\bibitem{CAE}
+Salah Rifai, Pascal Vincent, Xavier Muller, Xavier Glorot, and Yoshua Bengio.
+\newblock Contractive auto-encoders: Explicit invariance during feature
+  extraction.
+\newblock In {\em Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pages 833--840, 2011.
+
+\end{thebibliography}
