@@ -31,6 +31,8 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
 %\usepackage[backend=biber, style=numeric, maxnames=99, backref=false]{biblatex}
 \usepackage[style=numeric, maxnames=99, backref=false]{biblatex}
 
@@ -56,8 +58,15 @@
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\T}{\ensuremath{\mathbb{T}}}
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\dy}{\mathrm{d}y}
+\newcommand{\df}{\mathrm{d}f}
+\newcommand{\dv}{\mathrm{d}v}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 \long\def\tbl#1#2
 {

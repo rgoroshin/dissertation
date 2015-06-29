@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: main.aux
 The style file: biblatex.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated field_info (elt_size=4) to 10016 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: references.bib
 Repeated entry---line 266 of file references.bib
@@ -16,47 +17,119 @@ Repeated entry---line 347 of file references.bib
  : @techreport{DAE
  :                ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 399 of file references.bib
+ : @article{complexCells
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 408 of file references.bib
+ : @inproceedings{DrLIM
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 415 of file references.bib
+ : @inproceedings{groupSparsity
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 453 of file references.bib
+ : @article{JoanScat
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 464 of file references.bib
+ : @inproceedings{ImageNet
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 482 of file references.bib
+ : @inproceedings{DrLIMVideo
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 489 of file references.bib
+ : @inproceedings{JoanPooling
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 496 of file references.bib
+ : @inproceedings{MaxOut
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 503 of file references.bib
+ : @inproceedings{LISTA
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 510 of file references.bib
+ : @article{SFA
+ :             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 516 of file references.bib
+ : @book{Huyvarinen
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 524 of file references.bib
+ : @article{Cadieu
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 539 of file references.bib
+ : @inproceedings{CAE
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 546 of file references.bib
+ : @inproceedings{SATAE
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 553 of file references.bib
+ : @inproceedings{SSA
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 560 of file references.bib
+ : @techreport{Bengio2012
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 572 of file references.bib
+ : @techreport{DAE
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 579 of file references.bib
+ : @article{LeCun1998
+ :                   ,
+I'm skipping whatever remains of this entry
 Biblatex version: 0.8i
 Warning--Invalid format of field 'month' in entry 'alexthesis'
-You've used 28 entries,
+You've used 38 entries,
             5526 wiz_defined-function locations,
-            1270 strings with 13692 characters,
-and the built_in function-call counts, 94706 in all, are:
-= -- 3143
-> -- 4320
-< -- 964
-+ -- 1497
-- -- 1912
-* -- 9170
-:= -- 6607
+            1320 strings with 15346 characters,
+and the built_in function-call counts, 129181 in all, are:
+= -- 4245
+> -- 5923
+< -- 1327
++ -- 2029
+- -- 2632
+* -- 12634
+:= -- 8956
 add.period$ -- 0
-call.type$ -- 28
-change.case$ -- 408
+call.type$ -- 38
+change.case$ -- 532
 chr.to.int$ -- 41
-cite$ -- 56
-duplicate$ -- 9914
-empty$ -- 8736
-format.name$ -- 2651
-if$ -- 21399
+cite$ -- 76
+duplicate$ -- 13540
+empty$ -- 11892
+format.name$ -- 3669
+if$ -- 29194
 int.to.chr$ -- 0
-int.to.str$ -- 65
+int.to.str$ -- 92
 missing$ -- 0
-newline$ -- 747
-num.names$ -- 1284
-pop$ -- 7618
+newline$ -- 1019
+num.names$ -- 1743
+pop$ -- 10434
 preamble$ -- 1
-purify$ -- 564
+purify$ -- 748
 quote$ -- 0
-skip$ -- 5429
+skip$ -- 7428
 stack$ -- 0
-substring$ -- 1744
-swap$ -- 3102
-text.length$ -- 1038
-text.prefix$ -- 0
+substring$ -- 2258
+swap$ -- 4225
+text.length$ -- 1427
+text.prefix$ -- 1
 top$ -- 1
-type$ -- 1000
+type$ -- 1360
 warning$ -- 1
-while$ -- 548
+while$ -- 735
 width$ -- 0
-write$ -- 718
-(There were 3 error messages)
+write$ -- 980
+(There were 21 error messages)

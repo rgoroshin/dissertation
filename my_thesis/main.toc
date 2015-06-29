@@ -64,12 +64,30 @@
 \defcounter {refsection}{0}
 \contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{39}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{40}
+\contentsline {section}{\numberline {6.1}Introduction}{39}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {8}Conclusion}{41}
+\contentsline {section}{\numberline {6.2}Prior Work}{41}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{42}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{43}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{47}
+\defcounter {refsection}{0}
+\contentsline {section}{\numberline {6.4}Experiments}{49}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{49}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{50}
+\defcounter {refsection}{0}
+\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{53}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{56}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {8}Conclusion}{57}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Bibliography}{42}
+\contentsline {chapter}{Bibliography}{58}
