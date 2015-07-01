@@ -2,134 +2,142 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: main.aux
 The style file: biblatex.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated field_info (elt_size=4) to 10016 items from 5000.
+Reallocated field_info (elt_size=4) to 10412 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: references.bib
-Repeated entry---line 266 of file references.bib
+Repeated entry---line 277 of file references.bib
  : @inproceedings{LISTA
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 303 of file references.bib
+Repeated entry---line 314 of file references.bib
  : @inproceedings{CAE
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 347 of file references.bib
+Repeated entry---line 358 of file references.bib
  : @techreport{DAE
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 399 of file references.bib
+Repeated entry---line 410 of file references.bib
  : @article{complexCells
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 408 of file references.bib
+Repeated entry---line 419 of file references.bib
  : @inproceedings{DrLIM
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 415 of file references.bib
+Repeated entry---line 426 of file references.bib
  : @inproceedings{groupSparsity
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 453 of file references.bib
+Repeated entry---line 444 of file references.bib
+ : @article{SAE
+ :             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 464 of file references.bib
  : @article{JoanScat
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 464 of file references.bib
+Repeated entry---line 475 of file references.bib
  : @inproceedings{ImageNet
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 482 of file references.bib
+Repeated entry---line 485 of file references.bib
+ : @inproceedings{ConvSC
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 493 of file references.bib
  : @inproceedings{DrLIMVideo
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 489 of file references.bib
+Repeated entry---line 500 of file references.bib
  : @inproceedings{JoanPooling
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 496 of file references.bib
+Repeated entry---line 507 of file references.bib
  : @inproceedings{MaxOut
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 503 of file references.bib
+Repeated entry---line 514 of file references.bib
  : @inproceedings{LISTA
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 510 of file references.bib
+Repeated entry---line 521 of file references.bib
  : @article{SFA
  :             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 516 of file references.bib
+Repeated entry---line 527 of file references.bib
  : @book{Huyvarinen
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 524 of file references.bib
+Repeated entry---line 535 of file references.bib
  : @article{Cadieu
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 539 of file references.bib
+Repeated entry---line 550 of file references.bib
  : @inproceedings{CAE
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 546 of file references.bib
+Repeated entry---line 557 of file references.bib
  : @inproceedings{SATAE
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 553 of file references.bib
+Repeated entry---line 564 of file references.bib
  : @inproceedings{SSA
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 560 of file references.bib
+Repeated entry---line 571 of file references.bib
  : @techreport{Bengio2012
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 572 of file references.bib
+Repeated entry---line 583 of file references.bib
  : @techreport{DAE
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 579 of file references.bib
+Repeated entry---line 590 of file references.bib
  : @article{LeCun1998
  :                   ,
 I'm skipping whatever remains of this entry
 Biblatex version: 0.8i
 Warning--Invalid format of field 'month' in entry 'alexthesis'
-You've used 38 entries,
+You've used 41 entries,
             5526 wiz_defined-function locations,
-            1320 strings with 15346 characters,
-and the built_in function-call counts, 129181 in all, are:
-= -- 4245
-> -- 5923
-< -- 1327
-+ -- 2029
-- -- 2632
-* -- 12634
-:= -- 8956
+            1336 strings with 15806 characters,
+and the built_in function-call counts, 139658 in all, are:
+= -- 4573
+> -- 6410
+< -- 1436
++ -- 2190
+- -- 2856
+* -- 13725
+:= -- 9672
 add.period$ -- 0
-call.type$ -- 38
-change.case$ -- 532
+call.type$ -- 41
+change.case$ -- 566
 chr.to.int$ -- 41
-cite$ -- 76
-duplicate$ -- 13540
-empty$ -- 11892
-format.name$ -- 3669
-if$ -- 29194
+cite$ -- 82
+duplicate$ -- 14630
+empty$ -- 12848
+format.name$ -- 3982
+if$ -- 31561
 int.to.chr$ -- 0
-int.to.str$ -- 92
+int.to.str$ -- 99
 missing$ -- 0
-newline$ -- 1019
-num.names$ -- 1743
-pop$ -- 10434
+newline$ -- 1104
+num.names$ -- 1873
+pop$ -- 11272
 preamble$ -- 1
-purify$ -- 748
+purify$ -- 801
 quote$ -- 0
-skip$ -- 7428
+skip$ -- 8032
 stack$ -- 0
-substring$ -- 2258
-swap$ -- 4225
-text.length$ -- 1427
+substring$ -- 2419
+swap$ -- 4576
+text.length$ -- 1544
 text.prefix$ -- 1
 top$ -- 1
-type$ -- 1360
+type$ -- 1468
 warning$ -- 1
-while$ -- 735
+while$ -- 791
 width$ -- 0
-write$ -- 980
-(There were 21 error messages)
+write$ -- 1062
+(There were 23 error messages)

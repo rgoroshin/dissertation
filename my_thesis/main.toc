@@ -44,50 +44,52 @@
 \defcounter {refsection}{0}
 \contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{20}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{21}
+\contentsline {section}{\numberline {4.1}Convolutional-LISTA}{21}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.1}Introduction}{21}
+\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{23}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{23}
+\contentsline {section}{\numberline {5.1}Introduction}{23}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{25}
+\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{25}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{27}
+\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{27}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{29}
+\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{29}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{30}
+\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{31}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.5}Experimental Results}{31}
+\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{32}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.6}Conclusion}{37}
+\contentsline {section}{\numberline {5.5}Experimental Results}{33}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{39}
+\contentsline {section}{\numberline {5.6}Conclusion}{39}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.1}Introduction}{39}
+\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{41}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.2}Prior Work}{41}
+\contentsline {section}{\numberline {6.1}Introduction}{41}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{42}
+\contentsline {section}{\numberline {6.2}Prior Work}{43}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{43}
+\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{44}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{47}
+\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{45}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.4}Experiments}{49}
+\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{49}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{49}
+\contentsline {section}{\numberline {6.4}Experiments}{51}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{50}
+\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{51}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{53}
+\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{52}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{56}
+\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{55}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {8}Conclusion}{57}
+\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{58}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {8}Conclusion}{59}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Bibliography}{58}
+\contentsline {chapter}{Bibliography}{60}

@@ -42,6 +42,32 @@
   \field{year}{2014}
 \endentry
 
+\entry{FISTA}{article}{}
+  \name{author}{2}{%
+    {{Beck}{B.}%
+     {Amir}{A.}%
+     {}{}%
+     {}{}}%
+    {{Teboulle}{T.}%
+     {Marc}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {SIAM}%
+  }
+  \field{journaltitle}{SIAM journal on imaging sciences}
+  \strng{namehash}{BATM1}
+  \strng{fullhash}{BATM1}
+  \field{sortinit}{B}
+  \field{number}{1}
+  \field{pages}{183\bibrangedash 202}
+  \field{title}{A fast iterative shrinkage-thresholding algorithm for linear
+  inverse problems}
+  \field{volume}{2}
+  \field{year}{2009}
+\endentry
+
 \entry{Bengio2012}{report}{}
   \name{author}{3}{%
     {{Bengio}{B.}%
@@ -481,6 +507,42 @@
   \field{year}{2009}
 \endentry
 
+\entry{ConvSC}{inproceedings}{}
+  \name{author}{6}{%
+    {{Kavukcuoglu}{K.}%
+     {Koray}{K.}%
+     {}{}%
+     {}{}}%
+    {{Sermanet}{S.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+    {{Boureau}{B.}%
+     {Y-Lan}{Y.-L.}%
+     {}{}%
+     {}{}}%
+    {{Gregor}{G.}%
+     {Karol}{K.}%
+     {}{}%
+     {}{}}%
+    {{Mathieu}{M.}%
+     {Micha\''{e}l}{M.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KKSPBYLGKMMLY1}
+  \strng{fullhash}{KKSPBYLGKMMLY1}
+  \field{sortinit}{K}
+  \field{booktitle}{NIPS}
+  \field{title}{Learning Convolutional Feature Hierarchies for Visual
+  Recognition}
+  \field{year}{2010}
+\endentry
+
 \entry{SSA}{inproceedings}{}
   \name{author}{5}{%
     {{Kayser}{K.}%
@@ -778,6 +840,31 @@
   \field{pages}{1\bibrangedash 8}
   \field{title}{Unsupervised learning of invariant feature hierarchies with
   applications to object recognition}
+  \field{year}{2007}
+\endentry
+
+\entry{SAE}{article}{}
+  \name{author}{3}{%
+    {{Ranzato}{R.}%
+     {M.A}{M.}%
+     {}{}%
+     {}{}}%
+    {{Boureau}{B.}%
+     {Y-Lan}{Y.-L.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{Advances in neural information processing systems}
+  \strng{namehash}{RMBYLLY1}
+  \strng{fullhash}{RMBYLLY1}
+  \field{sortinit}{R}
+  \field{pages}{1185\bibrangedash 1192}
+  \field{title}{Sparse feature learning for deep belief networks}
+  \field{volume}{20}
   \field{year}{2007}
 \endentry
 
