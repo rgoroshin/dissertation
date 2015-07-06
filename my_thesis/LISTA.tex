@@ -24,7 +24,7 @@ minimizing the lasso loss.
 
 Recall the iterative ISTA algorithm for solving the relaxed sparse inference problem
 known as the lasso was discussed in Chapter \ref{chapter:introduction}. 
-Recall that the lasso loss is given by:
+The lasso loss is given by:
   
 \begin{equation}
 L_{lasso} = \frac{1}{2}\|X-W_dZ\| + \alpha |Z|_1 
@@ -36,7 +36,7 @@ algorithm as a recurrent network, and ``unrolling'' into a finite number of
 loops with shared-weight stages.  The recurrent and unrolled networks
 (three-loops) are shown in Figure \ref{fig:LISTA}. Note that
 $S=I-\frac{1}{L}W_d^T W_d$, where $W_d$ is the decoder and $L$ is the upper
-bound of $W_d^t W_d$.  The above network can be made convolutional by replacing
+bound of $W_d^t W_d$. The above network can be made convolutional by replacing
 the linear operators $W_e$ and $S$ with convolutional filter banks. In order to
 be able to compute the reconstruction error in Equation \ref{eqn:lasso}, the
 convolutional synthesis operator must produce outputs of the same size as the
@@ -45,28 +45,57 @@ the input and computing the reconstruction error in the ``valid'' regions. As
 in ordinary convolutional networks, each convolutional layer produces multiple
 output planes. For example, if the encoder takes in images of 3-input planes
 and produces $n$-output planes then the $S$ convolution stage takes in
-$n$-input planes and produces $n$-output planes. Convolutional dictonaries are
+$n$-input planes and produces $n$-output planes. Convolutional dictionaries are
 massively overcomplete, making sparse inference a potentially much
 harder problem \cite{ConvSC}. 
-     
+
+\section{Learning to Perform Sparse Inference} Training networks to perform
+sparse inference was originally proposed in \cite{groupSparsity}, the
+specialized LISTA architecture was proposed later in \cite{LISTA}. In \cite{LISTA} 
+networks were trained to explicitly minimize the $L^2$ distance between
+the predicted and ground truth codes obtained via iterative sparse inference. 
+This requires pre-training a dictionary and constructing a dataset consisting of 
+sparse codes corresponding to minima of the lasso loss. 
+However, in \cite{groupSparsity} the networks were implicitly trained to produce sparse
+codes by directly minimizing a variant of the lasso loss. The variant included an additional 
+term which encouraged the predicted codes to be close to the codes which minimize the lasso loss. 
+In the context of dictionary learning it is desirable to learn the encoder and decoder jointly, 
+(i.e. training an auto-encoder) as opposed to learning a decoder first then training an encoder to predict
+the sparse codes. This section will present experimental results which empirically answer the following questions: 
+\begin{itemize} 
+\item{Does the convolutional LISTA architecture outperform other architectures when minimizing the lasso loss with a fixed dictionary?} 
+\item{Does the convolutional LISTA architecture outperform other architectures when minimizing the lasso loss with a learned dictionary?} 
+\end{itemize}
+The following experiments were performed on the whitened CIFAR-10 dataset. 
+A pre-trained decoder was obtained via convolutional sparse coding with FISTA inference \cite{ConvSC}.
+This decoder was used to perform the fixed-dictionary experiments. The decoder consists of 32-convolutional $3\times9\times9$ filters shown in Figure \ref{fig:FISTA_decoder}.  
+The top plot of Figure \ref{fig:learning_curves} presents the learning curves  
+
+\begin{figure}
+\centering
+\includegraphics[scale=2]{./figures/LISTA/FISTA_decoder.png}
+\caption{Pre-trained decoder used for fixed-decoder experiments} 
+\label{fig:FISTA_decoder} 
+\end{figure}  
+
 \begin{figure}
 \centering
 \includegraphics[scale=0.75]{./figures/LISTA/code_pred.pdf}
 \caption{Sparse inference learning curves} 
-\label{fig:LISTA} 
+\label{fig:learning_curves} 
 \end{figure}  
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.75]{./figures/LISTA/fixed_decoder_loss.pdf}
 \caption{Lasso Loss} 
-\label{fig:LISTA} 
+\label{fig:lasso_loss} 
 \end{figure}  
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.75]{./figures/LISTA/fixed_decoder_scatter.pdf}
 \caption{Scatter Plot} 
-\label{fig:LISTA} 
+\label{fig:scatter_fixed} 
 \end{figure}  
 
