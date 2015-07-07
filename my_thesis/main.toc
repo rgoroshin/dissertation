@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}
 \contentsline {section}{List of Figures}{vii}
 \defcounter {refsection}{0}
-\contentsline {section}{List of Tables}{x}
+\contentsline {section}{List of Tables}{xi}
 \defcounter {refsection}{0}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \defcounter {refsection}{0}
@@ -50,50 +50,52 @@
 \defcounter {refsection}{0}
 \contentsline {subsection}{\numberline {4.2.1}Sparse Inference in a Fixed Dictionary}{25}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{29}
+\contentsline {subsection}{\numberline {4.2.2}Sparse Convolutional Auto-encoders}{28}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.1}Introduction}{29}
+\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{30}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{31}
+\contentsline {section}{\numberline {5.1}Introduction}{30}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{33}
+\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{32}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{35}
+\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{34}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{37}
+\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{36}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{38}
+\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{38}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.5}Experimental Results}{39}
+\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{39}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.6}Conclusion}{45}
+\contentsline {section}{\numberline {5.5}Experimental Results}{40}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{47}
+\contentsline {section}{\numberline {5.6}Conclusion}{46}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.1}Introduction}{47}
+\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{48}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.2}Prior Work}{49}
+\contentsline {section}{\numberline {6.1}Introduction}{48}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{50}
+\contentsline {section}{\numberline {6.2}Prior Work}{50}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{51}
+\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{51}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{55}
+\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{52}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.4}Experiments}{57}
+\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{56}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{57}
+\contentsline {section}{\numberline {6.4}Experiments}{58}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{58}
+\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{58}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{61}
+\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{59}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{64}
+\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{62}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {8}Conclusion}{65}
+\contentsline {chapter}{\numberline {7}Adversarial Inpainting}{65}
+\defcounter {refsection}{0}
+\contentsline {chapter}{\numberline {8}Conclusion}{66}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Bibliography}{66}
+\contentsline {chapter}{Bibliography}{67}
