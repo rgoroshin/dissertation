@@ -1,14 +1,30 @@
 Much of computer vision has been devoted to the question of representation
-through feature extraction.  Useful features transform the raw pixel values to
-a representation in which common problems such as identification, tracking, and
-segmentation of objects are easier to solve. Recently, deep feature hierarchies
-have proven to be immensely successful at solving many problems in computer
-vision. For specific problems, these hierarchies are learned from the input
-data itself along with problem-specific label information by minimizing an
-objective function.  Recent findings suggest that the learned features are not
-problem specific and can be transfered across multiple visual tasks, suggesting
-that there exists a generically useful feature representation for natural
-visual data.    
+through feature extraction. Useful features transform the raw pixel intensity
+values to a representation in which common problems such as identification,
+tracking, and segmentation of objects are easier to solve. Recently, deep
+feature hierarchies have proven to be immensely successful at solving many
+problems in computer vision. In the supervised setting, these hierarchies are
+trained to solve specific problems by minimizing an objective function of the
+data and problem specific label information. Recent findings suggest that
+despite being trained on a specific task, the learned features can be
+transferred across multiple visual tasks. These findings suggests that there
+exists a generically useful feature representation for natural visual data.    
 
 This work aims to uncover the principles that lead to these generic feature
-representations without resorting to problem specific label information. 
+representations in the unsupervised setting that doesn't resort to problem
+specific label information. We begin by reviewing relevant prior work,
+particularly the literature on auto-encoder networks and energy based learning.
+We introduce a new regularizer for auto-encoders which plays an analogous role
+to the partition function in probabilistic graphical models.  Next we explore
+the role of specialized encoder architectures for sparse inference. The
+remainder of the thesis explores visual feature learning from video. We
+establish a connection between slow-feature learning and metric learning, and
+experimentally demonstrate that semantically coherent metrics can be learned
+from natural videos. Finally, we posit that useful features linearize
+natural image transformations in video. To this end, we introduce a new
+architecture and loss for training deep feature hierarchies that linearize the
+transformations observed in unlabeled natural video sequences by learning to
+predict future frames in the presence of uncertainty.           
+
+
+ 
