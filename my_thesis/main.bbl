@@ -259,6 +259,32 @@
   \field{year}{2012}
 \endentry
 
+\entry{felleman1991}{article}{}
+  \name{author}{2}{%
+    {{Felleman}{F.}%
+     {Daniel~J}{D.~J.}%
+     {}{}%
+     {}{}}%
+    {{Van~Essen}{V.~E.}%
+     {David~C}{D.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oxford Univ Press}%
+  }
+  \field{journaltitle}{Cerebral cortex}
+  \strng{namehash}{FDJVEDC1}
+  \strng{fullhash}{FDJVEDC1}
+  \field{sortinit}{F}
+  \field{number}{1}
+  \field{pages}{1\bibrangedash 47}
+  \field{title}{Distributed hierarchical processing in the primate cerebral
+  cortex}
+  \field{volume}{1}
+  \field{year}{1991}
+\endentry
+
 \entry{MaxOut}{inproceedings}{}
   \name{author}{5}{%
     {{Goodfellow}{G.}%
@@ -410,6 +436,32 @@
   \field{pages}{44\bibrangedash 51}
   \field{title}{Transforming auto-encoders}
   \field{year}{2011}
+\endentry
+
+\entry{hubel1968}{article}{}
+  \name{author}{2}{%
+    {{Hubel}{H.}%
+     {David~H}{D.~H.}%
+     {}{}%
+     {}{}}%
+    {{Wiesel}{W.}%
+     {Torsten~N}{T.~N.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Wiley Online Library}%
+  }
+  \field{journaltitle}{The Journal of physiology}
+  \strng{namehash}{HDHWTN1}
+  \strng{fullhash}{HDHWTN1}
+  \field{sortinit}{H}
+  \field{number}{1}
+  \field{pages}{215\bibrangedash 243}
+  \field{title}{Receptive fields and functional architecture of monkey striate
+  cortex}
+  \field{volume}{195}
+  \field{year}{1968}
 \endentry
 
 \entry{Huyvarinen}{book}{}
