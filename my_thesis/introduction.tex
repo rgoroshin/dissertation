@@ -1,33 +1,88 @@
 Vision is the ability to make inferences about the natural world from the
 patterns of light captured by the eyes of living organism or cameras in
-machines. Consider a digital image which is a discrete two dimensional array of
-intensity values referred to as pixels. Though each pixel corresponds to a
-potentially independent light intensity measurement, in practice pixel
-intesities are strongly spatially correlated in natural images. However, this
-structure is not caputred by the camera sensor itself; each pixel is stored as
-a separate light intensity measurement in memory. Therefore it is natural to 
-think of raw images as points in high dimensional space, where the dimension is 
-equal to the number of pixels in the image.         
+machines. A digital image is a discrete two dimensional array of intensity
+values referred to as pixels. Though each pixel corresponds to a potentially
+independent light intensity measurement, these intesities exhibit strong
+spatial correlations in natural images \cite{simoncelli2001}.  However, this
+structure is not explicitly captured by the camera sensor; each pixel is stored
+as a separate light intensity measurement in memory. Therefore it is natural to
+think of raw images as points in high dimensional space in which each pixel
+corresponds to an independant variable. Because of this structure, or
+dependency between adjacent pixels, the number of possible \emph{natural}
+images is far smaller than the number of possible images.  This observation has
+a geometric interpretation: the \emph{intrinsic} dimension of natural images is
+much lower than the ambient dimension, thus natural images are concentrated
+around a low-dimensional ``manifold''
+\cite{bengio2013,tenenbaum2000,roweis2000}. Similarly, videos can be imagined
+as one dimensional trajectories on this manifold parametrized by time
+\cite{goroshin2015}. Figure \ref{fig:structure} is an illustrative
+visualization of the distribution of random images (left) and natural images
+(right). 
 
-\begin{figure}[ht]
+The role of visual features is to transform the raw input image to a
+representation that facilitates inferences about the natural world by modeling
+commonly occurring dependencies between input pixels. This can be restated from
+the manifold perspective: visual features model the natural data manifold.
+This so called ``manifold theory of natural data'' allows for a more
+geometrically intuitive interpretation of problems in computer vision. Indeed,
+many feature learning algorithms can be related or even derived using the
+manifold theory perspective of natural data. 
+
+\begin{figure} 
 \centering
-\includegraphics[scale=0.3]{./figures/introduction/structure.png}
-\caption{Top left: random image, Top right: natural image, Bottom left:
-visualization of unstructured data, Bottom right: visualization of data with
-intrinsic structure} \label{fig:LISTA} 
+\includegraphics[scale=0.3]{./figures/introduction/structure.png} 
+\caption{Top left: random image, Top right: natural image, Bottom left: visualization of
+unstructured data, Bottom right: visualization of data with intrinsic
+structure} 
+\label{fig:structure} 
 \end{figure}  
 
+Historically, approaches for constructing visual features in computer vision
+have been broadly divided into two categories: ``hand-crafted'' features are
+designed by a human expert, whereas ``learned'' features use techniques from
+machine learning to learn the features automatically from the problem related
+data itself. Both types of features are often optimized in order to solve
+specific problems. Examples of hand crafted features (also called
+``descriptors'') include the Scale Invariant Feature Transform (SIFT)
+\cite{SIFT}, Histogram of Gradients (HoG) \cite{HoG}, and ``gist'' \cite{gist}
+features. Though these hand crafted features paved the way for many
+breakthroughs in computer vision, recent breakthroughs have largely been
+attributed to feature learning with deep convolutional networks (ConvNets)
+\cite{fukushima1980, LeCun1998, ImageNet}.  Remarkably, these hand-crafted
+features bear striking similarity to shallow ConvNets. The main differences
+between ConvNets and these features are that: (i) ConvNet features are
+optimized or ``learned'' for specific problems, and (ii) they are arranged and
+learned in a hierarchical fashion. Traditional ConvNet layers are composed of
+trainable convolutional filter banks, interspersed with point-wise
+nonlinearities and subsampling (or ``pooling'') layers.  A now famous ConvNet
+architecture, dubbed LeNet5 \cite{LeCun1998} is shown in Figure \ref{fig:LeNet5}.       
 
-It is been a long standing belief in neuroscience that the visual
-cortex has a hierarchical organization \cite{hubel1968,felleman1991}. Simply
-put, there is a sequence of processing steps which eventually results in our
-visual perception of the world. Many recent successes in computer vision have
-been attributed to Convolutional Networks, which make use of deep hierarchical
-representations heavily inspired by the visual systems of living organism.    
-Though these networks are not completely understood, it is clear that 
-the sequence of operations corresponding to each layer transforms the data in 
-a way that makes the task easier to solve for the final layer, which is often 
-a linear operator.    
+\begin{figure} 
+\centering
+\includegraphics[scale=0.5]{./figures/introduction/lenet5.png} 
+\caption{The LeNet5 network was trained to recognize hand written characters in order to 
+automatically process bank checks} 
+\label{fig:LeNet5} 
+\end{figure}  
+
+Interestingly, the hierarchical representations of ConvNets were inspired by
+studies of natural visual systems. A long standing belief in neuroscience is
+that the visual cortex also has a hierarchical organization
+\cite{hubel1968,felleman1991}. Simply put, there is a sequence of processing
+steps which eventually results in our visual perception of the world. Recent
+work has revealed strong empirical similarities between the artificial feature
+hierarchies of ConvNets and natural visual hierarchies of the animal visual
+system \cite{yamins2014}. Though the hierarchical representations learned by
+ConvNets are not completely understood, it is clear that the sequence of
+operations corresponding to each layer transforms the data in a way that makes
+the task easier to solve for the final layer, often a linear operator.    
+
+Recent work suggests that early stages of the hierarchy learned by ConvNets 
+on specific \emph{supervised learning} tasks such as classification, can be transfered 
+to other tasks, such as segmentation \cite{yosinski2014}. This finding suggests 
+that these representations are not task specific but are generically useful. 
+The goal of this thesis is to explore \emph{unsupervised learning} principles which lead
+to generically useful image representations.    
 
 
 
@@ -35,4 +90,3 @@ a linear operator.
 
 
 
- 

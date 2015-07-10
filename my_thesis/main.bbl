@@ -68,6 +68,36 @@
   \field{year}{2009}
 \endentry
 
+\entry{bengio2013}{article}{}
+  \name{author}{3}{%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Courville}{C.}%
+     {Aaron}{A.}%
+     {}{}%
+     {}{}}%
+    {{Vincent}{V.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \field{journaltitle}{Pattern Analysis and Machine Intelligence, IEEE
+  Transactions on}
+  \strng{namehash}{BYCAVP1}
+  \strng{fullhash}{BYCAVP1}
+  \field{sortinit}{B}
+  \field{number}{8}
+  \field{pages}{1798\bibrangedash 1828}
+  \field{title}{Representation learning: A review and new perspectives}
+  \field{volume}{35}
+  \field{year}{2013}
+\endentry
+
 \entry{Bengio2012}{report}{}
   \name{author}{3}{%
     {{Bengio}{B.}%
@@ -234,6 +264,31 @@
   \field{year}{2014}
 \endentry
 
+\entry{HoG}{inproceedings}{}
+  \name{author}{2}{%
+    {{Dalal}{D.}%
+     {Navneet}{N.}%
+     {}{}%
+     {}{}}%
+    {{Triggs}{T.}%
+     {Bill}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{DNTB1}
+  \strng{fullhash}{DNTB1}
+  \field{sortinit}{D}
+  \field{booktitle}{Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}
+  \field{pages}{886\bibrangedash 893}
+  \field{title}{Histograms of oriented gradients for human detection}
+  \field{volume}{1}
+  \field{year}{2005}
+\endentry
+
 \entry{DHS}{book}{}
   \name{author}{3}{%
     {{Duda}{D.}%
@@ -283,6 +338,28 @@
   cortex}
   \field{volume}{1}
   \field{year}{1991}
+\endentry
+
+\entry{fukushima1980}{article}{}
+  \name{author}{1}{%
+    {{Fukushima}{F.}%
+     {Kunihiko}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \field{journaltitle}{Biological cybernetics}
+  \strng{namehash}{FK1}
+  \strng{fullhash}{FK1}
+  \field{sortinit}{F}
+  \field{number}{4}
+  \field{pages}{193\bibrangedash 202}
+  \field{title}{Neocognitron: A self-organizing neural network model for a
+  mechanism of pattern recognition unaffected by shift in position}
+  \field{volume}{36}
+  \field{year}{1980}
 \endentry
 
 \entry{MaxOut}{inproceedings}{}
@@ -345,6 +422,29 @@
   \field{sortinit}{G}
   \field{title}{Unsupervised Learning of Spatiotemporally Coherent Metrics}
   \field{year}{2014}
+\endentry
+
+\entry{goroshin2015}{article}{}
+  \name{author}{3}{%
+    {{Goroshin}{G.}%
+     {Ross}{R.}%
+     {}{}%
+     {}{}}%
+    {{Mathieu}{M.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{arXiv preprint arXiv:1506.03011}
+  \strng{namehash}{GRMMLY1}
+  \strng{fullhash}{GRMMLY1}
+  \field{sortinit}{G}
+  \field{title}{Learning to Linearize Under Uncertainty}
+  \field{year}{2015}
 \endentry
 
 \entry{SATAE}{inproceedings}{}
@@ -729,6 +829,27 @@
   \field{year}{2014}
 \endentry
 
+\entry{SIFT}{inproceedings}{}
+  \name{author}{1}{%
+    {{Lowe}{L.}%
+     {David~G}{D.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Ieee}%
+  }
+  \strng{namehash}{LDG1}
+  \strng{fullhash}{LDG1}
+  \field{sortinit}{L}
+  \field{booktitle}{Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}
+  \field{pages}{1150\bibrangedash 1157}
+  \field{title}{Object recognition from local scale-invariant features}
+  \field{volume}{2}
+  \field{year}{1999}
+\endentry
+
 \entry{DrLIMVideo}{inproceedings}{}
   \name{author}{3}{%
     {{Mobahi}{M.}%
@@ -750,6 +871,32 @@
   \field{booktitle}{ICML}
   \field{title}{Deep Learning from Temporal Coherence in Video}
   \field{year}{2009}
+\endentry
+
+\entry{gist}{article}{}
+  \name{author}{2}{%
+    {{Oliva}{O.}%
+     {Aude}{A.}%
+     {}{}%
+     {}{}}%
+    {{Torralba}{T.}%
+     {Antonio}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \field{journaltitle}{International journal of computer vision}
+  \strng{namehash}{OATA1}
+  \strng{fullhash}{OATA1}
+  \field{sortinit}{O}
+  \field{number}{3}
+  \field{pages}{145\bibrangedash 175}
+  \field{title}{Modeling the shape of the scene: A holistic representation of
+  the spatial envelope}
+  \field{volume}{42}
+  \field{year}{2001}
 \endentry
 
 \entry{sparseCoding}{article}{}
@@ -1023,6 +1170,87 @@
   \field{year}{2011}
 \endentry
 
+\entry{roweis2000}{article}{}
+  \name{author}{2}{%
+    {{Roweis}{R.}%
+     {Sam~T}{S.~T.}%
+     {}{}%
+     {}{}}%
+    {{Saul}{S.}%
+     {Lawrence~K}{L.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {American Association for the Advancement of Science}%
+  }
+  \field{journaltitle}{Science}
+  \strng{namehash}{RSTSLK1}
+  \strng{fullhash}{RSTSLK1}
+  \field{sortinit}{R}
+  \field{number}{5500}
+  \field{pages}{2323\bibrangedash 2326}
+  \field{title}{Nonlinear dimensionality reduction by locally linear embedding}
+  \field{volume}{290}
+  \field{year}{2000}
+\endentry
+
+\entry{simoncelli2001}{article}{}
+  \name{author}{2}{%
+    {{Simoncelli}{S.}%
+     {Eero~P}{E.~P.}%
+     {}{}%
+     {}{}}%
+    {{Olshausen}{O.}%
+     {Bruno~A}{B.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139,
+  USA}%
+  }
+  \field{journaltitle}{Annual review of neuroscience}
+  \strng{namehash}{SEPOBA1}
+  \strng{fullhash}{SEPOBA1}
+  \field{sortinit}{S}
+  \field{number}{1}
+  \field{pages}{1193\bibrangedash 1216}
+  \field{title}{Natural image statistics and neural representation}
+  \field{volume}{24}
+  \field{year}{2001}
+\endentry
+
+\entry{tenenbaum2000}{article}{}
+  \name{author}{3}{%
+    {{Tenenbaum}{T.}%
+     {Joshua~B}{J.~B.}%
+     {}{}%
+     {}{}}%
+    {{De~Silva}{D.~S.}%
+     {Vin}{V.}%
+     {}{}%
+     {}{}}%
+    {{Langford}{L.}%
+     {John~C}{J.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {American Association for the Advancement of Science}%
+  }
+  \field{journaltitle}{Science}
+  \strng{namehash}{TJBDSVLJC1}
+  \strng{fullhash}{TJBDSVLJC1}
+  \field{sortinit}{T}
+  \field{number}{5500}
+  \field{pages}{2319\bibrangedash 2323}
+  \field{title}{A global geometric framework for nonlinear dimensionality
+  reduction}
+  \field{volume}{290}
+  \field{year}{2000}
+\endentry
+
 \entry{DAE}{inproceedings}{}
   \name{author}{4}{%
     {{Vincent}{V.}%
@@ -1115,6 +1343,76 @@
   \field{sortinit}{W}
   \field{title}{Slow Feature Analysis: Unsupervised Learning of Invariances}
   \field{year}{2002}
+\endentry
+
+\entry{yamins2014}{article}{}
+  \name{author}{6}{%
+    {{Yamins}{Y.}%
+     {Daniel~LK}{D.~L.}%
+     {}{}%
+     {}{}}%
+    {{Hong}{H.}%
+     {Ha}{H.}%
+     {}{}%
+     {}{}}%
+    {{Cadieu}{C.}%
+     {Charles~F}{C.~F.}%
+     {}{}%
+     {}{}}%
+    {{Solomon}{S.}%
+     {Ethan~A}{E.~A.}%
+     {}{}%
+     {}{}}%
+    {{Seibert}{S.}%
+     {Darren}{D.}%
+     {}{}%
+     {}{}}%
+    {{DiCarlo}{D.}%
+     {James~J}{J.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {National Acad Sciences}%
+  }
+  \field{journaltitle}{Proceedings of the National Academy of Sciences}
+  \strng{namehash}{YDLHHCCFSEASDDJJ1}
+  \strng{fullhash}{YDLHHCCFSEASDDJJ1}
+  \field{sortinit}{Y}
+  \field{number}{23}
+  \field{pages}{8619\bibrangedash 8624}
+  \field{title}{Performance-optimized hierarchical models predict neural
+  responses in higher visual cortex}
+  \field{volume}{111}
+  \field{year}{2014}
+\endentry
+
+\entry{yosinski2014}{inproceedings}{}
+  \name{author}{4}{%
+    {{Yosinski}{Y.}%
+     {Jason}{J.}%
+     {}{}%
+     {}{}}%
+    {{Clune}{C.}%
+     {Jeff}{J.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Lipson}{L.}%
+     {Hod}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YJCJBYLH1}
+  \strng{fullhash}{YJCJBYLH1}
+  \field{sortinit}{Y}
+  \field{booktitle}{Advances in Neural Information Processing Systems}
+  \field{pages}{3320\bibrangedash 3328}
+  \field{title}{How transferable are features in deep neural networks?}
+  \field{year}{2014}
 \endentry
 
 \entry{zeiler2010}{inproceedings}{}
