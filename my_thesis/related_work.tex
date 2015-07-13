@@ -1,0 +1,72 @@
+\begin{table} 
+\begin{center} 
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+\emph{Algorithm} & \emph{Model} & \emph{Encode} & \emph{Decode} & \emph{Relate Enc. \& Dec.}\\
+%\thickhline
+\hline \hline 
+\cellcolor{red}PCA & Global Linear &\checkmark & \checkmark & $W_D = W_E ^T$\\
+\hline
+\cellcolor{red}ICA & Global Linear &\checkmark & \checkmark & $W_D = W_E ^T$\\
+\hline
+\cellcolor{yellow}Sparse Coding & Local Linear &\checkmark & \checkmark & $W_D = W_E ^T$ \\
+\hline 
+\cellcolor{yellow}PSD \& LISTA & Local Linear &\checkmark & \checkmark & Learned $W_E$\\
+\hline
+\cellcolor{lightblue}DrLIM & Nonlinear & \checkmark & X & Enc. Only\\
+\hline
+\cellcolor{lightblue}Chapter \ref{chapter:slow} & Nonlinear & \checkmark & X & Enc. Only\\
+\hline
+\cellcolor{lightblue}Chapter \ref{chapter:linear} & Nonlinear & \checkmark & \checkmark & Enc. Only\\
+\hline
+Adversarial Networks & Nonlinear & X & \checkmark & Dec. Only \\
+\hline 
+\cellcolor{green}Auto-Encoders & Nonlinear & \checkmark & \checkmark & Learned $W_E$ \& $W_D$ \\
+\hline 
+\end{tabular} \\
+\vspace{0.25cm} \hspace{0.25cm}  
+\begin{tabular}{|c|}
+\hline 
+\emph{Model Prior}\\  
+\hline \hline
+\cellcolor{red} De-correlation/Independence  \\
+\hline
+\cellcolor{yellow} Sparsity \\
+\hline
+\cellcolor{lightblue} Metric Learning/Geometric Prior  \\
+\hline
+\cellcolor{green} All of the Above \\
+\hline
+None \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Summary of unsupervised feature learning algorithms and their properties} 
+\end{table} 
+
+Unsupervised feature learning dates back to the invention of Principal
+Component Analysis (PCA) in 1901 by Karl Pearson \cite{PCA}. As mentioned in
+Chapter \ref{chapter:introduction}, feature learning algorithms model
+intrinsically low dimensional data embedded in a high dimensional ambient
+space. These models can usually be decomposed into two parts: a mapping from
+the input space to the feature space, called encoding, and
+mapping the feature space back to the input space, called decoding. If the encoding 
+or decoding processes have corresponding functional forms, they are 
+refferred to as the ``encoder'' and ``decoder'', respectively.  From the
+natural image manifold persepective, ideal encodings map the extrinsic
+coordinates (i.e. pixel values) to intrinisic manifold coordinates. It is hoped
+that these intrinsic coordinates correspond to physical attributes of the
+natural world, such as the presence of certain objects in the scene, their
+properties, etc. \cite{nair2008,capsules}     
+
+Sparse inference refers to the problem of finding the coefficients $z$ which
+reconstruct the input $x$ as a sparse linear combination of some basis elements
+contained an over-complete dictionary $W_d$. In general, sparse inference is an 
+intractable combinatorial problem. A relaxation of the sparse inference problem is
+the so called lasso, 
+
+\begin{equation}
+L_{lasso} = \min_Z \frac{1}{2}\|X-W_dZ\| + \alpha |Z|_1 
+\end{equation} 
+
+ 
