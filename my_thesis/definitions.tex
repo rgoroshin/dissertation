@@ -33,6 +33,7 @@
 \usepackage{verbatim}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{color, colortbl}
 %\usepackage[backend=biber, style=numeric, maxnames=99, backref=false]{biblatex}
 \usepackage[style=numeric, maxnames=99, backref=false]{biblatex}
 
@@ -67,6 +68,13 @@
 \newcommand{\eps}{\varepsilon}
 \newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
 \DeclareMathOperator*{\argmax}{arg\,max}
+
+\definecolor{lightblue}{RGB}{128,179,255}
+
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+    \futurelet \reserved@a \@xhline}
+\usepackage{color, colortbl}
 
 \long\def\tbl#1#2
 {

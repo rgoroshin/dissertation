@@ -894,6 +894,34 @@
   \field{year}{2009}
 \endentry
 
+\entry{nair2008}{incollection}{}
+  \name{author}{3}{%
+    {{Nair}{N.}%
+     {Vinod}{V.}%
+     {}{}%
+     {}{}}%
+    {{Susskind}{S.}%
+     {Josh}{J.}%
+     {}{}%
+     {}{}}%
+    {{Hinton}{H.}%
+     {Geoffrey~E}{G.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \strng{namehash}{NVSJHGE1}
+  \strng{fullhash}{NVSJHGE1}
+  \field{sortinit}{N}
+  \field{booktitle}{Artificial Neural Networks-ICANN 2008}
+  \field{pages}{971\bibrangedash 981}
+  \field{title}{Analysis-by-synthesis by learning to invert generative black
+  boxes}
+  \field{year}{2008}
+\endentry
+
 \entry{gist}{article}{}
   \name{author}{2}{%
     {{Oliva}{O.}%
@@ -1002,6 +1030,21 @@
   \field{title}{Learning and transferring mid-level image representations using
   convolutional neural networks}
   \field{year}{2014}
+\endentry
+
+\entry{PCA}{article}{}
+  \name{author}{1}{%
+    {{Pearson}{P.}%
+     {K}{K}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PK1}
+  \strng{fullhash}{PK1}
+  \field{sortinit}{P}
+  \field{title}{On Lines and Planes of Closest Fit to System of Points in
+  Space. Philiosophical Magazine, 2, 559-572}
+  \field{year}{1901}
 \endentry
 
 \entry{SAE1}{inproceedings}{}
