@@ -340,6 +340,27 @@
   \field{year}{1991}
 \endentry
 
+\entry{foldiak1991}{article}{}
+  \name{author}{1}{%
+    {{F{\"o}ldi{\'a}k}{F.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {MIT Press}%
+  }
+  \field{journaltitle}{Neural Computation}
+  \strng{namehash}{FP1}
+  \strng{fullhash}{FP1}
+  \field{sortinit}{F}
+  \field{number}{2}
+  \field{pages}{194\bibrangedash 200}
+  \field{title}{Learning invariance from transformation sequences}
+  \field{volume}{3}
+  \field{year}{1991}
+\endentry
+
 \entry{fukushima1980}{article}{}
   \name{author}{1}{%
     {{Fukushima}{F.}%
@@ -1195,6 +1216,35 @@
   \field{year}{2000}
 \endentry
 
+\entry{sharma2000}{article}{}
+  \name{author}{3}{%
+    {{Sharma}{S.}%
+     {Jitendra}{J.}%
+     {}{}%
+     {}{}}%
+    {{Angelucci}{A.}%
+     {Alessandra}{A.}%
+     {}{}%
+     {}{}}%
+    {{Sur}{S.}%
+     {Mriganka}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Nature Publishing Group}%
+  }
+  \field{journaltitle}{Nature}
+  \strng{namehash}{SJAASM1}
+  \strng{fullhash}{SJAASM1}
+  \field{sortinit}{S}
+  \field{number}{6780}
+  \field{pages}{841\bibrangedash 847}
+  \field{title}{Induction of visual orientation modules in auditory cortex}
+  \field{volume}{404}
+  \field{year}{2000}
+\endentry
+
 \entry{simoncelli2001}{article}{}
   \name{author}{2}{%
     {{Simoncelli}{S.}%
@@ -1219,6 +1269,27 @@
   \field{title}{Natural image statistics and neural representation}
   \field{volume}{24}
   \field{year}{2001}
+\endentry
+
+\entry{sinha2013}{article}{}
+  \name{author}{1}{%
+    {{Sinha}{S.}%
+     {Pawan}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Nature Publishing Group}%
+  }
+  \field{journaltitle}{Scientific American}
+  \strng{namehash}{SP1}
+  \strng{fullhash}{SP1}
+  \field{sortinit}{S}
+  \field{number}{1}
+  \field{pages}{48\bibrangedash 55}
+  \field{title}{Once blind and now they see}
+  \field{volume}{309}
+  \field{year}{2013}
 \endentry
 
 \entry{tenenbaum2000}{article}{}

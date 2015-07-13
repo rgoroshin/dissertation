@@ -12,92 +12,90 @@
 \defcounter {refsection}{0}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {1.1}Thesis Outline}{4}
+\contentsline {section}{\numberline {1.1}Thesis Outline and Summary of Contributions}{4}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {1.2}Summary of Contributions}{4}
+\contentsline {chapter}{\numberline {2}Related Work}{6}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {2}Related Work}{5}
+\contentsline {chapter}{\numberline {3}Saturating Auto-Encoders}{7}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {3}Saturating Auto-Encoders}{6}
+\contentsline {section}{\numberline {3.1}Introduction}{7}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.1}Introduction}{6}
+\contentsline {section}{\numberline {3.2}Latent State Regularization}{8}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.2}Latent State Regularization}{7}
+\contentsline {subsection}{\numberline {3.2.1}Saturating Auto-Encoder through Complementary Nonlinearities}{9}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.2.1}Saturating Auto-Encoder through Complementary Nonlinearities}{8}
+\contentsline {section}{\numberline {3.3}Effect of the Saturation Regularizer}{12}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.3}Effect of the Saturation Regularizer}{11}
+\contentsline {subsection}{\numberline {3.3.1}Visualizing the Energy Landscape}{12}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.1}Visualizing the Energy Landscape}{11}
+\contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{13}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{12}
+\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{17}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{16}
+\contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{17}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{16}
+\contentsline {section}{\numberline {3.4}Experimental Details}{18}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.4}Experimental Details}{17}
+\contentsline {section}{\numberline {3.5}Discussion}{19}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.5}Discussion}{18}
+\contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{20}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{19}
+\contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{22}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{21}
+\contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{22}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{21}
+\contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{24}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{23}
+\contentsline {section}{\numberline {4.1}Convolutional-LISTA}{25}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {4.1}Convolutional-LISTA}{24}
+\contentsline {section}{\numberline {4.2}Learning to Perform Sparse Inference}{26}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {4.2}Learning to Perform Sparse Inference}{25}
+\contentsline {subsection}{\numberline {4.2.1}Sparse Inference in a Fixed Dictionary}{29}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {4.2.1}Sparse Inference in a Fixed Dictionary}{28}
+\contentsline {subsection}{\numberline {4.2.2}Sparse Convolutional Auto-encoders}{32}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {4.2.2}Sparse Convolutional Auto-encoders}{31}
+\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{34}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {5}Learning Spatiotemporally Coherent Metrics}{33}
+\contentsline {section}{\numberline {5.1}Introduction}{34}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.1}Introduction}{33}
+\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{36}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.2}Contributions and Prior Work}{35}
+\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{38}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.3}Slowness as Metric Learning }{37}
+\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{40}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.4}Slow Feature Pooling Auto-Encoders}{39}
+\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{42}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {5.4.1}Fully-Connected Architecture}{41}
+\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{43}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {5.4.2}Convolutional Architecture}{42}
+\contentsline {section}{\numberline {5.5}Experimental Results}{44}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.5}Experimental Results}{43}
+\contentsline {section}{\numberline {5.6}Conclusion}{50}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {5.6}Conclusion}{49}
+\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{52}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {6}Learning to Linearize under Uncertainty}{51}
+\contentsline {section}{\numberline {6.1}Introduction}{52}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.1}Introduction}{51}
+\contentsline {section}{\numberline {6.2}Prior Work}{54}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.2}Prior Work}{53}
+\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{55}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.3}Learning Linearized Representations}{54}
+\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{56}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.3.1}Phase Pooling}{55}
+\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{60}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.3.2}Addressing Uncertainty}{59}
+\contentsline {section}{\numberline {6.4}Experiments}{62}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {6.4}Experiments}{61}
+\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{62}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.1}Shallow Architecture Trained on Natural Data}{61}
+\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{63}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.2}Deep Architecture trained on NORB}{62}
+\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{66}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {6.4.3}Uncertainty}{65}
-\defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {7}Conclusion}{68}
+\contentsline {chapter}{\numberline {7}Conclusion}{69}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
 \setcounter {tocdepth}{+1}
 \defcounter {refsection}{0}
-\contentsline {chapter}{Bibliography}{69}
+\contentsline {chapter}{Bibliography}{70}
