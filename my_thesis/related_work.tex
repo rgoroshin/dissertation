@@ -2,32 +2,32 @@
 \begin{center} 
 \begin{tabular}{|c||c|c|c|c|}
 \hline
-\emph{Algorithm} & \emph{Model} & \emph{Encode} & \emph{Decode} & \emph{Relate Enc. \& Dec.}\\
+\emph{Algorithm} & \emph{Manifold Model} & \emph{Encode} & \emph{Decode} & \emph{Relate Enc. \& Dec.}\\
 %\thickhline
 \hline \hline 
-\cellcolor{red}PCA & Global Linear &\checkmark & \checkmark & $W_D = W_E ^T$\\
+\cellcolor{red}PCA & Linear &\checkmark & \checkmark & $W_D = W_E ^T$\\
 \hline
-\cellcolor{red}ICA & Global Linear &\checkmark & \checkmark & $W_D = W_E ^T$\\
+\cellcolor{red}ICA & Linear &\checkmark & \checkmark & $W_D = W_E ^T$\\
 \hline
-\cellcolor{yellow}Sparse Coding & Local Linear &\checkmark & \checkmark & $W_D = W_E ^T$ \\
+\cellcolor{yellow}Sparse Coding & Local Linear &\checkmark & \checkmark & Separate \\
 \hline 
-\cellcolor{yellow}PSD \& LISTA & Local Linear &\checkmark & \checkmark & Learned $W_E$\\
+\cellcolor{yellow}PSD \& LISTA & Local Linear &\checkmark & \checkmark & Separate\\
 \hline
 \cellcolor{lightblue}DrLIM & Nonlinear & \checkmark & X & Enc. Only\\
 \hline
 \cellcolor{lightblue}Chapter \ref{chapter:slow} & Nonlinear & \checkmark & X & Enc. Only\\
 \hline
-\cellcolor{lightblue}Chapter \ref{chapter:linear} & Nonlinear & \checkmark & \checkmark & Enc. Only\\
+\cellcolor{lightblue}Chapter \ref{chapter:linear} & Nonlinear & \checkmark & \checkmark & Separate\\
 \hline
 Adversarial Networks & Nonlinear & X & \checkmark & Dec. Only \\
 \hline 
-\cellcolor{green}Auto-Encoders & Nonlinear & \checkmark & \checkmark & Learned $W_E$ \& $W_D$ \\
+\cellcolor{green}Auto-Encoders & Nonlinear & \checkmark & \checkmark & Separate \\
 \hline 
 \end{tabular} \\
 \vspace{0.25cm} \hspace{0.25cm}  
 \begin{tabular}{|c|}
 \hline 
-\emph{Model Prior}\\  
+\emph{Model Objective/Prior}\\  
 \hline \hline
 \cellcolor{red} De-correlation/Independence  \\
 \hline
@@ -42,31 +42,55 @@ None \\
 \end{tabular}
 \end{center}
 \caption{Summary of unsupervised feature learning algorithms and their properties} 
+\label{tbl:models} 
 \end{table} 
 
-Unsupervised feature learning dates back to the invention of Principal
+Unsupervised feature learning arguably dates back to the invention of Principal
 Component Analysis (PCA) in 1901 by Karl Pearson \cite{PCA}. As mentioned in
 Chapter \ref{chapter:introduction}, feature learning algorithms model
 intrinsically low dimensional data embedded in a high dimensional ambient
 space. These models can usually be decomposed into two parts: a mapping from
-the input space to the feature space, called encoding, and
-mapping the feature space back to the input space, called decoding. If the encoding 
-or decoding processes have corresponding functional forms, they are 
-refferred to as the ``encoder'' and ``decoder'', respectively.  From the
-natural image manifold persepective, ideal encodings map the extrinsic
-coordinates (i.e. pixel values) to intrinisic manifold coordinates. It is hoped
-that these intrinsic coordinates correspond to physical attributes of the
-natural world, such as the presence of certain objects in the scene, their
-properties, etc. \cite{nair2008,capsules}     
+the input space to the feature space, called encoding, and mapping the feature
+space back to the input space, called decoding. If the encoding or decoding
+processes have corresponding functional forms, they are referred to as the
+``encoder'' and ``decoder'', respectively.  From the natural image manifold
+perspective, ideal encodings map the extrinsic coordinates (i.e. pixel values)
+to intrinsic manifold coordinates. It is hoped that these intrinsic coordinates
+correspond to physical attributes of the natural world, such as the presence of
+certain objects in the scene, their properties, etc \cite{nair2008,capsules}.
+Unsupervised feature learning models are mainly distinguished by: i-the
+geometrical prior they assume about the data manifold, ii-whether they learn an
+encoder, decoder, or both. For example, Principal Component Analysis assumes
+that the data is concentrated around a hyper-plane, i.e. it assumes a globally
+linear data manifold model. The PCA encoder is a matrix operator, $W_e$, as is
+the decoder $W_d=W_e^T$.  Obtaining ``invariant'' representations has been a
+major driving force in feature learning, driven mainly by recognition and
+classification problems.  Invariant features imply that the encoding process is
+necessarily a many-to-one mapping. This means that the decoding process must
+involve some random selection among the possible inputs that produced the code,
+usually  by sampling from a distribution. Models that include a decoder are
+called ``generative models'' in the literature. 
+
+Table \ref{tbl:models} summarizes key aspects of several well-known feature
+learning models, as well as the new models which will be introduced in Chapters
+\ref{chapter:slow} and \ref{chapter:linear}. The first column lists the name of
+the model, the color indicates the type of objective each model tries to
+optimize.  These are summarized in the table below. For example, one version of
+PCA finds maximally decorrelated linear components. The ``manifold model'' column
+indicates the geometric prior each model assumes about the data manifold. The 
+next two columns indicate whether each model learns an encoder and/or decoder. 
+Finally, the last column summarizes the relationship enforced between the 
+encoder and decoder. For example in PCA the encoder and decoder are related 
+by the transpose operator. 
+
 
 Sparse inference refers to the problem of finding the coefficients $z$ which
 reconstruct the input $x$ as a sparse linear combination of some basis elements
-contained an over-complete dictionary $W_d$. In general, sparse inference is an 
-intractable combinatorial problem. A relaxation of the sparse inference problem is
-the so called lasso, 
+contained an over-complete dictionary $W_d$. In general, sparse inference is an
+intractable combinatorial problem. A relaxation of the sparse inference problem
+is the so called lasso, 
 
-\begin{equation}
-L_{lasso} = \min_Z \frac{1}{2}\|X-W_dZ\| + \alpha |Z|_1 
+\begin{equation} L_{lasso} = \min_Z \frac{1}{2}\|X-W_dZ\| + \alpha |Z|_1
 \end{equation} 
 
  
