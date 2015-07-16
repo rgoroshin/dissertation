@@ -585,6 +585,44 @@
   \field{year}{1968}
 \endentry
 
+\entry{ICA}{book}{}
+  \name{author}{6}{%
+    {{Hyv{\"a}rinen}{H.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Aapo}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Karhunen}{K.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Juha}{J.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Oja}{O.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{Erkki}{E.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Wiley \& Sons}%
+  }
+  \strng{namehash}{HAKJOE1}
+  \strng{fullhash}{HAKJOE1}
+  \field{sortinit}{H}
+  \field{title}{Independent component analysis}
+  \field{volume}{46}
+  \field{year}{2004}
+\endentry
+
 \entry{Huyvarinen}{book}{}
   \name{author}{6}{%
     {{Hyv{\"a}rinen}{H.}%

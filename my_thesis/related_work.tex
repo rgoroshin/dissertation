@@ -76,14 +76,43 @@ learning models, as well as the new models which will be introduced in Chapters
 \ref{chapter:slow} and \ref{chapter:linear}. The first column lists the name of
 the model, the color indicates the type of objective each model tries to
 optimize.  These are summarized in the table below. For example, one version of
-PCA finds maximally decorrelated linear components. The ``manifold model'' column
-indicates the geometric prior each model assumes about the data manifold. The 
-next two columns indicate whether each model learns an encoder and/or decoder. 
-Finally, the last column summarizes the relationship enforced between the 
-encoder and decoder. For example in PCA the encoder and decoder are related 
-by the transpose operator. 
+PCA finds maximally decorrelated linear components. The ``manifold model''
+column indicates the geometric prior each model assumes about the data
+manifold. The next two columns indicate whether each model learns an encoder
+and/or decoder.  Finally, the last column summarizes the relationship enforced
+between the encoder and decoder. For example in PCA the encoder and decoder are
+related by the transpose operator. This chapter will review the algorithms in
+Table \ref{tbl:models}, placing emphasis on the precursors of the algorithms
+presented in Chapters \ref{chapter:slow} and \ref{chapter:linear}. The
+algorithms will be presented as various models of the data manifold.
+
+\section{Principal and Independent Component Analysis} 
+
+\begin{figure} 
+\centering
+\includegraphics[scale=0.4]{./figures/related_work/ICA.png} 
+\includegraphics[scale=0.4]{./figures/related_work/L1.png} 
+\caption{Left: visualization of the optimization problem used to solve for independent representations. Right: visualization of the optimization problem used to solve for sparse representations.} 
+\label{fig:ICA_lasso} 
+\end{figure}  
+
+Principal Component Analysis (PCA) and Independent Component Analysis (ICA) are
+the most well know linear manifold models \cite{ICA}. Both assume that the
+observed high dimensional data $x$ are generated from some low dimensional
+latent variables $z$ via a linear operator $A$, that is $x=Az$. Assuming that
+the data is zero mean, PCA implicitly makes the assumption that the latent
+variables correspond to directions with the largest variance \cite{PCA}. ICA
+however searches for linearly independent components, formulating the
+definition of independence using the central limit theorem. Although the
+detailed derivation of ICA will not be presented here, we will mention that it
+leads to a fourth order moment (kurtosis) maximization problem subject to a
+second order moment (variance) constraint. This optimization problem is
+visualized as the left plot of Figure \ref{fig:ICA_lasso}. The blue curves
+represent the level sets of the kurtosis objective, and the red curve
+represents the unit variance constraint. 
 
 
+\section{Sparse Representations} 
 Sparse inference refers to the problem of finding the coefficients $z$ which
 reconstruct the input $x$ as a sparse linear combination of some basis elements
 contained an over-complete dictionary $W_d$. In general, sparse inference is an
@@ -93,4 +122,7 @@ is the so called lasso,
 \begin{equation} L_{lasso} = \min_Z \frac{1}{2}\|X-W_dZ\| + \alpha |Z|_1
 \end{equation} 
 
+\section{Metric Learning}
+
+\section{Regularized Auto-Encoders} 
  

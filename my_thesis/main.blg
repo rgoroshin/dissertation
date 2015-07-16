@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: main.aux
 The style file: biblatex.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated field_info (elt_size=4) to 12788 items from 5000.
+Reallocated field_info (elt_size=4) to 12920 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: references.bib
 Repeated entry---line 454 of file references.bib
@@ -65,10 +65,6 @@ Repeated entry---line 698 of file references.bib
  : @article{SFA
  :             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 704 of file references.bib
- : @book{Huyvarinen
- :                 ,
-I'm skipping whatever remains of this entry
 Repeated entry---line 712 of file references.bib
  : @article{Cadieu
  :                ,
@@ -103,45 +99,45 @@ Too many commas in name 1 of "Annual Reviews 4139 El Camino Way, PO Box 10139, P
 while executing---line 2445 of file biblatex.bst
 Too many commas in name 1 of "Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA" for entry simoncelli2001
 while executing---line 2445 of file biblatex.bst
-You've used 59 entries,
+You've used 60 entries,
             5526 wiz_defined-function locations,
-            1447 strings with 18769 characters,
-and the built_in function-call counts, 201612 in all, are:
-= -- 7076
-> -- 8899
-< -- 1958
-+ -- 3122
-- -- 3745
-* -- 18774
-:= -- 13556
+            1449 strings with 18775 characters,
+and the built_in function-call counts, 206456 in all, are:
+= -- 7229
+> -- 9180
+< -- 2005
++ -- 3235
+- -- 3876
+* -- 19282
+:= -- 13917
 add.period$ -- 0
-call.type$ -- 59
-change.case$ -- 1083
+call.type$ -- 60
+change.case$ -- 1110
 chr.to.int$ -- 41
-cite$ -- 118
-duplicate$ -- 21522
-empty$ -- 19040
-format.name$ -- 5365
-if$ -- 45547
+cite$ -- 120
+duplicate$ -- 22001
+empty$ -- 19415
+format.name$ -- 5535
+if$ -- 46634
 int.to.chr$ -- 0
-int.to.str$ -- 150
+int.to.str$ -- 155
 missing$ -- 0
-newline$ -- 1556
-num.names$ -- 2982
-pop$ -- 16160
+newline$ -- 1594
+num.names$ -- 3048
+pop$ -- 16464
 preamble$ -- 1
-purify$ -- 1384
+purify$ -- 1422
 quote$ -- 0
-skip$ -- 11464
+skip$ -- 11749
 stack$ -- 0
-substring$ -- 4379
-swap$ -- 6780
-text.length$ -- 2091
+substring$ -- 4464
+swap$ -- 6923
+text.length$ -- 2143
 text.prefix$ -- 2
 top$ -- 1
-type$ -- 2116
+type$ -- 2152
 warning$ -- 1
-while$ -- 1144
+while$ -- 1164
 width$ -- 0
-write$ -- 1496
-(There were 25 error messages)
+write$ -- 1533
+(There were 24 error messages)

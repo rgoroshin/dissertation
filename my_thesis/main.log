@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.6.25)  15 JUL 2015 18:45
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.6.25)  16 JUL 2015 17:54
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -742,14 +742,23 @@ PNG copy)>] [4]) [5]
 Chapter 2.
 (./related_work.tex [6
 
-] [7]) [8]
+] [7]
+<./figures/related_work/ICA.png, id=68, 476.13176pt x 357.09882pt>
+File: ./figures/related_work/ICA.png Graphic file (type png)
+
+<use ./figures/related_work/ICA.png>
+<./figures/related_work/L1.png, id=69, 476.13176pt x 357.09882pt>
+File: ./figures/related_work/L1.png Graphic file (type png)
+
+<use ./figures/related_work/L1.png> [8 <./figures/related_work/ICA.png (PNG cop
+y)> <./figures/related_work/L1.png (PNG copy)>]) [9]
 Chapter 3.
 (./SATAE.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--15
 
  []
 
-[9
+[10
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 40--58
@@ -763,29 +772,29 @@ Underfull \hbox (badness 1642) in paragraph at lines 40--58
 on-trac-tive auto-
  []
 
-[10] [11] [12]
-<./figures/SATAE/compliments.png, id=85, 476.13176pt x 357.09882pt>
+[11] [12] [13]
+<./figures/SATAE/compliments.png, id=90, 476.13176pt x 357.09882pt>
 File: ./figures/SATAE/compliments.png Graphic file (type png)
 
-<use ./figures/SATAE/compliments.png> [13 <./figures/SATAE/compliments.png (PNG
- copy)>] [14] <./figures/SATAE/toy_shrink.png, id=95, 602.25pt x 300.12125pt>
+<use ./figures/SATAE/compliments.png> [14 <./figures/SATAE/compliments.png (PNG
+ copy)>] [15] <./figures/SATAE/toy_shrink.png, id=100, 602.25pt x 300.12125pt>
 File: ./figures/SATAE/toy_shrink.png Graphic file (type png)
 
 <use ./figures/SATAE/toy_shrink.png>
-<./figures/SATAE/toy_sat_linear_noreg.png, id=96, 907.39pt x 300.12125pt>
+<./figures/SATAE/toy_sat_linear_noreg.png, id=101, 907.39pt x 300.12125pt>
 File: ./figures/SATAE/toy_sat_linear_noreg.png Graphic file (type png)
 
 <use ./figures/SATAE/toy_sat_linear_noreg.png>
-<./figures/SATAE/toy_sat_linear_reg.png, id=97, 906.38625pt x 299.1175pt>
+<./figures/SATAE/toy_sat_linear_reg.png, id=102, 906.38625pt x 299.1175pt>
 File: ./figures/SATAE/toy_sat_linear_reg.png Graphic file (type png)
 
-<use ./figures/SATAE/toy_sat_linear_reg.png> [15 <./figures/SATAE/toy_shrink.pn
+<use ./figures/SATAE/toy_sat_linear_reg.png> [16 <./figures/SATAE/toy_shrink.pn
 g (PNG copy)>]
-<./figures/SATAE/viz_nonlin.png, id=101, 538.01pt x 183.68625pt>
+<./figures/SATAE/viz_nonlin.png, id=106, 538.01pt x 183.68625pt>
 File: ./figures/SATAE/viz_nonlin.png Graphic file (type png)
 
 <use ./figures/SATAE/viz_nonlin.png>
-<./figures/SATAE/1.png, id=102, 34.1275pt x 33.12375pt>
+<./figures/SATAE/1.png, id=107, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/1.png Graphic file (type png)
 
 <use ./figures/SATAE/1.png>
@@ -793,7 +802,7 @@ Overfull \hbox (5.38243pt too wide) in paragraph at lines 231--231
  [][] 
  []
 
-<./figures/SATAE/horse1.png, id=103, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse1.png, id=108, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse1.png Graphic file (type png)
 
 <use ./figures/SATAE/horse1.png>
@@ -801,7 +810,7 @@ Overfull \hbox (3.37495pt too wide) in paragraph at lines 231--234
  [][] 
  []
 
-<./figures/SATAE/2.png, id=104, 34.1275pt x 33.12375pt>
+<./figures/SATAE/2.png, id=109, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/2.png Graphic file (type png)
 
 <use ./figures/SATAE/2.png>
@@ -809,7 +818,7 @@ Overfull \hbox (5.38243pt too wide) in paragraph at lines 235--235
  [][] 
  []
 
-<./figures/SATAE/horse2.png, id=105, 34.1275pt x 33.12375pt>
+<./figures/SATAE/horse2.png, id=110, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/horse2.png Graphic file (type png)
 
 <use ./figures/SATAE/horse2.png>
@@ -817,7 +826,7 @@ Overfull \hbox (5.38243pt too wide) in paragraph at lines 236--239
  [][] 
  []
 
-<./figures/SATAE/3.png, id=106, 34.1275pt x 33.12375pt>
+<./figures/SATAE/3.png, id=111, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/3.png Graphic file (type png)
 
 <use ./figures/SATAE/3.png>
@@ -825,7 +834,7 @@ Overfull \hbox (5.38243pt too wide) in paragraph at lines 240--240
  [][] 
  []
 
-<./figures/SATAE/horse3.png, id=107, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse3.png, id=112, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse3.png Graphic file (type png)
 
 <use ./figures/SATAE/horse3.png>
@@ -833,7 +842,7 @@ Overfull \hbox (3.37495pt too wide) in paragraph at lines 241--243
  [][] 
  []
 
-<./figures/SATAE/4.png, id=108, 34.1275pt x 33.12375pt>
+<./figures/SATAE/4.png, id=113, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/4.png Graphic file (type png)
 
 <use ./figures/SATAE/4.png>
@@ -841,7 +850,7 @@ Overfull \hbox (5.38243pt too wide) in paragraph at lines 246--246
  [][] 
  []
 
-<./figures/SATAE/horse4.png, id=109, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse4.png, id=114, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse4.png Graphic file (type png)
 
 <use ./figures/SATAE/horse4.png>
@@ -849,11 +858,11 @@ Overfull \hbox (3.37495pt too wide) in paragraph at lines 247--250
  [][] 
  []
 
-<./figures/SATAE/5.png, id=110, 34.1275pt x 33.12375pt>
+<./figures/SATAE/5.png, id=115, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/5.png Graphic file (type png)
 
 <use ./figures/SATAE/5.png>
-<./figures/SATAE/horse5.png, id=111, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse5.png, id=116, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse5.png Graphic file (type png)
 
 <use ./figures/SATAE/horse5.png>
@@ -866,69 +875,69 @@ Overfull \hbox (3.37495pt too wide) in paragraph at lines 251--252
  [] 
  []
 
-[16 <./figures/SATAE/toy_sat_linear_noreg.png (PNG copy)> <./figures/SATAE/toy_
+[17 <./figures/SATAE/toy_sat_linear_noreg.png (PNG copy)> <./figures/SATAE/toy_
 sat_linear_reg.png (PNG copy)> <./figures/SATAE/viz_nonlin.png (PNG copy)>]
-[17 <./figures/SATAE/1.png (PNG copy)> <./figures/SATAE/horse1.png (PNG copy)> 
+[18 <./figures/SATAE/1.png (PNG copy)> <./figures/SATAE/horse1.png (PNG copy)> 
 <./figures/SATAE/2.png (PNG copy)> <./figures/SATAE/horse2.png (PNG copy)> <./f
 igures/SATAE/3.png (PNG copy)> <./figures/SATAE/horse3.png (PNG copy)> <./figur
 es/SATAE/4.png (PNG copy)> <./figures/SATAE/horse4.png (PNG copy)> <./figures/S
 ATAE/5.png (PNG copy)> <./figures/SATAE/horse5.png (PNG copy)>]
-<./figures/SATAE/strokes_full.png, id=118, 290.08376pt x 969.6225pt>
+<./figures/SATAE/strokes_full.png, id=123, 290.08376pt x 969.6225pt>
 File: ./figures/SATAE/strokes_full.png Graphic file (type png)
 
 <use ./figures/SATAE/strokes_full.png>
-<./figures/SATAE/MNIST_sat_linear_full.png, id=119, 290.08376pt x 971.63pt>
+<./figures/SATAE/MNIST_sat_linear_full.png, id=124, 290.08376pt x 971.63pt>
 File: ./figures/SATAE/MNIST_sat_linear_full.png Graphic file (type png)
 
 <use ./figures/SATAE/MNIST_sat_linear_full.png>
-<./figures/SATAE/gabors_full.png, id=120, 258.9675pt x 971.63pt>
+<./figures/SATAE/gabors_full.png, id=125, 258.9675pt x 971.63pt>
 File: ./figures/SATAE/gabors_full.png Graphic file (type png)
 
 <use ./figures/SATAE/gabors_full.png>
-<./figures/SATAE/patches_sat_linear_full.png, id=121, 195.73125pt x 782.925pt>
+<./figures/SATAE/patches_sat_linear_full.png, id=126, 195.73125pt x 782.925pt>
 File: ./figures/SATAE/patches_sat_linear_full.png Graphic file (type png)
 
 <use ./figures/SATAE/patches_sat_linear_full.png>
-<./figures/SATAE/CIFAR_shrink01.png, id=123, 165.61874pt x 662.475pt>
+<./figures/SATAE/CIFAR_shrink01.png, id=128, 165.61874pt x 662.475pt>
 File: ./figures/SATAE/CIFAR_shrink01.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_shrink01.png>
-<./figures/SATAE/CIFAR_shrink05.png, id=124, 165.61874pt x 662.475pt>
+<./figures/SATAE/CIFAR_shrink05.png, id=129, 165.61874pt x 662.475pt>
 File: ./figures/SATAE/CIFAR_shrink05.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_shrink05.png>
-<./figures/SATAE/CIFAR_sat_linear300_1.png, id=125, 165.61874pt x 661.47125pt>
+<./figures/SATAE/CIFAR_sat_linear300_1.png, id=130, 165.61874pt x 661.47125pt>
 File: ./figures/SATAE/CIFAR_sat_linear300_1.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_sat_linear300_1.png>
-<./figures/SATAE/CIFAR_sat_linear300_6.png, id=126, 165.61874pt x 661.47125pt>
+<./figures/SATAE/CIFAR_sat_linear300_6.png, id=131, 165.61874pt x 661.47125pt>
 File: ./figures/SATAE/CIFAR_sat_linear300_6.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_sat_linear300_6.png>
 
 LaTeX Warning: Float too large for page by 101.64268pt on input line 280.
 
-[18 <./figures/SATAE/strokes_full.png (PNG copy)> <./figures/SATAE/MNIST_sat_li
+[19 <./figures/SATAE/strokes_full.png (PNG copy)> <./figures/SATAE/MNIST_sat_li
 near_full.png (PNG copy)> <./figures/SATAE/gabors_full.png (PNG copy)> <./figur
 es/SATAE/patches_sat_linear_full.png> <./figures/SATAE/CIFAR_shrink01.png (PNG 
 copy)> <./figures/SATAE/CIFAR_shrink05.png (PNG copy)> <./figures/SATAE/CIFAR_s
 at_linear300_1.png (PNG copy)> <./figures/SATAE/CIFAR_sat_linear300_6.png (PNG 
-copy)>] [19
+copy)>] [20
 
 
-] [20] [21] [22]
-<./figures/SATAE/diff_cc.png, id=144, 476.13176pt x 357.09882pt>
+] [21] [22] [23]
+<./figures/SATAE/diff_cc.png, id=149, 476.13176pt x 357.09882pt>
 File: ./figures/SATAE/diff_cc.png Graphic file (type png)
 
-<use ./figures/SATAE/diff_cc.png> [23 <./figures/SATAE/diff_cc.png (PNG copy)>]
-) [24] [25]
+<use ./figures/SATAE/diff_cc.png> [24 <./figures/SATAE/diff_cc.png (PNG copy)>]
+) [25] [26]
 Chapter 4.
-(./LISTA.tex <./figures/LISTA/LISTA.pdf, id=154, 812.03375pt x 425.59pt>
+(./LISTA.tex <./figures/LISTA/LISTA.pdf, id=160, 812.03375pt x 425.59pt>
 File: ./figures/LISTA/LISTA.pdf Graphic file (type pdf)
 
-<use ./figures/LISTA/LISTA.pdf> [26
+<use ./figures/LISTA/LISTA.pdf> [27
 
-] [27 <./figures/LISTA/LISTA.pdf>]
+] [28 <./figures/LISTA/LISTA.pdf>]
 LaTeX Font Info:    Try loading font information for OMS+txr on input line 69.
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/omstxr.fd
@@ -936,179 +945,179 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 69.
- [28]
-<./figures/LISTA/FISTA_decoder.png, id=168, 80.3pt x 40.15pt>
+ [29]
+<./figures/LISTA/FISTA_decoder.png, id=173, 80.3pt x 40.15pt>
 File: ./figures/LISTA/FISTA_decoder.png Graphic file (type png)
 
 <use ./figures/LISTA/FISTA_decoder.png>
-<./figures/LISTA/sample.png, id=169, 529.98pt x 33.12375pt>
+<./figures/LISTA/sample.png, id=174, 529.98pt x 33.12375pt>
 File: ./figures/LISTA/sample.png Graphic file (type png)
 
 <use ./figures/LISTA/sample.png>
-<./figures/LISTA/rec.png, id=170, 529.98pt x 33.12375pt>
+<./figures/LISTA/rec.png, id=175, 529.98pt x 33.12375pt>
 File: ./figures/LISTA/rec.png Graphic file (type png)
 
 <use ./figures/LISTA/rec.png>
-<./figures/LISTA/activations.png, id=171, 529.98pt x 529.98pt>
+<./figures/LISTA/activations.png, id=176, 529.98pt x 529.98pt>
 File: ./figures/LISTA/activations.png Graphic file (type png)
 
-<use ./figures/LISTA/activations.png> [29 <./figures/LISTA/FISTA_decoder.png (P
+<use ./figures/LISTA/activations.png> [30 <./figures/LISTA/FISTA_decoder.png (P
 NG copy)> <./figures/LISTA/sample.png (PNG copy)> <./figures/LISTA/rec.png (PNG
- copy)>] [30 <./figures/LISTA/activations.png (PNG copy)>]
-<./figures/LISTA/code_pred.pdf, id=178, 443.6575pt x 656.4525pt>
+ copy)>] [31 <./figures/LISTA/activations.png (PNG copy)>]
+<./figures/LISTA/code_pred.pdf, id=183, 443.6575pt x 656.4525pt>
 File: ./figures/LISTA/code_pred.pdf Graphic file (type pdf)
 
 <use ./figures/LISTA/code_pred.pdf>
-<./figures/LISTA/fixed_decoder_loss.pdf, id=179, 377.41pt x 268.00125pt>
+<./figures/LISTA/fixed_decoder_loss.pdf, id=184, 377.41pt x 268.00125pt>
 File: ./figures/LISTA/fixed_decoder_loss.pdf Graphic file (type pdf)
 
 <use ./figures/LISTA/fixed_decoder_loss.pdf>
-<./figures/LISTA/fixed_decoder_scatter.pdf, id=180, 399.4925pt x 322.20375pt>
+<./figures/LISTA/fixed_decoder_scatter.pdf, id=185, 399.4925pt x 322.20375pt>
 File: ./figures/LISTA/fixed_decoder_scatter.pdf Graphic file (type pdf)
 
-<use ./figures/LISTA/fixed_decoder_scatter.pdf> [31] [32 <./figures/LISTA/code_
-pred.pdf>] [33 <./figures/LISTA/fixed_decoder_loss.pdf> <./figures/LISTA/fixed_
+<use ./figures/LISTA/fixed_decoder_scatter.pdf> [32] [33 <./figures/LISTA/code_
+pred.pdf>] [34 <./figures/LISTA/fixed_decoder_loss.pdf> <./figures/LISTA/fixed_
 decoder_scatter.pdf>]
-<./figures/LISTA/learned_decoder_loss.pdf, id=205, 371.3875pt x 269.005pt>
+<./figures/LISTA/learned_decoder_loss.pdf, id=210, 371.3875pt x 269.005pt>
 File: ./figures/LISTA/learned_decoder_loss.pdf Graphic file (type pdf)
 
 <use ./figures/LISTA/learned_decoder_loss.pdf>
-<./figures/LISTA/learned_decoder_scatter.pdf, id=206, 420.57124pt x 322.20375pt
+<./figures/LISTA/learned_decoder_scatter.pdf, id=211, 420.57124pt x 322.20375pt
 >
 File: ./figures/LISTA/learned_decoder_scatter.pdf Graphic file (type pdf)
- <use ./figures/LISTA/learned_decoder_scatter.pdf> [34 <./figures/LISTA/learned
-_decoder_loss.pdf>]) [35 <./figures/LISTA/learned_decoder_scatter.pdf>]
+ <use ./figures/LISTA/learned_decoder_scatter.pdf> [35 <./figures/LISTA/learned
+_decoder_loss.pdf>]) [36 <./figures/LISTA/learned_decoder_scatter.pdf>]
 Chapter 5.
-(./slow.tex [36
+(./slow.tex [37
 
-] [37] [38] [39]
-<./figures/slow/toyplane.png, id=237, 96.36pt x 96.36pt>
+] [38] [39] [40]
+<./figures/slow/toyplane.png, id=242, 96.36pt x 96.36pt>
 File: ./figures/slow/toyplane.png Graphic file (type png)
 
 <use ./figures/slow/toyplane.png>
-<./figures/slow/toyplane2.png, id=238, 96.36pt x 96.36pt>
+<./figures/slow/toyplane2.png, id=243, 96.36pt x 96.36pt>
 File: ./figures/slow/toyplane2.png Graphic file (type png)
 
 <use ./figures/slow/toyplane2.png>
-<./figures/slow/toyplane3.png, id=239, 96.36pt x 96.36pt>
+<./figures/slow/toyplane3.png, id=244, 96.36pt x 96.36pt>
 File: ./figures/slow/toyplane3.png Graphic file (type png)
 
 <use ./figures/slow/toyplane3.png>
-<./figures/slow/drlim1.pdf, id=240, 361.35pt x 252.945pt>
+<./figures/slow/drlim1.pdf, id=245, 361.35pt x 252.945pt>
 File: ./figures/slow/drlim1.pdf Graphic file (type pdf)
 
 <use ./figures/slow/drlim1.pdf>
-<./figures/slow/drlim2.pdf, id=242, 361.35pt x 252.945pt>
+<./figures/slow/drlim2.pdf, id=247, 361.35pt x 252.945pt>
 File: ./figures/slow/drlim2.pdf Graphic file (type pdf)
 
 <use ./figures/slow/drlim2.pdf>
-<./figures/slow/drlim3.pdf, id=244, 361.35pt x 252.945pt>
+<./figures/slow/drlim3.pdf, id=249, 361.35pt x 252.945pt>
 File: ./figures/slow/drlim3.pdf Graphic file (type pdf)
 
 <use ./figures/slow/drlim3.pdf>
-<./figures/slow/drlim4.pdf, id=246, 361.35pt x 252.945pt>
+<./figures/slow/drlim4.pdf, id=251, 361.35pt x 252.945pt>
 File: ./figures/slow/drlim4.pdf Graphic file (type pdf)
 
-<use ./figures/slow/drlim4.pdf> [40 <./figures/slow/drlim1.pdf> <./figures/slow
+<use ./figures/slow/drlim4.pdf> [41 <./figures/slow/drlim1.pdf> <./figures/slow
 /drlim2.pdf> <./figures/slow/drlim3.pdf> <./figures/slow/drlim4.pdf> <./figures
 /slow/toyplane.png (PNG copy)> <./figures/slow/toyplane2.png (PNG copy)> <./fig
-ures/slow/toyplane3.png (PNG copy)>] [41] [42]
-<./figures/slow/slow_dec_pooling_sub.png, id=281, 353.32pt x 176.66pt>
+ures/slow/toyplane3.png (PNG copy)>] [42] [43]
+<./figures/slow/slow_dec_pooling_sub.png, id=286, 353.32pt x 176.66pt>
 File: ./figures/slow/slow_dec_pooling_sub.png Graphic file (type png)
 
 <use ./figures/slow/slow_dec_pooling_sub.png>
-<./figures/slow/slow_dec_l1_pooling.png, id=282, 353.32pt x 176.66pt>
+<./figures/slow/slow_dec_l1_pooling.png, id=287, 353.32pt x 176.66pt>
 File: ./figures/slow/slow_dec_l1_pooling.png Graphic file (type png)
 
-<use ./figures/slow/slow_dec_l1_pooling.png> [43]
-<./figures/slow/Rebbutal_Figures/diagram.pdf, id=286, 722.7pt x 542.025pt>
+<use ./figures/slow/slow_dec_l1_pooling.png> [44]
+<./figures/slow/Rebbutal_Figures/diagram.pdf, id=292, 722.7pt x 542.025pt>
 File: ./figures/slow/Rebbutal_Figures/diagram.pdf Graphic file (type pdf)
 
-<use ./figures/slow/Rebbutal_Figures/diagram.pdf> [44 <./figures/slow/slow_dec_
+<use ./figures/slow/Rebbutal_Figures/diagram.pdf> [45 <./figures/slow/slow_dec_
 pooling_sub.png (PNG copy)> <./figures/slow/slow_dec_l1_pooling.png (PNG copy)>
-] [45] [46 <./figures/slow/Rebbutal_Figures/diagram.pdf>] [47]
-<./figures/slow/youtube.png, id=339, 364.36125pt x 199.74625pt>
+] [46] [47 <./figures/slow/Rebbutal_Figures/diagram.pdf>] [48]
+<./figures/slow/youtube.png, id=344, 364.36125pt x 199.74625pt>
 File: ./figures/slow/youtube.png Graphic file (type png)
 
 <use ./figures/slow/youtube.png>
-<./figures/slow/Rebbutal_Figures/filters_drlim.png, id=340, 80.3pt x 80.3pt>
+<./figures/slow/Rebbutal_Figures/filters_drlim.png, id=345, 80.3pt x 80.3pt>
 File: ./figures/slow/Rebbutal_Figures/filters_drlim.png Graphic file (type png)
 
 
 <use ./figures/slow/Rebbutal_Figures/filters_drlim.png>
-<./figures/slow/filters_not_slow.png, id=341, 80.3pt x 80.3pt>
+<./figures/slow/filters_not_slow.png, id=346, 80.3pt x 80.3pt>
 File: ./figures/slow/filters_not_slow.png Graphic file (type png)
 
 <use ./figures/slow/filters_not_slow.png>
-<./figures/slow/Rebbutal_Figures/filters_group_sparse.png, id=342, 80.3pt x 80.
+<./figures/slow/Rebbutal_Figures/filters_group_sparse.png, id=347, 80.3pt x 80.
 3pt>
 File: ./figures/slow/Rebbutal_Figures/filters_group_sparse.png Graphic file (ty
 pe png)
  <use ./figures/slow/Rebbutal_Figures/filters_group_sparse.png>
-<./figures/slow/filters_slow.png, id=343, 80.3pt x 80.3pt>
+<./figures/slow/filters_slow.png, id=348, 80.3pt x 80.3pt>
 File: ./figures/slow/filters_slow.png Graphic file (type png)
 
 <use ./figures/slow/filters_slow.png>
-<./figures/slow/Rebbutal_Figures/NNtime1.pdf, id=344, 424.58624pt x 249.93375pt
+<./figures/slow/Rebbutal_Figures/NNtime1.pdf, id=349, 424.58624pt x 249.93375pt
 >
 File: ./figures/slow/Rebbutal_Figures/NNtime1.pdf Graphic file (type pdf)
  <use ./figures/slow/Rebbutal_Figures/NNtime1.pdf>
-<./figures/slow/Rebbutal_Figures/NNtime2.pdf, id=347, 424.58624pt x 249.93375pt
+<./figures/slow/Rebbutal_Figures/NNtime2.pdf, id=352, 424.58624pt x 249.93375pt
 >
 File: ./figures/slow/Rebbutal_Figures/NNtime2.pdf Graphic file (type pdf)
  <use ./figures/slow/Rebbutal_Figures/NNtime2.pdf>
-<./figures/slow/Rebbutal_Figures/NNclass1.pdf, id=350, 424.58624pt x 249.93375p
+<./figures/slow/Rebbutal_Figures/NNclass1.pdf, id=355, 424.58624pt x 249.93375p
 t>
 File: ./figures/slow/Rebbutal_Figures/NNclass1.pdf Graphic file (type pdf)
  <use ./figures/slow/Rebbutal_Figures/NNclass1.pdf>
-<./figures/slow/Rebbutal_Figures/NNclass2.pdf, id=353, 424.58624pt x 249.93375p
+<./figures/slow/Rebbutal_Figures/NNclass2.pdf, id=358, 424.58624pt x 249.93375p
 t>
 File: ./figures/slow/Rebbutal_Figures/NNclass2.pdf Graphic file (type pdf)
  <use ./figures/slow/Rebbutal_Figures/NNclass2.pdf>
-<./figures/slow/Rebbutal_Figures/AUC_time-crop.pdf, id=356, 390.45876pt x 317.1
+<./figures/slow/Rebbutal_Figures/AUC_time-crop.pdf, id=361, 390.45876pt x 317.1
 85pt>
 File: ./figures/slow/Rebbutal_Figures/AUC_time-crop.pdf Graphic file (type pdf)
 
  <use ./figures/slow/Rebbutal_Figures/AUC_time-crop.pdf>
-<./figures/slow/Rebbutal_Figures/AUC_class-crop.pdf, id=357, 394.47375pt x 324.
+<./figures/slow/Rebbutal_Figures/AUC_class-crop.pdf, id=362, 394.47375pt x 324.
 21124pt>
 File: ./figures/slow/Rebbutal_Figures/AUC_class-crop.pdf Graphic file (type pdf
 )
- <use ./figures/slow/Rebbutal_Figures/AUC_class-crop.pdf> [48] [49 <./figures/s
+ <use ./figures/slow/Rebbutal_Figures/AUC_class-crop.pdf> [49] [50 <./figures/s
 low/youtube.png (PNG copy)> <./figures/slow/Rebbutal_Figures/filters_drlim.png 
 (PNG copy)> <./figures/slow/filters_not_slow.png (PNG copy)> <./figures/slow/Re
 bbutal_Figures/filters_group_sparse.png (PNG copy)> <./figures/slow/filters_slo
-w.png (PNG copy)>] [50 <./figures/slow/Rebbutal_Figures/NNtime1.pdf> <./figures
+w.png (PNG copy)>] [51 <./figures/slow/Rebbutal_Figures/NNtime1.pdf> <./figures
 /slow/Rebbutal_Figures/NNtime2.pdf> <./figures/slow/Rebbutal_Figures/NNclass1.p
 df> <./figures/slow/Rebbutal_Figures/NNclass2.pdf> <./figures/slow/Rebbutal_Fig
 ures/AUC_time-crop.pdf> <./figures/slow/Rebbutal_Figures/AUC_class-crop.pdf>] [
-51]) [52] [53]
+52]) [53] [54]
 Chapter 6.
-(./linear.tex [54
+(./linear.tex [55
 
 ]
 
-LaTeX Warning: Reference `sec:conclusion' on page 55 undefined on input line 14
+LaTeX Warning: Reference `sec:conclusion' on page 56 undefined on input line 14
 .
 
-[55] [56] [57] <./figures/linear/fig1.pdf, id=456, 75.28125pt x 75.28125pt>
+[56] [57] [58] <./figures/linear/fig1.pdf, id=461, 75.28125pt x 75.28125pt>
 File: ./figures/linear/fig1.pdf Graphic file (type pdf)
 
 <use ./figures/linear/fig1.pdf>
-<./figures/linear/fig2.pdf, id=458, 372.39125pt x 312.16624pt>
+<./figures/linear/fig2.pdf, id=463, 372.39125pt x 312.16624pt>
 File: ./figures/linear/fig2.pdf Graphic file (type pdf)
 
-<use ./figures/linear/fig2.pdf> [58 <./figures/linear/fig1.pdf> <./figures/line
+<use ./figures/linear/fig2.pdf> [59 <./figures/linear/fig1.pdf> <./figures/line
 ar/fig2.pdf>]
 
 pdfTeX warning: pdflatex (file ./figures/linear/network.pdf): PDF inclusion: fo
 und PDF version <1.5>, but at most version <1.4> allowed
-<./figures/linear/network.pdf, id=478, 815.40523pt x 258.88869pt>
+<./figures/linear/network.pdf, id=483, 815.40523pt x 258.88869pt>
 File: ./figures/linear/network.pdf Graphic file (type pdf)
 
-<use ./figures/linear/network.pdf> [59 <./figures/linear/network.pdf>] [60]
-[61] [62] [63] [64] [65] [66]
-<./figures/linear/pretty_decoder.png, id=512, 158.5925pt x 158.5925pt>
+<use ./figures/linear/network.pdf> [60 <./figures/linear/network.pdf>] [61]
+[62] [63] [64] [65] [66] [67]
+<./figures/linear/pretty_decoder.png, id=517, 158.5925pt x 158.5925pt>
 File: ./figures/linear/pretty_decoder.png Graphic file (type png)
 
 <use ./figures/linear/pretty_decoder.png>
@@ -1116,7 +1125,7 @@ Underfull \hbox (badness 2980) in paragraph at lines 263--263
 []\OT1/txr/m/n/10.95 (a) |Shal-low Ar-chi-tec-
  []
 
-<./figures/linear/dec200.png, id=513, 158.5925pt x 158.5925pt>
+<./figures/linear/dec200.png, id=518, 158.5925pt x 158.5925pt>
 File: ./figures/linear/dec200.png Graphic file (type png)
 
 <use ./figures/linear/dec200.png>
@@ -1124,38 +1133,38 @@ Underfull \hbox (badness 2478) in paragraph at lines 267--267
 []\OT1/txr/m/n/10.95 (b) |Shal-low Ar-chi-tec-
  []
 
-<./figures/linear/taco/original.png, id=514, 192.72pt x 256.96pt>
+<./figures/linear/taco/original.png, id=519, 192.72pt x 256.96pt>
 File: ./figures/linear/taco/original.png Graphic file (type png)
 
 <use ./figures/linear/taco/original.png>
-<./figures/linear/taco/siamese_interp_num.png, id=515, 448.67625pt x 255.95625p
+<./figures/linear/taco/siamese_interp_num.png, id=520, 448.67625pt x 255.95625p
 t>
 File: ./figures/linear/taco/siamese_interp_num.png Graphic file (type png)
- <use ./figures/linear/taco/siamese_interp_num.png> [67 <./figures/linear/prett
+ <use ./figures/linear/taco/siamese_interp_num.png> [68 <./figures/linear/prett
 y_decoder.png (PNG copy)> <./figures/linear/dec200.png (PNG copy)> <./figures/l
 inear/taco/original.png (PNG copy)> <./figures/linear/taco/siamese_interp_num.p
 ng>]
-<./figures/linear/taco/interp_no_pool_no_reg.png, id=520, 449.68pt x 256.96pt>
+<./figures/linear/taco/interp_no_pool_no_reg.png, id=526, 449.68pt x 256.96pt>
 File: ./figures/linear/taco/interp_no_pool_no_reg.png Graphic file (type png)
 
 <use ./figures/linear/taco/interp_no_pool_no_reg.png>
-<./figures/linear/taco/interp_pool_best_reg.png, id=521, 449.68pt x 256.96pt>
+<./figures/linear/taco/interp_pool_best_reg.png, id=527, 449.68pt x 256.96pt>
 File: ./figures/linear/taco/interp_pool_best_reg.png Graphic file (type png)
 
 <use ./figures/linear/taco/interp_pool_best_reg.png>
-<./figures/linear/taco/interp_nodelta.png, id=522, 449.68pt x 256.96pt>
+<./figures/linear/taco/interp_nodelta.png, id=528, 449.68pt x 256.96pt>
 File: ./figures/linear/taco/interp_nodelta.png Graphic file (type png)
 
 <use ./figures/linear/taco/interp_nodelta.png>
-<./figures/linear/taco/interp_delta.png, id=523, 449.68pt x 256.96pt>
+<./figures/linear/taco/interp_delta.png, id=529, 449.68pt x 256.96pt>
 File: ./figures/linear/taco/interp_delta.png Graphic file (type png)
 
-<use ./figures/linear/taco/interp_delta.png>) [68] [69 <./figures/linear/taco/i
+<use ./figures/linear/taco/interp_delta.png>) [69] [70 <./figures/linear/taco/i
 nterp_no_pool_no_reg.png (PNG copy)> <./figures/linear/taco/interp_pool_best_re
 g.png (PNG copy)> <./figures/linear/taco/interp_nodelta.png (PNG copy)> <./figu
-res/linear/taco/interp_delta.png (PNG copy)>] [70]
+res/linear/taco/interp_delta.png (PNG copy)>] [71]
 Chapter 7.
-[71
+[72
 
 ]
 Missing character: There is no â in font txr!
@@ -1164,14 +1173,14 @@ Missing character: There is no œ in font txr!
 Missing character: There is no â in font txr!
 Missing character: There is no € in font txr!
 Missing character: There is no  in font txr!
- [72
+ [73
 
 
-] [73]
+] [74]
 Missing character: There is no â in font txr!
 Missing character: There is no € in font txr!
 Missing character: There is no ™ in font txr!
- [74] [75] [76] [77] [78] (./main.aux)
+ [75] [76] [77] [78] [79] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1180,10 +1189,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9319 strings out of 493848
- 145179 string characters out of 1152823
+ 9332 strings out of 493848
+ 145518 string characters out of 1152823
  285681 words of memory out of 3000000
- 12301 multiletter control sequences out of 15000+50000
+ 12311 multiletter control sequences out of 15000+50000
  46039 words of font info for 105 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,13n,38p,2653b,698s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1198,9 +1207,9 @@ b></usr/share/texmf-texlive/fonts/type1/public/txfonts/txsyb.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8
 a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (89 pages, 4187582 bytes).
+Output written on main.pdf (90 pages, 4216863 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
+ 609 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 395 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 
