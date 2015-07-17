@@ -245,6 +245,65 @@
   \field{year}{2012}
 \endentry
 
+\entry{candes2006}{article}{}
+  \name{author}{3}{%
+    {{Cand{\`e}s}{C.}%
+     {Emmanuel~J}{E.~J.}%
+     {}{}%
+     {}{}}%
+    {{Romberg}{R.}%
+     {Justin}{J.}%
+     {}{}%
+     {}{}}%
+    {{Tao}{T.}%
+     {Terence}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \field{journaltitle}{Information Theory, IEEE Transactions on}
+  \strng{namehash}{CEJRJTT1}
+  \strng{fullhash}{CEJRJTT1}
+  \field{sortinit}{C}
+  \field{number}{2}
+  \field{pages}{489\bibrangedash 509}
+  \field{title}{Robust uncertainty principles: Exact signal reconstruction from
+  highly incomplete frequency information}
+  \field{volume}{52}
+  \field{year}{2006}
+\endentry
+
+\entry{BP}{article}{}
+  \name{author}{3}{%
+    {{Chen}{C.}%
+     {Scott~Shaobing}{S.~S.}%
+     {}{}%
+     {}{}}%
+    {{Donoho}{D.}%
+     {David~L}{D.~L.}%
+     {}{}%
+     {}{}}%
+    {{Saunders}{S.}%
+     {Michael~A}{M.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {SIAM}%
+  }
+  \field{journaltitle}{SIAM journal on scientific computing}
+  \strng{namehash}{CSSDDLSMA1}
+  \strng{fullhash}{CSSDDLSMA1}
+  \field{sortinit}{C}
+  \field{number}{1}
+  \field{pages}{33\bibrangedash 61}
+  \field{title}{Atomic decomposition by basis pursuit}
+  \field{volume}{20}
+  \field{year}{1998}
+\endentry
+
 \entry{taco}{article}{}
   \name{author}{2}{%
     {{Cohen}{C.}%

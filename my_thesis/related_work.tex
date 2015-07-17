@@ -101,28 +101,49 @@ the most well know linear manifold models \cite{ICA}. Both assume that the
 observed high dimensional data $x$ are generated from some low dimensional
 latent variables $z$ via a linear operator $A$, that is $x=Az$. Assuming that
 the data is zero mean, PCA implicitly makes the assumption that the latent
-variables correspond to directions with the largest variance \cite{PCA}. ICA
-however searches for linearly independent components, formulating the
-definition of independence using the central limit theorem. Although the
+variables correspond to directions with the largest variance \cite{PCA}.  These
+components can be obtained from the Eigen decomposition of the covariance
+matrix.  ICA however searches for linearly independent components, formulating
+the definition of independence using the central limit theorem. Although the
 detailed derivation of ICA will not be presented here, we will mention that it
 leads to a fourth order moment (kurtosis) maximization problem subject to a
 second order moment (variance) constraint. This optimization problem is
 visualized as the left plot of Figure \ref{fig:ICA_lasso}. The blue curves
 represent the level sets of the kurtosis objective, and the red curve
-represents the unit variance constraint. 
-
+represents the unit variance constraint. The next section will establish a 
+remarkable connection between ICA and sparse inference.  
 
 \section{Sparse Representations} 
 Sparse inference refers to the problem of finding the coefficients $z$ which
 reconstruct the input $x$ as a sparse linear combination of some basis elements
-contained an over-complete dictionary $W_d$. In general, sparse inference is an
-intractable combinatorial problem. A relaxation of the sparse inference problem
-is the so called lasso, 
+contained an over-complete dictionary $W_d$. Sparsity is measured by the number
+of non-zero coefficients; the higher the sparsity the fewer non-zero
+coefficients in $z$ used to represent $x$.  
+The sparse inference problem can be stated formally as: 
 
-\begin{equation} L_{lasso} = \min_Z \frac{1}{2}\|X-W_dZ\| + \alpha |Z|_1
+\begin{equation} 
+min \|z\|_0 \mbox{ subject to } x = W_dz 
 \end{equation} 
+
+In general, this is an intractable combinatorial problem. A now famous
+breakthrough showed that exact sparse solutions can be obtained, under certain
+conditions, by replacing the $L_0$ norm with an $L_1$ norm \cite{candes2006}.
+This optimization problem is depicted on the right side of Figure
+\ref{fig:ICA_lasso}.  The level sets of the $L_1$ norm are shown in blue and
+the linear constraint is shown in red. The minimum occur on the $x$-axis, with
+$y=0$ implying that the solution is indeed sparse. Remarkably, the solution to
+the ICA problem (left side of Figure \ref{fig:ICA_Lasso}) is also sparse though the
+objective was explicitly derived with sparsity in mind.    
+
+Relaxing the constraint, this problem can be written as an unconstrained loss
+functional called the lasso (also basis pursuit de-noising) \cite{BP}:  
+
+\begin{equation} 
+L_{lasso} = \frac{1}{2}\|x-W_dz\| + \alpha |z|_1
+\end{equation} 
+
 
 \section{Metric Learning}
 
-\section{Regularized Auto-Encoders} 
+\section{Auto-Encoders and Energy Based Learning} 
  
