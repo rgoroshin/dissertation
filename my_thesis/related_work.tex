@@ -110,8 +110,25 @@ leads to a fourth order moment (kurtosis) maximization problem subject to a
 second order moment (variance) constraint. This optimization problem is
 visualized as the left plot of Figure \ref{fig:ICA_lasso}. The blue curves
 represent the level sets of the kurtosis objective, and the red curve
-represents the unit variance constraint. The next section will establish a 
-remarkable connection between ICA and sparse inference.  
+represents the unit variance constraint. Figure \ref{fig:ICA_features}  shows
+the features learned using an ICA algorithm on natural image patches.  Note the
+strong resemblance to the bases learned with sparse feature learning algorithms
+such as Sparse Coding \cite{SC}. The next section will establish a remarkable
+connection between ICA and sparse inference.  
+
+\begin{figure} 
+\centering
+\includegraphics[scale=0.4]{./figures/related_work/imageManifold.png} 
+\caption{Sparse coding learns a local linear model of the data manifold (image from \cite{SC2}).}
+\label{fig:ICA_features} 
+\end{figure} 
+
+\begin{figure} 
+\centering
+\includegraphics[scale=0.4]{./figures/related_work/ICABasis.png} 
+\caption{Independent features learned on natural image patches}
+\label{fig:ICA_features} 
+\end{figure} 
 
 \section{Sparse Representations} 
 Sparse inference refers to the problem of finding the coefficients $z$ which
@@ -132,16 +149,29 @@ This optimization problem is depicted on the right side of Figure
 \ref{fig:ICA_lasso}.  The level sets of the $L_1$ norm are shown in blue and
 the linear constraint is shown in red. The minimum occur on the $x$-axis, with
 $y=0$ implying that the solution is indeed sparse. Remarkably, the solution to
-the ICA problem (left side of Figure \ref{fig:ICA_Lasso}) is also sparse though the
-objective was explicitly derived with sparsity in mind.    
+the ICA problem (left side of Figure \ref{fig:ICA_lasso}) is also sparse though the
+objective was explicitly derived with sparsity in mind. Given this similarity 
+between ICA and sparse feature learning, it is not surprising that the features 
+learned with ICA on natural images strongly resemble those learned with sparse coding. 
 
 Relaxing the constraint, this problem can be written as an unconstrained loss
 functional called the lasso (also basis pursuit de-noising) \cite{BP}:  
 
 \begin{equation} 
-L_{lasso} = \frac{1}{2}\|x-W_dz\| + \alpha |z|_1
+L_{lasso} = \frac{1}{2}\|x-W_dz\|^2_2 + \alpha |z|_1
+\label{eqn:lasso} 
 \end{equation} 
 
+Minimizing the above loss with respect to $z$ and a fixed $W_d$ corresponds to
+the sparse inference problem, and corresponds to the ``encoding''. Decoding
+sparse representations is trivial, it simply corresponds to computing $W_dz$.
+The loss described by the above equation is non-convex with respect to $z$,
+however each of the two terms are individually convex which prompted
+alternating minimization approaches such as the various Iterative Shrinkage and
+Thresholding algorithms \cite{FISTA}. It is possible to find ``feed forward'',
+i.e. non-iterative approximations (i.e. encoders) to iterative sparse inference
+algorithms for data $x$ drawn from a fixed distribution. Thus the codes are
+given by a functional mapping of the input, i.e. $z=F_w(x)$. 
 
 \section{Metric Learning}
 
