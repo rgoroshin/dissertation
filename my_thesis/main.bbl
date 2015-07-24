@@ -398,6 +398,33 @@
   \field{year}{2012}
 \endentry
 
+\entry{CBP}{article}{}
+  \name{author}{3}{%
+    {{Ekanadham}{E.}%
+     {Chaitanya}{C.}%
+     {}{}%
+     {}{}}%
+    {{Tranchina}{T.}%
+     {Daniel}{D.}%
+     {}{}%
+     {}{}}%
+    {{Simoncelli}{S.}%
+     {Eero~P}{E.~P.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{IEEE TRANSACTIONS ON SIGNAL PROCESSING}
+  \strng{namehash}{ECTDSEP1}
+  \strng{fullhash}{ECTDSEP1}
+  \field{sortinit}{E}
+  \field{number}{10}
+  \field{pages}{4735}
+  \field{title}{Recovery of Sparse Translation-Invariant Signals With
+  Continuous Basis Pursuit}
+  \field{volume}{59}
+  \field{year}{2011}
+\endentry
+
 \entry{felleman1991}{article}{}
   \name{author}{2}{%
     {{Felleman}{F.}%
@@ -944,6 +971,28 @@
   \field{title}{Gradient-Based Learning Applied to Document Recognition}
   \field{volume}{86}
   \field{year}{1998}
+\endentry
+
+\entry{gabor}{article}{}
+  \name{author}{1}{%
+    {{Lee}{L.}%
+     {Tai~Sing}{T.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \field{journaltitle}{Pattern Analysis and Machine Intelligence, IEEE
+  Transactions on}
+  \strng{namehash}{LTS1}
+  \strng{fullhash}{LTS1}
+  \field{sortinit}{L}
+  \field{number}{10}
+  \field{pages}{959\bibrangedash 971}
+  \field{title}{Image representation using 2D Gabor wavelets}
+  \field{volume}{18}
+  \field{year}{1996}
 \endentry
 
 \entry{complexCells}{article}{}

@@ -11,6 +11,8 @@
 \hline
 \cellcolor{yellow}Sparse Coding & Local Linear &\checkmark & \checkmark & Separate \\
 \hline 
+\cellcolor{yellow}CBP & Osculating Circle &\checkmark & \checkmark & Separate \\
+\hline 
 \cellcolor{yellow}PSD \& LISTA & Local Linear &\checkmark & \checkmark & Separate\\
 \hline
 \cellcolor{lightblue}DrLIM & Nonlinear & \checkmark & X & Enc. Only\\
@@ -78,10 +80,12 @@ the model, the color indicates the type of objective each model tries to
 optimize.  These are summarized in the table below. For example, one version of
 PCA finds maximally decorrelated linear components. The ``manifold model''
 column indicates the geometric prior each model assumes about the data
-manifold. The next two columns indicate whether each model learns an encoder
-and/or decoder.  Finally, the last column summarizes the relationship enforced
-between the encoder and decoder. For example in PCA the encoder and decoder are
-related by the transpose operator. This chapter will review the algorithms in
+manifold. As another exampling,  the Continous Basis Pursuit (CBP) model
+proposes a local osculating circle model to the data manifold \cite{CBP}.  The
+next two columns indicate whether each model learns an encoder and/or decoder.
+Finally, the last column summarizes the relationship enforced between the
+encoder and decoder. For example in PCA the encoder and decoder are related by
+the transpose operator. This chapter will review some of the algorithms in
 Table \ref{tbl:models}, placing emphasis on the precursors of the algorithms
 presented in Chapters \ref{chapter:slow} and \ref{chapter:linear}. The
 algorithms will be presented as various models of the data manifold.
@@ -163,17 +167,45 @@ L_{lasso} = \frac{1}{2}\|x-W_dz\|^2_2 + \alpha |z|_1
 \end{equation} 
 
 Minimizing the above loss with respect to $z$ and a fixed $W_d$ corresponds to
-the sparse inference problem, and corresponds to the ``encoding''. Decoding
-sparse representations is trivial, it simply corresponds to computing $W_dz$.
-The loss described by the above equation is non-convex with respect to $z$,
-however each of the two terms are individually convex which prompted
-alternating minimization approaches such as the various Iterative Shrinkage and
-Thresholding algorithms \cite{FISTA}. It is possible to find ``feed forward'',
-i.e. non-iterative approximations (i.e. encoders) to iterative sparse inference
-algorithms for data $x$ drawn from a fixed distribution. Thus the codes are
-given by a functional mapping of the input, i.e. $z=F_w(x)$. 
+the sparse inference problem, which also corresponds to the ``encoding''
+process. Decoding sparse representations is trivial, it simply corresponds to
+computing $W_dz$.  The loss described by the above equation is non-convex with
+respect to $z$, however each of the two terms are individually convex which
+prompted alternating minimization approaches such as the various Iterative
+Shrinkage and Thresholding algorithms \cite{FISTA}. It is possible to find
+``feed forward'', i.e. non-iterative approximations (i.e. encoders) to
+iterative sparse inference algorithms for data $x$ drawn from a fixed
+distribution. Thus the codes are given by a functional mapping of the input,
+i.e. $z=F_W(x)$. This mapping, called the encoder, can be learned jointly with
+the decoder.  The corresponding loss is given by Equation \ref{eqn:sae_loss}, 
+
+\begin{equation} 
+L_{SAE} = \frac{1}{2}\|x-W_dF_W(x)\|^2_2 + \alpha |F_W(x)|_1
+\label{eqn:sae_loss} 
+\end{equation} 
+
+The above loss can be implemented using a network architecture called an
+``auto-encoder''. This loss is highly non-convex and no optimal minimization
+algorithm is known, however stochastic gradient descent works well in practice.
+Because of the sparsity-inducing $L^1$ penalty on the code, this is called the
+sparse auto-encoder (SAE) \cite{SAE1,SAE2}. Optimal architectures for $F_W()$
+in the SAE network are the subject of Chapter \ref{chapter:LISTA}. Other
+auto-encoder networks are the subject of the next subsection.    
+
+It was noticed that when sparse feature learning was applied to natural images
+local edge detectors, similar to the Gabor wavelet basis emerged \cite{SC,gabor}.  
+One problem with sparse representations is their stability. A sparse code 
+corresponding to an overcomplete basis implies that each basis element is specializes to
+respond to some very particularly input; an edge at a specific location and orientation
+for example. If the edge moves slightly, a different basis element will respond, corresponding 
+to a change of support in code space. This highly unstable behaviour of sparse 
+representations is undesirable for tasks such as classification where \emph{invariance} 
+is an important property. That is, the object category remains the same under 
+many transformations. Several works have attempted to compensate for this...    
+ 
+
+\section{Auto-Encoders and Energy Based Learning} 
 
 \section{Metric Learning}
 
-\section{Auto-Encoders and Energy Based Learning} 
  
