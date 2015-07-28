@@ -193,17 +193,48 @@ in the SAE network are the subject of Chapter \ref{chapter:LISTA}. Other
 auto-encoder networks are the subject of the next subsection.    
 
 It was noticed that when sparse feature learning was applied to natural images
-local edge detectors, similar to the Gabor wavelet basis emerged \cite{SC,gabor}.  
-One problem with sparse representations is their stability. A sparse code 
-corresponding to an overcomplete basis implies that each basis element is specializes to
-respond to some very particularly input; an edge at a specific location and orientation
-for example. If the edge moves slightly, a different basis element will respond, corresponding 
-to a change of support in code space. This highly unstable behaviour of sparse 
-representations is undesirable for tasks such as classification where \emph{invariance} 
-is an important property. That is, the object category remains the same under 
-many transformations. Several works have attempted to compensate for this...    
- 
+local edge detectors, similar to the Gabor wavelet basis emerged
+\cite{SC,gabor}.  One problem with sparse representations is their instability.
+A sparse code corresponding to an overcomplete basis implies that each basis
+element activates only for some to inputs; an edge at a specific location and
+orientation for example. If the edge moves slightly, a different basis element
+will respond, corresponding to a change of support in code space. This highly
+unstable behavior of sparse representations is undesirable for tasks such as
+classification where \emph{invariance} is an important property. For example,
+the object category remains the same under many transformations. One way to
+mitigate this behavior is to combine the responses of several basis elements
+such that the response of the group is more stable than the response of the
+individual elements.  This so called ``group sparsity'' results in feature
+representations that are much more stable and hence more useful for tasks that
+require invariant representations \cite{groupSparsity}. One way to group these
+features uses a local $L^2$ pooling operator in a predefined topology. In
+group-sparse models, the sparsity inducing $L^1$ norm is applied to the grouped
+activations, i.e. to the output of the local $L^2$ pooling operator.
+Specifically, if the code space is partitioned into $K$ potentially overlapping
+neighborhoods, where $P_i$ denotes the $i^{th}$ neighborhood, the group
+sparsity loss can be written as: 
 
+\begin{equation} 
+L_{GSC} = \frac{1}{2} \|x - Wz \|_2 ^ 2 + \alpha \sum_{i=1} ^ K \sqrt{\sum_{j \in P_i} w_jz_j ^2}  
+\label{eqn:gsc_loss} 
+\end{equation}
+
+Note that if the optional neighborhood weights $w_j$ are all set to unity, the
+second term reduces to a sum of $L^2$ norms.  The features learned with this
+model are shown in Figure \ref{fig:GSC_features}.  Note that the pooling
+operator introduces a topology in the feature space, whereby nearby features
+tend to co-activate. The models presented in Chapters \ref{chapter:slow} and
+\ref{chapter:linear} extend this idea to temporal data in order to learn
+feature groups that correspond to temporal transformations.    
+
+\begin{figure} 
+\centering
+\includegraphics[scale=0.4]{./figures/related_work/PSD.png} 
+\caption{Features learned with group sparsity model in a two dimensional topology, 
+with a local pooling neighborhood is overlaid in black. Figure from \cite{groupSparsity}.}
+\label{fig:GSC_features} 
+\end{figure} 
+ 
 \section{Auto-Encoders and Energy Based Learning} 
 
 \section{Metric Learning}

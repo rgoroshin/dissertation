@@ -423,12 +423,12 @@ convolution-pooling layers. \label{fig:query}}  \label{fig:query} \end{figure}
 curves corresponding to the YouTube (a) and CIFAR-10 (b) dataset.}
 \label{fig:ROC} \end{figure}
 
-\begin{figure} \centering \begin{tabular}{| l | l | l | l |} \hline Model &
+\begin{table} \centering \begin{tabular}{| l | l | l | l |} \hline Model &
 Optimization & Temporal AUC & Class AUC \\ \hline Our Model Layer1 & --- &
 0.262 & 0.296 \\ Our Model Layer2 & Greedy & 0.300 & \bf{0.310} \\ DrLIM Layer1
 & --- & 0.188 & 0.221 \\ DrLIM Layer2 & Joint & \bf{0.378} & 0.268 \\ Group
 $L_1$ Layer1 & --- & 0.231 & 0.266 \\ Group $L_1$ Layer2 & Greedy & 0.285 &
-0.281 \\ \hline \end{tabular} \end{figure} %\subsection{Discussion of Results}
+0.281 \\ \hline \end{tabular} \caption{Comnparison of Temporal and Class AUCs} \end{table} %\subsection{Discussion of Results}
 %filter discussion  Figure \ref{fig:videoquery} shows the top nine query
 results on the YouTube dataset for a single frame (left column) in eight
 spaces. The top row shows the nearest neighbors in pixel space. The second row

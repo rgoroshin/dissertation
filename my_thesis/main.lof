@@ -14,70 +14,72 @@
 \defcounter {refsection}{0}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Independent features learned on natural image patches\relax }}{11}
 \defcounter {refsection}{0}
-\addvspace {10\p@ }
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Three nonlinearities (top) with their associated complementary regularization functions(bottom).\relax }}{18}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Energy surfaces for unregularized (left), and regularized (right) solutions obtained on SATAE-shrink and 10 basis vectors. Black corresponds to low reconstruction energy. Training points lie on a one-dimensional manifold shown in yellow.\relax }}{20}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces SATAE-SL toy example with two basis elements. Top Row: three randomly initialized solutions obtained with no regularization. Bottom Row: three randomly initialized solutions obtained with regularization.\relax }}{21}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Geometric visualization of non-linearities\relax }}{21}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Evolution of two filters with increasing saturation regularization for a SATAE-SL trained on CIFAR-10. Filters corresponding to larger values of $\alpha $ were initialized using the filter corresponding to the previous $\alpha $. The regularization parameter was varied from 0.1 to 0.5 (left to right) in the top five images and 0.5 to 1 in the bottom five \relax }}{22}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Basis elements learned by the SATAE using different nonlinearities on: 28x28 binary MNIST digits, 12x12 gray scale natural image patches, and CIFAR-10. (a) SATAE-shrink trained on MNIST, (b) SATAE-saturated-linear trained on MNIST, (c) SATAE-shrink trained on natural image patches, (d) SATAE-saturated-linear trained on natural image patches, (e)-(f) SATAE-shrink trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.5$, respectively, (g)-(h) SATAE-SL trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.6$, respectively. \relax }}{23}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of the complimentary function ($f_c$) as defined by Equation 3 for a non-monotonic activation function ($f$). The absolute derivative of $f$ is shown for comparison.\relax }}{28}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Features learned with group sparsity model in a two dimensional topology, with a local pooling neighborhood is overlaid in black. Figure from \cite {groupSparsity}.\relax }}{14}
 \defcounter {refsection}{0}
 \addvspace {10\p@ }
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces LISTA network architecture\relax }}{32}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Three nonlinearities (top) with their associated complementary regularization functions(bottom).\relax }}{19}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Pre-trained decoder used for fixed-decoder experiments\relax }}{34}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Energy surfaces for unregularized (left), and regularized (right) solutions obtained on SATAE-shrink and 10 basis vectors. Black corresponds to low reconstruction energy. Training points lie on a one-dimensional manifold shown in yellow.\relax }}{21}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Whitened CIFAR-10 samples (top) and their corresponding reconstructions.\relax }}{34}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces SATAE-SL toy example with two basis elements. Top Row: three randomly initialized solutions obtained with no regularization. Bottom Row: three randomly initialized solutions obtained with regularization.\relax }}{22}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Sparse codes obtained with FISTA inference\relax }}{35}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Geometric visualization of non-linearities\relax }}{22}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Sparse inference learning curves\relax }}{37}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Evolution of two filters with increasing saturation regularization for a SATAE-SL trained on CIFAR-10. Filters corresponding to larger values of $\alpha $ were initialized using the filter corresponding to the previous $\alpha $. The regularization parameter was varied from 0.1 to 0.5 (left to right) in the top five images and 0.5 to 1 in the bottom five \relax }}{23}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Lasso Loss with Fixed Dictionary\relax }}{38}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Basis elements learned by the SATAE using different nonlinearities on: 28x28 binary MNIST digits, 12x12 gray scale natural image patches, and CIFAR-10. (a) SATAE-shrink trained on MNIST, (b) SATAE-saturated-linear trained on MNIST, (c) SATAE-shrink trained on natural image patches, (d) SATAE-saturated-linear trained on natural image patches, (e)-(f) SATAE-shrink trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.5$, respectively, (g)-(h) SATAE-SL trained on CIFAR-10 with $\alpha =0.1$ and $\alpha =0.6$, respectively. \relax }}{24}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Reconstruction and Sparsity with Fixed Dictionary\relax }}{38}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Lasso Loss with Learned Dictionary\relax }}{39}
-\defcounter {refsection}{0}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Reconstruction and Sparsity with Learned Dictionary\relax }}{40}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of the complimentary function ($f_c$) as defined by Equation 3 for a non-monotonic activation function ($f$). The absolute derivative of $f$ is shown for comparison.\relax }}{29}
 \defcounter {refsection}{0}
 \addvspace {10\p@ }
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Three samples from our rotating plane toy dataset. (b) Scatter plot of the dataset plotted in the output space of $G_W$ at the start (top) and end (bottom) of training. The left side of the figure is colored by the yaw angle, and the right side by roll, $0^{\circ }$ blue, $90^{\circ }$ in pink.\relax }}{45}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces LISTA network architecture\relax }}{33}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Pooled decoder dictionaries learned without (a) and with (b) the $L_1$ penalty using (6.1\hbox {}).\relax }}{49}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pre-trained decoder used for fixed-decoder experiments\relax }}{35}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Block diagram of the Siamese convolutional model trained on pairs of frames. \relax }}{51}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Whitened CIFAR-10 samples (top) and their corresponding reconstructions.\relax }}{35}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Six scenes from our YouTube dataset \relax }}{54}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sparse codes obtained with FISTA inference\relax }}{36}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Pooled convolutional dictionaries (decoders) learned with: (a) DrLIM and (b) sparsity only, (c) group sparsity, and (d) sparsity and slowness. Groups of four features that were pooled together are depicted as horizontally adjacent filters.\relax }}{54}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Sparse inference learning curves\relax }}{38}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Query results in the (a) video and (b) CIFAR-10 datasets. Each row corresponds to a different feature space in which the queries were performed; numbers (1 or 2) denote the number of convolution-pooling layers. \relax }}{55}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Lasso Loss with Fixed Dictionary\relax }}{39}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Precision-Recall curves corresponding to the YouTube (a) and CIFAR-10 (b) dataset.\relax }}{55}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Reconstruction and Sparsity with Fixed Dictionary\relax }}{39}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Lasso Loss with Learned Dictionary\relax }}{40}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Reconstruction and Sparsity with Learned Dictionary\relax }}{41}
 \defcounter {refsection}{0}
 \addvspace {10\p@ }
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces (a) A video generated by translating a Gaussian intensity bump over a three pixel array ($x$,$y$,$z$), (b) the corresponding manifold parametrized by time in three dimensional space\relax }}{63}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Three samples from our rotating plane toy dataset. (b) Scatter plot of the dataset plotted in the output space of $G_W$ at the start (top) and end (bottom) of training. The left side of the figure is colored by the yaw angle, and the right side by roll, $0^{\circ }$ blue, $90^{\circ }$ in pink.\relax }}{46}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The basic linear prediction architecture with shared weight encoders\relax }}{64}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Pooled decoder dictionaries learned without (a) and with (b) the $L_1$ penalty using (6.1\hbox {}).\relax }}{50}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Decoder filters learned by shallow phase-pooling architectures\relax }}{72}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Block diagram of the Siamese convolutional model trained on pairs of frames. \relax }}{52}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces (a) Test samples input to the network (b) Linear interpolation in code space learned by our Siamese-encoder network\relax }}{72}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Six scenes from our YouTube dataset \relax }}{55}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Linear interpolation in code space learned by our model. (a) no phase-pooling, no curvature regularization, (b) with phase pooling and curvature regularization\relax }}{74}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Pooled convolutional dictionaries (decoders) learned with: (a) DrLIM and (b) sparsity only, (c) group sparsity, and (d) sparsity and slowness. Groups of four features that were pooled together are depicted as horizontally adjacent filters.\relax }}{55}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Interpolation results obtained by minimizing (a) Equation 6.1\hbox {} and (b) Equation 6.7\hbox {} trained with only partially predictable simulated video\relax }}{74}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Query results in the (a) video and (b) CIFAR-10 datasets. Each row corresponds to a different feature space in which the queries were performed; numbers (1 or 2) denote the number of convolution-pooling layers. \relax }}{56}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Precision-Recall curves corresponding to the YouTube (a) and CIFAR-10 (b) dataset.\relax }}{56}
+\defcounter {refsection}{0}
+\addvspace {10\p@ }
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces (a) A video generated by translating a Gaussian intensity bump over a three pixel array ($x$,$y$,$z$), (b) the corresponding manifold parametrized by time in three dimensional space\relax }}{64}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The basic linear prediction architecture with shared weight encoders\relax }}{65}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Decoder filters learned by shallow phase-pooling architectures\relax }}{73}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces (a) Test samples input to the network (b) Linear interpolation in code space learned by our Siamese-encoder network\relax }}{73}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Linear interpolation in code space learned by our model. (a) no phase-pooling, no curvature regularization, (b) with phase pooling and curvature regularization\relax }}{75}
+\defcounter {refsection}{0}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Interpolation results obtained by minimizing (a) Equation 6.1\hbox {} and (b) Equation 6.7\hbox {} trained with only partially predictable simulated video\relax }}{75}
 \defcounter {refsection}{0}
 \addvspace {10\p@ }
