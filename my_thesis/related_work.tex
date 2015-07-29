@@ -193,26 +193,28 @@ in the SAE network are the subject of Chapter \ref{chapter:LISTA}. Other
 auto-encoder networks are the subject of the next subsection.    
 
 It was noticed that when sparse feature learning was applied to natural images
-local edge detectors, similar to the Gabor wavelet basis emerged
-\cite{SC,gabor}.  One problem with sparse representations is their instability.
-A sparse code corresponding to an overcomplete basis implies that each basis
-element activates only for some to inputs; an edge at a specific location and
-orientation for example. If the edge moves slightly, a different basis element
-will respond, corresponding to a change of support in code space. This highly
-unstable behavior of sparse representations is undesirable for tasks such as
-classification where \emph{invariance} is an important property. For example,
-the object category remains the same under many transformations. One way to
-mitigate this behavior is to combine the responses of several basis elements
-such that the response of the group is more stable than the response of the
-individual elements.  This so called ``group sparsity'' results in feature
-representations that are much more stable and hence more useful for tasks that
-require invariant representations \cite{groupSparsity}. One way to group these
-features uses a local $L^2$ pooling operator in a predefined topology. In
-group-sparse models, the sparsity inducing $L^1$ norm is applied to the grouped
-activations, i.e. to the output of the local $L^2$ pooling operator.
-Specifically, if the code space is partitioned into $K$ potentially overlapping
-neighborhoods, where $P_i$ denotes the $i^{th}$ neighborhood, the group
-sparsity loss can be written as: 
+local edge detectors, similar to the Gabor wavelet basis emerged which was
+already being used in many computer vision applications \cite{SC,gabor}. This
+observation lead to a flurry of works that tried to apply sparse features to
+common computer vision problems such as classification.  One problem with
+sparse representations is their instability.  A sparse code corresponding to an
+overcomplete basis implies that each basis element activates only for some to
+inputs; an edge at a specific location and orientation for example. If the edge
+moves slightly, a different basis element will respond, corresponding to a
+change of support in code space. This highly unstable behavior of sparse
+representations is undesirable for tasks such as classification where
+\emph{invariance} is an important property. For example, the object category
+remains the same under many transformations. One way to mitigate this behavior
+is to combine the responses of several basis elements such that the response of
+the group is more stable than the response of the individual elements.  This so
+called ``group sparsity'' results in feature representations that are much more
+stable and hence more useful for tasks that require invariant representations
+\cite{groupSparsity}. One way to group these features uses a local $L^2$
+pooling operator in a predefined topology. In group-sparse models, the sparsity
+inducing $L^1$ norm is applied to the grouped activations, i.e. to the output
+of the local $L^2$ pooling operator.  Specifically, if the code space is
+partitioned into $K$ potentially overlapping neighborhoods, where $P_i$ denotes
+the $i^{th}$ neighborhood, the group sparsity loss can be written as: 
 
 \begin{equation} 
 L_{GSC} = \frac{1}{2} \|x - Wz \|_2 ^ 2 + \alpha \sum_{i=1} ^ K \sqrt{\sum_{j \in P_i} w_jz_j ^2}  
@@ -221,11 +223,11 @@ L_{GSC} = \frac{1}{2} \|x - Wz \|_2 ^ 2 + \alpha \sum_{i=1} ^ K \sqrt{\sum_{j \i
 
 Note that if the optional neighborhood weights $w_j$ are all set to unity, the
 second term reduces to a sum of $L^2$ norms.  The features learned with this
-model are shown in Figure \ref{fig:GSC_features}.  Note that the pooling
-operator introduces a topology in the feature space, whereby nearby features
-tend to co-activate. The models presented in Chapters \ref{chapter:slow} and
-\ref{chapter:linear} extend this idea to temporal data in order to learn
-feature groups that correspond to temporal transformations.    
+model are shown in Figure \ref{fig:GSC_features}.  Note that the local
+overlapping pooling operator introduces a global topology in the feature space,
+whereby nearby features tend to co-activate. The models presented in Chapters
+\ref{chapter:slow} and \ref{chapter:linear} extend this idea to temporal data
+in order to learn feature groups that correspond to temporal transformations.    
 
 \begin{figure} 
 \centering
@@ -236,6 +238,24 @@ with a local pooling neighborhood is overlaid in black. Figure from \cite{groupS
 \end{figure} 
  
 \section{Auto-Encoders and Energy Based Learning} 
+In the previous subsection we have seen that sparse coding has corresponding
+auto-encoder network implementation. In the sparse auto-encoder, a
+sparsity-inducing $L^1$ penalty is applied to the code, i.e. output of the
+encoder. Other penalties are possible and impose different priors on the
+representation. In general these architectures are called regularized
+auto-encoders. In this subsection we will briefly mention several important
+regularizers, and introduce a new regularizer in Chapter \ref{chapter:SATAE},
+where auto-encoders are discussed in more detail. Broadly speaking,
+auto-encoders embody an implicit model of the data manifold. The reconstruction
+error for a sample on the data manifold should be low and high for points not
+near the data manifold.  In the following chapter we argue that the role of the
+regularizer is to ensure that reconstruction error (energy) is large for points
+far from the data manifold. In this sense the reconstruction energy can be seen
+as a sort of inverse probability of a sample belonging to the data generating
+distribution \cite{lecun2006}. Two popular regularized auto-encoder models
+include the Contractive Auto-Encoder (CAE) and the De-noising Auto-Encoder
+(DAE) \cite{CAE,DAE}.    
+
 
 \section{Metric Learning}
 

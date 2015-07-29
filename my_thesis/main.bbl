@@ -973,6 +973,39 @@
   \field{year}{1998}
 \endentry
 
+\entry{lecun2006}{article}{}
+  \name{author}{5}{%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Chopra}{C.}%
+     {Sumit}{S.}%
+     {}{}%
+     {}{}}%
+    {{Hadsell}{H.}%
+     {Raia}{R.}%
+     {}{}%
+     {}{}}%
+    {{Ranzato}{R.}%
+     {M}{M}%
+     {}{}%
+     {}{}}%
+    {{Huang}{H.}%
+     {F}{F}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{Predicting structured data}
+  \strng{namehash}{LYCSHRRMHF1}
+  \strng{fullhash}{LYCSHRRMHF1}
+  \field{sortinit}{L}
+  \field{pages}{0}
+  \field{title}{A tutorial on energy-based learning}
+  \field{volume}{1}
+  \field{year}{2006}
+\endentry
+
 \entry{gabor}{article}{}
   \name{author}{1}{%
     {{Lee}{L.}%
