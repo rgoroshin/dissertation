@@ -348,6 +348,31 @@
   \field{year}{2014}
 \endentry
 
+\entry{coifman2006}{article}{}
+  \name{author}{2}{%
+    {{Coifman}{C.}%
+     {Ronald~R}{R.~R.}%
+     {}{}%
+     {}{}}%
+    {{Lafon}{L.}%
+     {St{\'e}phane}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \field{journaltitle}{Applied and computational harmonic analysis}
+  \strng{namehash}{CRRLS1}
+  \strng{fullhash}{CRRLS1}
+  \field{sortinit}{C}
+  \field{number}{1}
+  \field{pages}{5\bibrangedash 30}
+  \field{title}{Diffusion maps}
+  \field{volume}{21}
+  \field{year}{2006}
+\endentry
+
 \entry{HoG}{inproceedings}{}
   \name{author}{2}{%
     {{Dalal}{D.}%

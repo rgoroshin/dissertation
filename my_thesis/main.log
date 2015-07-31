@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.6.25)  30 JUL 2015 16:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.6.25)  31 JUL 2015 18:41
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -721,7 +721,19 @@ File: utxsyc.fd 2000/12/15 v3.1
 [7
 
 
-] [8] [9])
+] [8]
+
+LaTeX Warning: Reference `eqn:loss' on page 51 undefined on input line 59.
+
+[9]
+
+LaTeX Warning: Reference `eqn:loss' on page 76 undefined on input line 83.
+
+
+LaTeX Warning: Reference `eqn:delta_loss' on page 76 undefined on input line 83
+.
+
+)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -776,186 +788,180 @@ fold.png (PNG copy)>] [11 <./figures/related_work/ICABasis.png (PNG copy)>]
 File: ./figures/related_work/PSD.png Graphic file (type png)
 
 <use ./figures/related_work/PSD.png> [13] [14 <./figures/related_work/PSD.png (
-PNG copy)>]) [15]
+PNG copy)>] [15] [16]) [17]
 Chapter 3.
-(./SATAE.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--15
-
- []
-
-[16
+(./SATAE.tex [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 40--58
+Underfull \hbox (badness 10000) in paragraph at lines 26--44
 []\OT1/txr/m/n/12 Several auto-encoder vari-ants which reg-u-lar-ize their la-t
 ent states have
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 40--58
+Underfull \hbox (badness 1642) in paragraph at lines 26--44
 \OT1/txr/m/n/12 been pro-posed, they in-clude the sparse auto-encoder and the c
 on-trac-tive auto-
  []
 
-[17] [18] [19]
-<./figures/SATAE/compliments.png, id=112, 476.13176pt x 357.09882pt>
+[19] [20] <./figures/SATAE/compliments.png, id=116, 476.13176pt x 357.09882pt>
 File: ./figures/SATAE/compliments.png Graphic file (type png)
 
-<use ./figures/SATAE/compliments.png> [20 <./figures/SATAE/compliments.png (PNG
- copy)>] [21] <./figures/SATAE/toy_shrink.png, id=122, 602.25pt x 300.12125pt>
+<use ./figures/SATAE/compliments.png> [21] [22 <./figures/SATAE/compliments.png
+ (PNG copy)>] <./figures/SATAE/toy_shrink.png, id=125, 602.25pt x 300.12125pt>
 File: ./figures/SATAE/toy_shrink.png Graphic file (type png)
 
-<use ./figures/SATAE/toy_shrink.png>
-<./figures/SATAE/toy_sat_linear_noreg.png, id=123, 907.39pt x 300.12125pt>
+<use ./figures/SATAE/toy_shrink.png> [23]
+<./figures/SATAE/toy_sat_linear_noreg.png, id=129, 907.39pt x 300.12125pt>
 File: ./figures/SATAE/toy_sat_linear_noreg.png Graphic file (type png)
 
 <use ./figures/SATAE/toy_sat_linear_noreg.png>
-<./figures/SATAE/toy_sat_linear_reg.png, id=124, 906.38625pt x 299.1175pt>
+<./figures/SATAE/toy_sat_linear_reg.png, id=130, 906.38625pt x 299.1175pt>
 File: ./figures/SATAE/toy_sat_linear_reg.png Graphic file (type png)
 
-<use ./figures/SATAE/toy_sat_linear_reg.png> [22 <./figures/SATAE/toy_shrink.pn
-g (PNG copy)>]
-<./figures/SATAE/viz_nonlin.png, id=128, 538.01pt x 183.68625pt>
+<use ./figures/SATAE/toy_sat_linear_reg.png> [24 <./figures/SATAE/toy_shrink.pn
+g (PNG copy)> <./figures/SATAE/toy_sat_linear_noreg.png (PNG copy)> <./figures/
+SATAE/toy_sat_linear_reg.png (PNG copy)>]
+<./figures/SATAE/viz_nonlin.png, id=134, 538.01pt x 183.68625pt>
 File: ./figures/SATAE/viz_nonlin.png Graphic file (type png)
 
 <use ./figures/SATAE/viz_nonlin.png>
-<./figures/SATAE/1.png, id=129, 34.1275pt x 33.12375pt>
+<./figures/SATAE/1.png, id=135, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/1.png Graphic file (type png)
 
 <use ./figures/SATAE/1.png>
-Overfull \hbox (5.38243pt too wide) in paragraph at lines 231--231
+Overfull \hbox (5.38243pt too wide) in paragraph at lines 217--217
  [][] 
  []
 
-<./figures/SATAE/horse1.png, id=130, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse1.png, id=136, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse1.png Graphic file (type png)
 
 <use ./figures/SATAE/horse1.png>
-Overfull \hbox (3.37495pt too wide) in paragraph at lines 231--234
+Overfull \hbox (3.37495pt too wide) in paragraph at lines 217--220
  [][] 
  []
 
-<./figures/SATAE/2.png, id=131, 34.1275pt x 33.12375pt>
+<./figures/SATAE/2.png, id=137, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/2.png Graphic file (type png)
 
 <use ./figures/SATAE/2.png>
-Overfull \hbox (5.38243pt too wide) in paragraph at lines 235--235
+Overfull \hbox (5.38243pt too wide) in paragraph at lines 221--221
  [][] 
  []
 
-<./figures/SATAE/horse2.png, id=132, 34.1275pt x 33.12375pt>
+<./figures/SATAE/horse2.png, id=138, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/horse2.png Graphic file (type png)
 
 <use ./figures/SATAE/horse2.png>
-Overfull \hbox (5.38243pt too wide) in paragraph at lines 236--239
+Overfull \hbox (5.38243pt too wide) in paragraph at lines 222--225
  [][] 
  []
 
-<./figures/SATAE/3.png, id=133, 34.1275pt x 33.12375pt>
+<./figures/SATAE/3.png, id=139, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/3.png Graphic file (type png)
 
 <use ./figures/SATAE/3.png>
-Overfull \hbox (5.38243pt too wide) in paragraph at lines 240--240
+Overfull \hbox (5.38243pt too wide) in paragraph at lines 226--226
  [][] 
  []
 
-<./figures/SATAE/horse3.png, id=134, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse3.png, id=140, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse3.png Graphic file (type png)
 
 <use ./figures/SATAE/horse3.png>
-Overfull \hbox (3.37495pt too wide) in paragraph at lines 241--243
+Overfull \hbox (3.37495pt too wide) in paragraph at lines 227--229
  [][] 
  []
 
-<./figures/SATAE/4.png, id=135, 34.1275pt x 33.12375pt>
+<./figures/SATAE/4.png, id=141, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/4.png Graphic file (type png)
 
 <use ./figures/SATAE/4.png>
-Overfull \hbox (5.38243pt too wide) in paragraph at lines 246--246
+Overfull \hbox (5.38243pt too wide) in paragraph at lines 232--232
  [][] 
  []
 
-<./figures/SATAE/horse4.png, id=136, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse4.png, id=142, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse4.png Graphic file (type png)
 
 <use ./figures/SATAE/horse4.png>
-Overfull \hbox (3.37495pt too wide) in paragraph at lines 247--250
+Overfull \hbox (3.37495pt too wide) in paragraph at lines 233--236
  [][] 
  []
 
-<./figures/SATAE/5.png, id=137, 34.1275pt x 33.12375pt>
+<./figures/SATAE/5.png, id=143, 34.1275pt x 33.12375pt>
 File: ./figures/SATAE/5.png Graphic file (type png)
 
 <use ./figures/SATAE/5.png>
-<./figures/SATAE/horse5.png, id=138, 33.12375pt x 33.12375pt>
+<./figures/SATAE/horse5.png, id=144, 33.12375pt x 33.12375pt>
 File: ./figures/SATAE/horse5.png Graphic file (type png)
 
 <use ./figures/SATAE/horse5.png>
-Overfull \hbox (5.38243pt too wide) in paragraph at lines 251--252
+Overfull \hbox (5.38243pt too wide) in paragraph at lines 237--238
  [][] 
  []
 
 
-Overfull \hbox (3.37495pt too wide) in paragraph at lines 251--252
+Overfull \hbox (3.37495pt too wide) in paragraph at lines 237--238
  [] 
  []
 
-[23 <./figures/SATAE/toy_sat_linear_noreg.png (PNG copy)> <./figures/SATAE/toy_
-sat_linear_reg.png (PNG copy)> <./figures/SATAE/viz_nonlin.png (PNG copy)>]
-[24 <./figures/SATAE/1.png (PNG copy)> <./figures/SATAE/horse1.png (PNG copy)> 
-<./figures/SATAE/2.png (PNG copy)> <./figures/SATAE/horse2.png (PNG copy)> <./f
-igures/SATAE/3.png (PNG copy)> <./figures/SATAE/horse3.png (PNG copy)> <./figur
-es/SATAE/4.png (PNG copy)> <./figures/SATAE/horse4.png (PNG copy)> <./figures/S
-ATAE/5.png (PNG copy)> <./figures/SATAE/horse5.png (PNG copy)>]
-<./figures/SATAE/strokes_full.png, id=145, 290.08376pt x 969.6225pt>
+[25 <./figures/SATAE/viz_nonlin.png (PNG copy)> <./figures/SATAE/1.png (PNG cop
+y)> <./figures/SATAE/horse1.png (PNG copy)> <./figures/SATAE/2.png (PNG copy)> 
+<./figures/SATAE/horse2.png (PNG copy)> <./figures/SATAE/3.png (PNG copy)> <./f
+igures/SATAE/horse3.png (PNG copy)> <./figures/SATAE/4.png (PNG copy)> <./figur
+es/SATAE/horse4.png (PNG copy)> <./figures/SATAE/5.png (PNG copy)> <./figures/S
+ATAE/horse5.png (PNG copy)>]
+<./figures/SATAE/strokes_full.png, id=148, 290.08376pt x 969.6225pt>
 File: ./figures/SATAE/strokes_full.png Graphic file (type png)
 
 <use ./figures/SATAE/strokes_full.png>
-<./figures/SATAE/MNIST_sat_linear_full.png, id=146, 290.08376pt x 971.63pt>
+<./figures/SATAE/MNIST_sat_linear_full.png, id=149, 290.08376pt x 971.63pt>
 File: ./figures/SATAE/MNIST_sat_linear_full.png Graphic file (type png)
 
 <use ./figures/SATAE/MNIST_sat_linear_full.png>
-<./figures/SATAE/gabors_full.png, id=147, 258.9675pt x 971.63pt>
+<./figures/SATAE/gabors_full.png, id=150, 258.9675pt x 971.63pt>
 File: ./figures/SATAE/gabors_full.png Graphic file (type png)
 
 <use ./figures/SATAE/gabors_full.png>
-<./figures/SATAE/patches_sat_linear_full.png, id=148, 195.73125pt x 782.925pt>
+<./figures/SATAE/patches_sat_linear_full.png, id=151, 195.73125pt x 782.925pt>
 File: ./figures/SATAE/patches_sat_linear_full.png Graphic file (type png)
 
 <use ./figures/SATAE/patches_sat_linear_full.png>
-<./figures/SATAE/CIFAR_shrink01.png, id=150, 165.61874pt x 662.475pt>
+<./figures/SATAE/CIFAR_shrink01.png, id=153, 165.61874pt x 662.475pt>
 File: ./figures/SATAE/CIFAR_shrink01.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_shrink01.png>
-<./figures/SATAE/CIFAR_shrink05.png, id=151, 165.61874pt x 662.475pt>
+<./figures/SATAE/CIFAR_shrink05.png, id=154, 165.61874pt x 662.475pt>
 File: ./figures/SATAE/CIFAR_shrink05.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_shrink05.png>
-<./figures/SATAE/CIFAR_sat_linear300_1.png, id=152, 165.61874pt x 661.47125pt>
+<./figures/SATAE/CIFAR_sat_linear300_1.png, id=155, 165.61874pt x 661.47125pt>
 File: ./figures/SATAE/CIFAR_sat_linear300_1.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_sat_linear300_1.png>
-<./figures/SATAE/CIFAR_sat_linear300_6.png, id=153, 165.61874pt x 661.47125pt>
+<./figures/SATAE/CIFAR_sat_linear300_6.png, id=156, 165.61874pt x 661.47125pt>
 File: ./figures/SATAE/CIFAR_sat_linear300_6.png Graphic file (type png)
 
 <use ./figures/SATAE/CIFAR_sat_linear300_6.png>
 
-LaTeX Warning: Float too large for page by 101.64268pt on input line 280.
+LaTeX Warning: Float too large for page by 101.64268pt on input line 266.
 
-[25 <./figures/SATAE/strokes_full.png (PNG copy)> <./figures/SATAE/MNIST_sat_li
+[26 <./figures/SATAE/strokes_full.png (PNG copy)> <./figures/SATAE/MNIST_sat_li
 near_full.png (PNG copy)> <./figures/SATAE/gabors_full.png (PNG copy)> <./figur
 es/SATAE/patches_sat_linear_full.png> <./figures/SATAE/CIFAR_shrink01.png (PNG 
 copy)> <./figures/SATAE/CIFAR_shrink05.png (PNG copy)> <./figures/SATAE/CIFAR_s
 at_linear300_1.png (PNG copy)> <./figures/SATAE/CIFAR_sat_linear300_6.png (PNG 
-copy)>] [26
+copy)>] [27
 
 
-] [27] [28] [29]
-<./figures/SATAE/diff_cc.png, id=171, 476.13176pt x 357.09882pt>
+] [28] [29] [30]
+<./figures/SATAE/diff_cc.png, id=174, 476.13176pt x 357.09882pt>
 File: ./figures/SATAE/diff_cc.png Graphic file (type png)
 
-<use ./figures/SATAE/diff_cc.png> [30 <./figures/SATAE/diff_cc.png (PNG copy)>]
-) [31] [32]
+<use ./figures/SATAE/diff_cc.png> [31 <./figures/SATAE/diff_cc.png (PNG copy)>]
+) [32]
 Chapter 4.
 (./LISTA.tex <./figures/LISTA/LISTA.pdf, id=182, 812.03375pt x 425.59pt>
 File: ./figures/LISTA/LISTA.pdf Graphic file (type pdf)
@@ -1214,10 +1220,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9361 strings out of 493848
- 146244 string characters out of 1152823
+ 9362 strings out of 493848
+ 146266 string characters out of 1152823
  285680 words of memory out of 3000000
- 12334 multiletter control sequences out of 15000+50000
+ 12335 multiletter control sequences out of 15000+50000
  46039 words of font info for 105 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,13n,41p,2653b,780s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1232,7 +1238,7 @@ b></usr/share/texmf-texlive/fonts/type1/public/txfonts/txsyb.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8
 a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (97 pages, 4806876 bytes).
+Output written on main.pdf (97 pages, 4809828 bytes).
 PDF statistics:
  635 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

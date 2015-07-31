@@ -1,19 +1,5 @@
-
-\section{Introduction} An auto-encoder is a conceptually simple
-neural network used for obtaining useful data representations through
-unsupervised training. It is composed of an encoder which outputs a hidden (or
-latent) representation and a decoder which attempts to reconstruct the input
-using the hidden representation as its input. Training consists of minimizing a
-reconstruction cost such as $L_2$ error. However this cost is merely a proxy
-for the true objective: to obtain a useful latent representation. Auto-encoders
-can  implement many dimensionality reduction techniques such as PCA and Sparse
-Coding (SC) ~\cite{DHS}~\cite{SC}~\cite{LISTA}. This makes the study of
-auto-encoders very appealing from a theoretical standpoint. In recent years,
-renewed interest in auto-encoders networks has mainly been due to their
-empirical success in unsupervised feature learning
-\cite{SAE1}\cite{SAE2}\cite{CAE}\cite{DAE}. \\
-
-\noindent When minimizing only reconstruction cost, the standard auto-encoder
+\section{Introduction} 
+When minimizing reconstruction loss alone, the standard auto-encoder
 does not typically learn any meaningful hidden representation of the data. Well
 known theoretical and experimental results show that a linear auto-encoder with
 trainable encoding and decoding matrices, $W^e$ and $W^d$ respectively, learns

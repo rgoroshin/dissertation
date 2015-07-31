@@ -238,6 +238,20 @@ with a local pooling neighborhood is overlaid in black. Figure from \cite{groupS
 \end{figure} 
  
 \section{Auto-Encoders and Energy Based Learning} 
+
+An auto-encoder is a conceptually simple neural network used for obtaining
+useful data representations through unsupervised training. It is composed of an
+encoder which outputs a hidden (or latent) representation and a decoder which
+attempts to reconstruct the input using the hidden representation as its input.
+Training consists of minimizing a reconstruction cost such as $L_2$ error.
+However this cost is merely a proxy for the true objective: to obtain a useful
+latent representation. Auto-encoders can  implement many dimensionality
+reduction techniques such as PCA and Sparse Coding (SC)
+~\cite{DHS}~\cite{SC}~\cite{LISTA}. This makes the study of auto-encoders very
+appealing from a theoretical standpoint. In recent years, renewed interest in
+auto-encoders networks has mainly been due to their empirical success in
+unsupervised feature learning \cite{SAE1}\cite{SAE2}\cite{CAE}\cite{DAE}. 
+
 In the previous subsection we have seen that sparse coding has corresponding
 auto-encoder network implementation. In the sparse auto-encoder, a
 sparsity-inducing $L^1$ penalty is applied to the code, i.e. output of the
@@ -247,16 +261,47 @@ auto-encoders. In this subsection we will briefly mention several important
 regularizers, and introduce a new regularizer in Chapter \ref{chapter:SATAE},
 where auto-encoders are discussed in more detail. Broadly speaking,
 auto-encoders embody an implicit model of the data manifold. The reconstruction
-error for a sample on the data manifold should be low and high for points not
+error for a sample that is near the manifold should be low and high for points not
 near the data manifold.  In the following chapter we argue that the role of the
 regularizer is to ensure that reconstruction error (energy) is large for points
 far from the data manifold. In this sense the reconstruction energy can be seen
 as a sort of inverse probability of a sample belonging to the data generating
 distribution \cite{lecun2006}. Two popular regularized auto-encoder models
 include the Contractive Auto-Encoder (CAE) and the De-noising Auto-Encoder
-(DAE) \cite{CAE,DAE}.    
+(DAE) \cite{CAE,DAE}. Both can be interpreted as implicit models of the data
+manifold. The DAE is trained to reconstruct original image samples from their 
+corrupted versions. The corruption process usually involves setting a random subset 
+of the pixels to zero. This forces the model to infer the original uncorrupted pixels 
+values from neighboring pixels. Another interpretation of the DAE is that it projects 
+corrupted samples to their nearest uncorrupted counterparts on the data manifold. The
+contractive auto-encoder introduced an explicit penalty on the Frobenius 
+norm of the Jacobian of the code with respect to the input. The loss corresponding 
+to the contractive auto-encoder is: 
 
+\begin{equation} 
+\nonumber 
+L_{CAE} = \frac{1}{2} \|x - Wz \|_2 ^ 2 + \alpha \sum_{ij} \left(\frac{\partial z_i}{\partial x_j}\right)^2  
+\end{equation}  
+
+Where $z_i$ and $x_j$ denote the $i^{th}$ component of $z$ and $j^{th}$
+component of $x$, respectively.  The second term in the loss encourages a
+stable, or invariant, representation $z$. However $z$ cannot be perfectly
+stable since it must be informative enough to reconstruct the input. From the
+manifold perspective, the mapping learned by the encoder is mainly allowed to
+vary in the principal directions of the data manifold.           
 
 \section{Metric Learning}
-
+Another important class of machine learning problems where feature learning can
+be useful is in the metric or similarity learning setting
+\cite{tenenbaum2000,DrLIM}. Metric learning problems aim to learn a feature
+space which satisfies certain metric properties given by (weakly) labeled data.
+For example we may wish to find a feature space in which images of objects that
+belong to the same category are closer to one another than objects from
+different categories. Many metric learning algorithms define a graph on the
+data whereby ``similar'' samples are connected by an edge, and the metric
+between samples are given by geodesics (shortest paths) on this graph structure
+\cite{tenenbaum2000, coifman2006}.
+\begin{equation} 
+L(W,Y,X_1,X_2) = (1-Y)\frac{1}{2}D_W^2 + Y \frac{1}{2}\{max(0,m-D_W)\}^2        
+\end{equation}  
  

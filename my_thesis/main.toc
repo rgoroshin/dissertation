@@ -22,35 +22,35 @@
 \defcounter {refsection}{0}
 \contentsline {section}{\numberline {2.3}Auto-Encoders and Energy Based Learning}{15}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {2.4}Metric Learning}{15}
+\contentsline {section}{\numberline {2.4}Metric Learning}{16}
 \defcounter {refsection}{0}
-\contentsline {chapter}{\numberline {3}Saturating Auto-Encoders}{16}
+\contentsline {chapter}{\numberline {3}Saturating Auto-Encoders}{18}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.1}Introduction}{16}
+\contentsline {section}{\numberline {3.1}Introduction}{18}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.2}Latent State Regularization}{17}
+\contentsline {section}{\numberline {3.2}Latent State Regularization}{19}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.2.1}Saturating Auto-Encoder through Complementary Nonlinearities}{18}
+\contentsline {subsection}{\numberline {3.2.1}Saturating Auto-Encoder through Complementary Nonlinearities}{20}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.3}Effect of the Saturation Regularizer}{21}
+\contentsline {section}{\numberline {3.3}Effect of the Saturation Regularizer}{22}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.1}Visualizing the Energy Landscape}{21}
+\contentsline {subsection}{\numberline {3.3.1}Visualizing the Energy Landscape}{22}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{22}
+\contentsline {subsection}{\numberline {3.3.2}SATAE-shrink}{23}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{26}
+\contentsline {subsection}{\numberline {3.3.3}SATAE-saturated-linear}{25}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{26}
+\contentsline {subsection}{\numberline {3.3.4}Experiments on CIFAR-10}{27}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.4}Experimental Details}{27}
+\contentsline {section}{\numberline {3.4}Experimental Details}{28}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {3.5}Discussion}{28}
+\contentsline {section}{\numberline {3.5}Discussion}{29}
 \defcounter {refsection}{0}
 \contentsline {subsection}{\numberline {3.5.1}Extension to Differentiable Functions}{29}
 \defcounter {refsection}{0}
 \contentsline {subsection}{\numberline {3.5.2}Relationship with the Contractive Auto-Encoder}{31}
 \defcounter {refsection}{0}
-\contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{31}
+\contentsline {subsection}{\numberline {3.5.3}Relationship with the Sparse Auto-Encoder}{32}
 \defcounter {refsection}{0}
 \contentsline {chapter}{\numberline {4}Convolutional Sparse Inference}{33}
 \defcounter {refsection}{0}
