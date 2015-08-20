@@ -60,18 +60,21 @@ perspective, ideal encodings map the extrinsic coordinates (i.e. pixel values)
 to intrinsic manifold coordinates. It is hoped that these intrinsic coordinates
 correspond to physical attributes of the natural world, such as the presence of
 certain objects in the scene, their properties, etc \cite{nair2008,capsules}.
-Unsupervised feature learning models are mainly distinguished by: i-the
-geometrical prior they assume about the data manifold, ii-whether they learn an
-encoder, decoder, or both. For example, Principal Component Analysis assumes
-that the data is concentrated around a hyper-plane, i.e. it assumes a globally
-linear data manifold model. The PCA encoder is a matrix operator, $W_e$, as is
-the decoder $W_d=W_e^T$.  Obtaining ``invariant'' representations has been a
-major driving force in feature learning, driven mainly by recognition and
-classification problems.  Invariant features imply that the encoding process is
-necessarily a many-to-one mapping. This means that the decoding process must
-involve some random selection among the possible inputs that produced the code,
-usually  by sampling from a distribution. Models that include a decoder are
-called ``generative models'' in the literature. 
+Unsupervised feature learning models are mainly distinguished by: (i)-whether
+they assume a deterministic or probabilistic model, (ii)-the geometrical prior
+they assume about the data manifold, (iii)-whether they learn an encoder,
+decoder, or both. For example, Principal Component Analysis assumes that the
+data is concentrated around a hyper-plane, i.e. it assumes a globally linear
+data manifold model. The PCA encoder is a matrix operator, $W_e$, as is the
+decoder $W_d=W_e^T$. Although probabilistic models is not the focus of this
+work, we will see a connection between probabilistic and deterministic models
+in Chapter \ref{chapter:SATAE}.  Obtaining ``invariant'' representations has
+been a major driving force in feature learning, driven mainly by recognition
+and classification problems.  Invariant features imply that the encoding
+process is necessarily a many-to-one mapping. This means that the decoding
+process must involve some random selection among the possible inputs that
+produced the code, usually  by sampling from a distribution. Models that
+include a decoder are called ``generative models'' in the literature. 
 
 Table \ref{tbl:models} summarizes key aspects of several well-known feature
 learning models, as well as the new models which will be introduced in Chapters
@@ -291,8 +294,8 @@ manifold perspective, the mapping learned by the encoder is mainly allowed to
 vary in the principal directions of the data manifold.           
 
 \section{Metric Learning}
-Another important class of machine learning problems where feature learning can
-be useful is in the metric or similarity learning setting
+Another important class of machine learning problems from which useful features
+can be learned are the metric or similarity learning problems
 \cite{tenenbaum2000,DrLIM}. Metric learning problems aim to learn a feature
 space which satisfies certain metric properties given by (weakly) labeled data.
 For example we may wish to find a feature space in which images of objects that
@@ -300,8 +303,32 @@ belong to the same category are closer to one another than objects from
 different categories. Many metric learning algorithms define a graph on the
 data whereby ``similar'' samples are connected by an edge, and the metric
 between samples are given by geodesics (shortest paths) on this graph structure
-\cite{tenenbaum2000, coifman2006}.
+\cite{tenenbaum2000, coifman2006}. Most classical metric learning algorithms,
+however, suffer from the so called ``out of sample extension'' problem
+\cite{bengio2004out,coifman2006geometric}. The problem is related to new samples 
+introduced at test time; new samples potentially change the adjacency graph 
+unpredictably which in turn requires re-running the geodesic computation every
+time a new sample is introduced. One solution to this problem is to train an
+encoder that projects the data into feature space with the desired metric
+properties. One method that does this is known as Dimensionality Reduction by
+Learning an Invariant Mapping \cite{DrLIM}. The encoder mapping, $G_W()$ is
+trained by stochastically optimizing the metric relationship between pairs of
+points, $\{x_i$,$x_j\}$.  If the points are deemed similar via some (weak)
+label ($Y=0$) then their distance is encouraged to decrease. Conversely if they
+are dissimilar, with label $Y=1$, their distance is encouraged to increase to
+at least some margin value $m$. This acts as a contrastive term and prevents 
+the mapping $G_W()$ from collapsing and producing constant outputs. These two 
+terms are combined to form the following loss:            
 \begin{equation} 
-L(W,Y,X_1,X_2) = (1-Y)\frac{1}{2}D_W^2 + Y \frac{1}{2}\{max(0,m-D_W)\}^2        
+L(W,Y,X_1,X_2) = (1-Y)\frac{1}{2}\|G_W(x_i)-G_W(x_j)\|^2 + Y \frac{1}{2}\max(0,m-\|G_W(x_i)-G_W(x_j)\|^2)  
 \end{equation}  
- 
+Unfortunately, as we will also show that the second term is a very weak
+requirement in high dimensional feature spaces and can be trivially 
+optimized. 
+\newline
+\newline
+\indent 
+In general the modus operandi of unsupervised feature learning research is to guess 
+generically useful characteristics of features, and then to derive the corresponding 
+losses and architectures that maximize those properties; of which sparsity, slowness, 
+and independence are just a few popular examples.      

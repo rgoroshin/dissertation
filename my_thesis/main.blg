@@ -2,94 +2,94 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: main.aux
 The style file: biblatex.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated field_info (elt_size=4) to 13844 items from 5000.
+Reallocated field_info (elt_size=4) to 14108 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: references.bib
-Repeated entry---line 529 of file references.bib
+Repeated entry---line 551 of file references.bib
  : @inproceedings{LISTA
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 566 of file references.bib
+Repeated entry---line 588 of file references.bib
  : @inproceedings{CAE
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 610 of file references.bib
+Repeated entry---line 632 of file references.bib
  : @techreport{DAE
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 662 of file references.bib
+Repeated entry---line 684 of file references.bib
  : @article{complexCells
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 671 of file references.bib
+Repeated entry---line 693 of file references.bib
  : @inproceedings{DrLIM
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 678 of file references.bib
+Repeated entry---line 700 of file references.bib
  : @inproceedings{groupSparsity
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 696 of file references.bib
+Repeated entry---line 718 of file references.bib
  : @article{SAE
  :             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 716 of file references.bib
+Repeated entry---line 738 of file references.bib
  : @article{JoanScat
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 727 of file references.bib
+Repeated entry---line 749 of file references.bib
  : @inproceedings{ImageNet
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 737 of file references.bib
+Repeated entry---line 759 of file references.bib
  : @inproceedings{ConvSC
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 745 of file references.bib
+Repeated entry---line 767 of file references.bib
  : @inproceedings{DrLIMVideo
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 752 of file references.bib
+Repeated entry---line 774 of file references.bib
  : @inproceedings{JoanPooling
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 759 of file references.bib
+Repeated entry---line 781 of file references.bib
  : @inproceedings{MaxOut
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 766 of file references.bib
+Repeated entry---line 788 of file references.bib
  : @inproceedings{LISTA
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 773 of file references.bib
+Repeated entry---line 795 of file references.bib
  : @article{SFA
  :             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 787 of file references.bib
+Repeated entry---line 809 of file references.bib
  : @article{Cadieu
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 802 of file references.bib
+Repeated entry---line 824 of file references.bib
  : @inproceedings{CAE
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 809 of file references.bib
+Repeated entry---line 831 of file references.bib
  : @inproceedings{SATAE
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 816 of file references.bib
+Repeated entry---line 838 of file references.bib
  : @inproceedings{SSA
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 823 of file references.bib
+Repeated entry---line 845 of file references.bib
  : @techreport{Bengio2012
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 835 of file references.bib
+Repeated entry---line 857 of file references.bib
  : @techreport{DAE
  :                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 842 of file references.bib
+Repeated entry---line 864 of file references.bib
  : @article{LeCun1998
  :                   ,
 I'm skipping whatever remains of this entry
@@ -99,45 +99,45 @@ Too many commas in name 1 of "Annual Reviews 4139 El Camino Way, PO Box 10139, P
 while executing---line 2445 of file biblatex.bst
 Too many commas in name 1 of "Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA" for entry simoncelli2001
 while executing---line 2445 of file biblatex.bst
-You've used 67 entries,
+You've used 69 entries,
             5526 wiz_defined-function locations,
-            1491 strings with 19794 characters,
-and the built_in function-call counts, 229229 in all, are:
-= -- 8004
-> -- 10132
-< -- 2221
-+ -- 3537
-- -- 4274
-* -- 21440
-:= -- 15401
+            1501 strings with 20221 characters,
+and the built_in function-call counts, 237457 in all, are:
+= -- 8302
+> -- 10525
+< -- 2295
++ -- 3689
+- -- 4440
+* -- 22247
+:= -- 15959
 add.period$ -- 0
-call.type$ -- 67
-change.case$ -- 1214
+call.type$ -- 69
+change.case$ -- 1270
 chr.to.int$ -- 41
-cite$ -- 134
-duplicate$ -- 24470
-empty$ -- 21656
-format.name$ -- 6128
-if$ -- 51781
+cite$ -- 138
+duplicate$ -- 25333
+empty$ -- 22388
+format.name$ -- 6360
+if$ -- 53625
 int.to.chr$ -- 0
-int.to.str$ -- 174
+int.to.str$ -- 182
 missing$ -- 0
-newline$ -- 1782
-num.names$ -- 3379
-pop$ -- 18366
+newline$ -- 1847
+num.names$ -- 3507
+pop$ -- 18922
 preamble$ -- 1
-purify$ -- 1557
+purify$ -- 1627
 quote$ -- 0
-skip$ -- 13041
+skip$ -- 13502
 stack$ -- 0
-substring$ -- 4896
-swap$ -- 7736
-text.length$ -- 2373
+substring$ -- 5108
+swap$ -- 8026
+text.length$ -- 2453
 text.prefix$ -- 4
 top$ -- 1
-type$ -- 2404
+type$ -- 2476
 warning$ -- 1
-while$ -- 1300
+while$ -- 1342
 width$ -- 0
-write$ -- 1714
+write$ -- 1777
 (There were 24 error messages)

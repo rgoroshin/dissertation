@@ -150,6 +150,47 @@
   \field{year}{2012}
 \endentry
 
+\entry{bengio2004out}{article}{}
+  \name{author}{6}{%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Paiement}{P.}%
+     {Jean-Fran{\c{c}}ois}{J.-F.}%
+     {}{}%
+     {}{}}%
+    {{Vincent}{V.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+    {{Delalleau}{D.}%
+     {Olivier}{O.}%
+     {}{}%
+     {}{}}%
+    {{Le~Roux}{L.~R.}%
+     {Nicolas}{N.}%
+     {}{}%
+     {}{}}%
+    {{Ouimet}{O.}%
+     {Marie}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge, MA, USA: MIT Press}%
+  }
+  \field{journaltitle}{Advances in neural information processing systems}
+  \strng{namehash}{BYPJFVPDOLRNOM1}
+  \strng{fullhash}{BYPJFVPDOLRNOM1}
+  \field{sortinit}{B}
+  \field{pages}{177\bibrangedash 184}
+  \field{title}{Out-of-sample extensions for lle, isomap, mds, eigenmaps, and
+  spectral clustering}
+  \field{volume}{16}
+  \field{year}{2004}
+\endentry
+
 \entry{siamese}{article}{}
   \name{author}{8}{%
     {{Bromley}{B.}%
@@ -369,6 +410,32 @@
   \field{number}{1}
   \field{pages}{5\bibrangedash 30}
   \field{title}{Diffusion maps}
+  \field{volume}{21}
+  \field{year}{2006}
+\endentry
+
+\entry{coifman2006geometric}{article}{}
+  \name{author}{2}{%
+    {{Coifman}{C.}%
+     {Ronald~R}{R.~R.}%
+     {}{}%
+     {}{}}%
+    {{Lafon}{L.}%
+     {St{\'e}phane}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \field{journaltitle}{Applied and Computational Harmonic Analysis}
+  \strng{namehash}{CRRLS1}
+  \strng{fullhash}{CRRLS1}
+  \field{sortinit}{C}
+  \field{number}{1}
+  \field{pages}{31\bibrangedash 52}
+  \field{title}{Geometric harmonics: a novel tool for multiscale out-of-sample
+  extension of empirical functions}
   \field{volume}{21}
   \field{year}{2006}
 \endentry
