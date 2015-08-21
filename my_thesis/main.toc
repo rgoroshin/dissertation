@@ -20,7 +20,7 @@
 \defcounter {refsection}{0}
 \contentsline {section}{\numberline {2.2}Sparse Representations}{10}
 \defcounter {refsection}{0}
-\contentsline {section}{\numberline {2.3}Auto-Encoders and Energy Based Learning}{15}
+\contentsline {section}{\numberline {2.3}Auto-Encoders and Energy Based Learning}{14}
 \defcounter {refsection}{0}
 \contentsline {section}{\numberline {2.4}Metric Learning}{16}
 \defcounter {refsection}{0}

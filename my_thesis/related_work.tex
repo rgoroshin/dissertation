@@ -80,18 +80,18 @@ Table \ref{tbl:models} summarizes key aspects of several well-known feature
 learning models, as well as the new models which will be introduced in Chapters
 \ref{chapter:slow} and \ref{chapter:linear}. The first column lists the name of
 the model, the color indicates the type of objective each model tries to
-optimize.  These are summarized in the table below. For example, one version of
-PCA finds maximally decorrelated linear components. The ``manifold model''
-column indicates the geometric prior each model assumes about the data
-manifold. As another exampling,  the Continous Basis Pursuit (CBP) model
-proposes a local osculating circle model to the data manifold \cite{CBP}.  The
-next two columns indicate whether each model learns an encoder and/or decoder.
-Finally, the last column summarizes the relationship enforced between the
-encoder and decoder. For example in PCA the encoder and decoder are related by
-the transpose operator. This chapter will review some of the algorithms in
-Table \ref{tbl:models}, placing emphasis on the precursors of the algorithms
-presented in Chapters \ref{chapter:slow} and \ref{chapter:linear}. The
-algorithms will be presented as various models of the data manifold.
+optimize. For example, one version of PCA finds maximally decorrelated linear
+components. The ``manifold model'' column indicates the geometric prior each
+model assumes about the data manifold. As another exampling,  the Continous
+Basis Pursuit (CBP) model proposes a local osculating circle model to the data
+manifold \cite{CBP}.  The next two columns indicate whether each model learns
+an encoder and/or decoder.  Finally, the last column summarizes the
+relationship enforced between the encoder and decoder. For example in PCA the
+encoder and decoder are related by the transpose operator. This chapter will
+review some of the algorithms in Table \ref{tbl:models}, placing emphasis on
+the precursors of the algorithms presented in Chapters \ref{chapter:slow} and
+\ref{chapter:linear}. The algorithms will be presented as various models of the
+data manifold.
 
 \section{Principal and Independent Component Analysis} 
 
@@ -120,33 +120,33 @@ represent the level sets of the kurtosis objective, and the red curve
 represents the unit variance constraint. Figure \ref{fig:ICA_features}  shows
 the features learned using an ICA algorithm on natural image patches.  Note the
 strong resemblance to the bases learned with sparse feature learning algorithms
-such as Sparse Coding \cite{SC}. The next section will establish a remarkable
+such as Sparse Coding \cite{SC}. The next section will establish a
 connection between ICA and sparse inference.  
 
 \begin{figure} 
 \centering
 \includegraphics[scale=0.4]{./figures/related_work/imageManifold.png} 
-\caption{Sparse coding learns a local linear model of the data manifold (image from \cite{SC2}).}
+\caption{Sparse coding learns a local linear model of the data manifold (source: \cite{SC2}).}
 \label{fig:ICA_features} 
 \end{figure} 
 
 \begin{figure} 
 \centering
 \includegraphics[scale=0.4]{./figures/related_work/ICABasis.png} 
-\caption{Independent features learned on natural image patches}
+\caption{Independent features learned on natural image patches (source: \cite{ICA}).}
 \label{fig:ICA_features} 
 \end{figure} 
 
 \section{Sparse Representations} 
-Sparse inference refers to the problem of finding the coefficients $z$ which
-reconstruct the input $x$ as a sparse linear combination of some basis elements
+Sparse inference refers to the problem of finding the sparse coefficients $z$ which
+reconstruct the input $x$ as a linear combination of some basis elements
 contained an over-complete dictionary $W_d$. Sparsity is measured by the number
 of non-zero coefficients; the higher the sparsity the fewer non-zero
 coefficients in $z$ used to represent $x$.  
 The sparse inference problem can be stated formally as: 
 
 \begin{equation} 
-min \|z\|_0 \mbox{ subject to } x = W_dz 
+\min \|z\|_0 \mbox{ subject to } x = W_dz 
 \end{equation} 
 
 In general, this is an intractable combinatorial problem. A now famous
@@ -157,7 +157,7 @@ This optimization problem is depicted on the right side of Figure
 the linear constraint is shown in red. The minimum occur on the $x$-axis, with
 $y=0$ implying that the solution is indeed sparse. Remarkably, the solution to
 the ICA problem (left side of Figure \ref{fig:ICA_lasso}) is also sparse though the
-objective was explicitly derived with sparsity in mind. Given this similarity 
+objective was explicitly not derived with sparsity in mind. Given this similarity 
 between ICA and sparse feature learning, it is not surprising that the features 
 learned with ICA on natural images strongly resemble those learned with sparse coding. 
 
@@ -165,7 +165,7 @@ Relaxing the constraint, this problem can be written as an unconstrained loss
 functional called the lasso (also basis pursuit de-noising) \cite{BP}:  
 
 \begin{equation} 
-L_{lasso} = \frac{1}{2}\|x-W_dz\|^2_2 + \alpha |z|_1
+L_{lasso} = \frac{1}{2}\|x-W_dz\|^2_2 + \alpha \|z\|_1
 \label{eqn:lasso} 
 \end{equation} 
 
@@ -175,49 +175,53 @@ process. Decoding sparse representations is trivial, it simply corresponds to
 computing $W_dz$.  The loss described by the above equation is non-convex with
 respect to $z$, however each of the two terms are individually convex which
 prompted alternating minimization approaches such as the various Iterative
-Shrinkage and Thresholding algorithms \cite{FISTA}. It is possible to find
-``feed forward'', i.e. non-iterative approximations (i.e. encoders) to
-iterative sparse inference algorithms for data $x$ drawn from a fixed
-distribution. Thus the codes are given by a functional mapping of the input,
+Shrinkage and Thresholding algorithms \cite{FISTA}. It is possible to find a
+``feed forward'', i.e. non-iterative approximation (i.e. encoder) to
+iterative sparse inference algorithms for data $x$ drawn from a stationary
+distribution. Thus the coefficients are given by a functional mapping of the input,
 i.e. $z=F_W(x)$. This mapping, called the encoder, can be learned jointly with
 the decoder.  The corresponding loss is given by Equation \ref{eqn:sae_loss}, 
 
 \begin{equation} 
-L_{SAE} = \frac{1}{2}\|x-W_dF_W(x)\|^2_2 + \alpha |F_W(x)|_1
+L_{SAE} = \frac{1}{2}\|x-W_dF_W(x)\|^2_2 + \alpha \|F_W(x)\|_1
 \label{eqn:sae_loss} 
 \end{equation} 
 
 The above loss can be implemented using a network architecture called an
-``auto-encoder''. This loss is highly non-convex and no optimal minimization
-algorithm is known, however stochastic gradient descent works well in practice.
-Because of the sparsity-inducing $L^1$ penalty on the code, this is called the
-sparse auto-encoder (SAE) \cite{SAE1,SAE2}. Optimal architectures for $F_W()$
-in the SAE network are the subject of Chapter \ref{chapter:LISTA}. Other
-auto-encoder networks are the subject of the next subsection.    
-
-It was noticed that when sparse feature learning was applied to natural images
-local edge detectors, similar to the Gabor wavelet basis emerged which was
-already being used in many computer vision applications \cite{SC,gabor}. This
-observation lead to a flurry of works that tried to apply sparse features to
-common computer vision problems such as classification.  One problem with
-sparse representations is their instability.  A sparse code corresponding to an
-overcomplete basis implies that each basis element activates only for some to
-inputs; an edge at a specific location and orientation for example. If the edge
-moves slightly, a different basis element will respond, corresponding to a
-change of support in code space. This highly unstable behavior of sparse
-representations is undesirable for tasks such as classification where
-\emph{invariance} is an important property. For example, the object category
-remains the same under many transformations. One way to mitigate this behavior
-is to combine the responses of several basis elements such that the response of
-the group is more stable than the response of the individual elements.  This so
-called ``group sparsity'' results in feature representations that are much more
-stable and hence more useful for tasks that require invariant representations
-\cite{groupSparsity}. One way to group these features uses a local $L^2$
-pooling operator in a predefined topology. In group-sparse models, the sparsity
-inducing $L^1$ norm is applied to the grouped activations, i.e. to the output
-of the local $L^2$ pooling operator.  Specifically, if the code space is
-partitioned into $K$ potentially overlapping neighborhoods, where $P_i$ denotes
-the $i^{th}$ neighborhood, the group sparsity loss can be written as: 
+``auto-encoder''. Depending on the functional form of $F_W$, the above loss can
+be highly non-convex with no known optimal minimization algorithm,
+however stochastic gradient descent works well in practice.  Because of the
+sparsity-inducing $L^1$ penalty on the coefficients, this is called the sparse
+auto-encoder (SAE) \cite{SAE1,SAE2}. Optimal architectures for $F_W()$ in the
+SAE network are the subject of Chapter \ref{chapter:LISTA}. Other auto-encoder
+networks will be discussed later in this chapter.    
+\newline 
+\indent  
+It was noticed that when sparse feature learning was applied to natural images,
+local edge detectors similar to the Gabor wavelet basis emerged. Gabor wavelets
+were already being used in many computer vision applications \cite{SC,gabor}.
+This observation lead to a flurry of works that tried to apply sparse features
+to common computer vision problems such as object detection and recognition.
+One problem with sparse representations is their instability. A sparse code
+corresponding to an overcomplete basis implies that each basis element is
+selective and is activated only be specific inputs; an edge at a specific
+location and orientation for example. If the edge moves slightly, a different
+basis element will respond, corresponding to a change of support in code space.
+This highly unstable behavior of sparse representations is undesirable for
+tasks such as classification where \emph{invariance} is an important property.
+For example, the object category remains the same under many transformations.
+One way to mitigate this behavior is to combine the responses of several basis
+elements such that the response of the group is more stable than the response
+of the individual elements.  This so called ``group sparsity'' results in
+feature representations that are much more stable and hence more useful for
+tasks that require invariant representations \cite{groupSparsity, ICA, yuan2006model}. 
+Groups of feature activations can be combined using so called ``pooling''
+operators, which partition the activations into groups and typically output
+their $L^2$ norm.  In group-sparse models, the sparsity inducing $L^1$ norm is
+applied to the grouped activations, i.e. to the output of the local $L^2$
+pooling operator.  Specifically, if the code space is partitioned into $K$
+potentially overlapping neighborhoods, where $P_i$ denotes the $i^{th}$
+neighborhood, the group sparsity loss can be written as: 
 
 \begin{equation} 
 L_{GSC} = \frac{1}{2} \|x - Wz \|_2 ^ 2 + \alpha \sum_{i=1} ^ K \sqrt{\sum_{j \in P_i} w_jz_j ^2}  
@@ -243,39 +247,41 @@ with a local pooling neighborhood is overlaid in black. Figure from \cite{groupS
 \section{Auto-Encoders and Energy Based Learning} 
 
 An auto-encoder is a conceptually simple neural network used for obtaining
-useful data representations through unsupervised training. It is composed of an
-encoder which outputs a hidden (or latent) representation and a decoder which
-attempts to reconstruct the input using the hidden representation as its input.
-Training consists of minimizing a reconstruction cost such as $L_2$ error.
-However this cost is merely a proxy for the true objective: to obtain a useful
-latent representation. Auto-encoders can  implement many dimensionality
-reduction techniques such as PCA and Sparse Coding (SC)
-~\cite{DHS}~\cite{SC}~\cite{LISTA}. This makes the study of auto-encoders very
-appealing from a theoretical standpoint. In recent years, renewed interest in
-auto-encoders networks has mainly been due to their empirical success in
-unsupervised feature learning \cite{SAE1}\cite{SAE2}\cite{CAE}\cite{DAE}. 
+useful data representations through unsupervised training. Where the usefulness
+is usually measured by applying them to some other task, such as
+classification.  This network is composed of an encoder which outputs a hidden
+(or latent) representation and a decoder which attempts to reconstruct the
+input using the hidden representation as its input.  Training consists of
+minimizing a reconstruction cost such as $L_2$ error.  However this cost is
+merely a proxy for the true objective: to obtain a useful latent
+representation. Auto-encoders can implement many dimensionality reduction
+techniques such as PCA and Sparse Coding \cite{DHS,SC,LISTA}.
+This makes the study of auto-encoders very appealing from a theoretical
+standpoint. In recent years, renewed interest in auto-encoders networks has
+mainly been due to their empirical success in unsupervised feature learning
+\cite{SAE1,SAE2,CAE,DAE}. 
 
-In the previous subsection we have seen that sparse coding has corresponding
+In the previous subsection we have seen that sparse coding has a corresponding
 auto-encoder network implementation. In the sparse auto-encoder, a
 sparsity-inducing $L^1$ penalty is applied to the code, i.e. output of the
 encoder. Other penalties are possible and impose different priors on the
 representation. In general these architectures are called regularized
 auto-encoders. In this subsection we will briefly mention several important
 regularizers, and introduce a new regularizer in Chapter \ref{chapter:SATAE},
-where auto-encoders are discussed in more detail. Broadly speaking,
+where auto-encoders are discussed in more detail. With appropriate regularization,
 auto-encoders embody an implicit model of the data manifold. The reconstruction
 error for a sample that is near the manifold should be low and high for points not
 near the data manifold.  In the following chapter we argue that the role of the
 regularizer is to ensure that reconstruction error (energy) is large for points
 far from the data manifold. In this sense the reconstruction energy can be seen
-as a sort of inverse probability of a sample belonging to the data generating
+as an unnormalized inverse probability of a sample belonging to the data generating
 distribution \cite{lecun2006}. Two popular regularized auto-encoder models
 include the Contractive Auto-Encoder (CAE) and the De-noising Auto-Encoder
 (DAE) \cite{CAE,DAE}. Both can be interpreted as implicit models of the data
-manifold. The DAE is trained to reconstruct original image samples from their 
+manifold. The DAE is trained to reconstruct input samples from their 
 corrupted versions. The corruption process usually involves setting a random subset 
-of the pixels to zero. This forces the model to infer the original uncorrupted pixels 
-values from neighboring pixels. Another interpretation of the DAE is that it projects 
+of the input dimensions to zero. This forces the model to infer the original uncorrupted pixels 
+values from neighboring pixels. One interpretation of the DAE is that it projects 
 corrupted samples to their nearest uncorrupted counterparts on the data manifold. The
 contractive auto-encoder introduced an explicit penalty on the Frobenius 
 norm of the Jacobian of the code with respect to the input. The loss corresponding 
@@ -299,7 +305,7 @@ can be learned are the metric or similarity learning problems
 \cite{tenenbaum2000,DrLIM}. Metric learning problems aim to learn a feature
 space which satisfies certain metric properties given by (weakly) labeled data.
 For example we may wish to find a feature space in which images of objects that
-belong to the same category are closer to one another than objects from
+belong to the same category are closer to each another than objects from
 different categories. Many metric learning algorithms define a graph on the
 data whereby ``similar'' samples are connected by an edge, and the metric
 between samples are given by geodesics (shortest paths) on this graph structure

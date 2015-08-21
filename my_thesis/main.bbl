@@ -1825,6 +1825,33 @@
   \field{year}{2014}
 \endentry
 
+\entry{yuan2006model}{article}{}
+  \name{author}{2}{%
+    {{Yuan}{Y.}%
+     {Ming}{M.}%
+     {}{}%
+     {}{}}%
+    {{Lin}{L.}%
+     {Yi}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Wiley Online Library}%
+  }
+  \field{journaltitle}{Journal of the Royal Statistical Society: Series B
+  (Statistical Methodology)}
+  \strng{namehash}{YMLY1}
+  \strng{fullhash}{YMLY1}
+  \field{sortinit}{Y}
+  \field{number}{1}
+  \field{pages}{49\bibrangedash 67}
+  \field{title}{Model selection and estimation in regression with grouped
+  variables}
+  \field{volume}{68}
+  \field{year}{2006}
+\endentry
+
 \entry{zeiler2010}{inproceedings}{}
   \name{author}{4}{%
     {{Zeiler}{Z.}%

@@ -10,9 +10,9 @@
 \defcounter {refsection}{0}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Left: visualization of the optimization problem used to solve for independent representations. Right: visualization of the optimization problem used to solve for sparse representations.\relax }}{9}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Sparse coding learns a local linear model of the data manifold (image from \cite {SC2}).\relax }}{10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Sparse coding learns a local linear model of the data manifold (source: \cite {SC2}).\relax }}{10}
 \defcounter {refsection}{0}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Independent features learned on natural image patches\relax }}{11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Independent features learned on natural image patches (source: \cite {ICA}).\relax }}{11}
 \defcounter {refsection}{0}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Features learned with group sparsity model in a two dimensional topology, with a local pooling neighborhood is overlaid in black. Figure from \cite {groupSparsity}.\relax }}{14}
 \defcounter {refsection}{0}
