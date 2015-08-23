@@ -331,10 +331,15 @@ L(W,Y,X_1,X_2) = (1-Y)\frac{1}{2}\|G_W(x_i)-G_W(x_j)\|^2 + Y \frac{1}{2}\max(0,m
 Unfortunately, as we will also show that the second term is a very weak
 requirement in high dimensional feature spaces and can be trivially 
 optimized. 
-\newline
-\newline
-\indent 
-In general the modus operandi of unsupervised feature learning research is to guess 
-generically useful characteristics of features, and then to derive the corresponding 
-losses and architectures that maximize those properties; of which sparsity, slowness, 
+\section{Summary} 
+Assuming that natural data lies on a low dimensional manifold, is perhaps a
+necessary but not sufficient condition for specifying a complete model of the
+data, and learning useful features.  Other characteristics of the data must be
+assumed to obtain not only necessary but sufficient conditions for for
+obtaining a useful characterization of the data. Often this includes
+characterizing the process by which the data was generated
+\cite{bishop2006pattern,blei2003latent}.   The modus operandi of unsupervised
+feature learning research is to guess what the generic characteristics of
+natural data are, and then to derive the corresponding losses and architectures
+that maximize these properties; of which sparsity, slowness, 
 and independence are just a few popular examples.      
