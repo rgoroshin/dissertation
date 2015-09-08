@@ -685,12 +685,12 @@
      {}{}%
      {}{}}%
   }
-  \field{journaltitle}{arXiv preprint arXiv:1412.6056}
+  \field{journaltitle}{International Conference on Conputer Vision (ICCV)}
   \strng{namehash}{GRBJTJEDLY1}
   \strng{fullhash}{GRBJTJEDLY1}
   \field{sortinit}{G}
   \field{title}{Unsupervised Learning of Spatiotemporally Coherent Metrics}
-  \field{year}{2014}
+  \field{year}{2015}
 \endentry
 
 \entry{goroshin2015}{article}{}
@@ -708,7 +708,7 @@
      {}{}%
      {}{}}%
   }
-  \field{journaltitle}{arXiv preprint arXiv:1506.03011}
+  \field{journaltitle}{Neural Information Processing Systems (NIPS)}
   \strng{namehash}{GRMMLY1}
   \strng{fullhash}{GRMMLY1}
   \field{sortinit}{G}
@@ -1338,39 +1338,6 @@
   employed by V1?}
   \field{volume}{37}
   \field{year}{1997}
-\endentry
-
-\entry{imageNetTransfer}{inproceedings}{}
-  \name{author}{4}{%
-    {{Oquab}{O.}%
-     {Maxime}{M.}%
-     {}{}%
-     {}{}}%
-    {{Bottou}{B.}%
-     {Leon}{L.}%
-     {}{}%
-     {}{}}%
-    {{Laptev}{L.}%
-     {Ivan}{I.}%
-     {}{}%
-     {}{}}%
-    {{Sivic}{S.}%
-     {Josef}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {IEEE}%
-  }
-  \strng{namehash}{OMBLLISJ1}
-  \strng{fullhash}{OMBLLISJ1}
-  \field{sortinit}{O}
-  \field{booktitle}{Computer Vision and Pattern Recognition (CVPR), 2014 IEEE
-  Conference on}
-  \field{pages}{1717\bibrangedash 1724}
-  \field{title}{Learning and transferring mid-level image representations using
-  convolutional neural networks}
-  \field{year}{2014}
 \endentry
 
 \entry{PCA}{article}{}

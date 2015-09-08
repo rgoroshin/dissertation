@@ -1,4 +1,14 @@
-\section{Introduction} Is it possible to characterize ``good'' representations
+\section{Introduction} 
+In this chapter we begin to explore the role of time as a source of weak
+supervision for learning feature representations. We focus on feature learning
+from unlabeled video data, using the assumption that adjacent video frames
+contain semantically similar information. This assumption is exploited to train
+a convolutional pooling auto-encoder regularized by slowness and sparsity. We
+establish a connection between slow feature learning to metric learning and
+show that the trained encoder can be used to define a more temporally and
+semantically coherent metric.   
+
+Is it possible to characterize ``good'' representations
 without specifying a task a priori? If so, does there exist a set of generic
 priors which lead to these representations? In recent years state-of-the-art
 results from supervised learning suggest that the most powerful representations

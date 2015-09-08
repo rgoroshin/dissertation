@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: main.aux
 The style file: biblatex.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated field_info (elt_size=4) to 14504 items from 5000.
+Reallocated field_info (elt_size=4) to 14372 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: references.bib
 Repeated entry---line 551 of file references.bib
@@ -99,45 +99,45 @@ Too many commas in name 1 of "Annual Reviews 4139 El Camino Way, PO Box 10139, P
 while executing---line 2445 of file biblatex.bst
 Too many commas in name 1 of "Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA" for entry simoncelli2001
 while executing---line 2445 of file biblatex.bst
-You've used 72 entries,
+You've used 71 entries,
             5526 wiz_defined-function locations,
-            1516 strings with 20635 characters,
-and the built_in function-call counts, 246895 in all, are:
-= -- 8670
-> -- 10891
-< -- 2379
-+ -- 3812
-- -- 4569
-* -- 22999
-:= -- 16549
+            1510 strings with 20398 characters,
+and the built_in function-call counts, 243145 in all, are:
+= -- 8548
+> -- 10715
+< -- 2340
++ -- 3751
+- -- 4488
+* -- 22603
+:= -- 16289
 add.period$ -- 0
-call.type$ -- 72
-change.case$ -- 1338
+call.type$ -- 71
+change.case$ -- 1324
 chr.to.int$ -- 41
-cite$ -- 144
-duplicate$ -- 26396
-empty$ -- 23358
-format.name$ -- 6570
-if$ -- 55765
+cite$ -- 142
+duplicate$ -- 26010
+empty$ -- 23023
+format.name$ -- 6458
+if$ -- 54924
 int.to.chr$ -- 0
-int.to.str$ -- 191
+int.to.str$ -- 188
 missing$ -- 0
-newline$ -- 1917
-num.names$ -- 3675
-pop$ -- 19738
+newline$ -- 1886
+num.names$ -- 3627
+pop$ -- 19456
 preamble$ -- 1
-purify$ -- 1704
+purify$ -- 1683
 quote$ -- 0
-skip$ -- 14035
+skip$ -- 13824
 stack$ -- 0
-substring$ -- 5357
-swap$ -- 8350
-text.length$ -- 2540
+substring$ -- 5282
+swap$ -- 8225
+text.length$ -- 2498
 text.prefix$ -- 4
 top$ -- 1
-type$ -- 2584
+type$ -- 2548
 warning$ -- 1
-while$ -- 1400
+while$ -- 1380
 width$ -- 0
-write$ -- 1844
+write$ -- 1814
 (There were 24 error messages)
