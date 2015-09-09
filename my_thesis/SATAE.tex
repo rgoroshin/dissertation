@@ -184,26 +184,29 @@ function with an encoding bias behaves as a positive only shrink function,
 similarly the complementary function is equivalent to a positive only $L_1$
 penalty on the activations.          
 
+\newcommand\x{2.5cm}
+\newcommand\y{8cm} 
+
 \afterpage{
-\clearpage
+%\clearpage
 \thispagestyle{empty}
 \begin{figure} 
 \centering \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/strokes_full.png} \caption{}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/strokes_full.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/MNIST_sat_linear_full.png}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/MNIST_sat_linear_full.png}
 \caption{} \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/gabors_full.png} \caption{}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/gabors_full.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/patches_sat_linear_full.png}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/patches_sat_linear_full.png}
 \caption{} \end{subfigure} \\ \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_shrink01.png} \caption{}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/CIFAR_shrink01.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.225\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_shrink05.png} \caption{}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/CIFAR_shrink05.png} \caption{}
 \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_sat_linear300_1.png}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/CIFAR_sat_linear300_1.png}
 \caption{} \end{subfigure} \begin{subfigure}[b]{0.2\textwidth} \centering
-\includegraphics[width=2.5cm, height=10cm]{./figures/SATAE/CIFAR_sat_linear300_6.png}
+\includegraphics[width=\x, height=\y]{./figures/SATAE/CIFAR_sat_linear300_6.png}
 \caption{} \end{subfigure} \caption{\small Basis elements learned by the SATAE using
 different nonlinearities on: 28x28 binary MNIST digits, 12x12 gray scale
 natural image patches, and CIFAR-10. (a) SATAE-shrink trained on MNIST, (b)

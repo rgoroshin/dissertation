@@ -1,16 +1,44 @@
-Unsupervised learning remains an unsolved, ill-defined problem. However the recent 
-advent of deep learning has recast the problem as a representation, or feature learning 
-problem. It is not clear what priors, supervision, or cross-sensor modalities are necessary 
-for learning a generic representation that can be transferred across multiple problems.
-In this work we have mainly focused on the role of time as a source of weak supervision for 
-learning visual representations. Indeed it may be necessary to incorporate more sources 
-of supervision (e.g. reinforcement learning), or perhaps it is matter of building up the necessary 
-model priors (e.g. three-dimensional world) in our models. Another important problem in 
-unsupervised feature learning is that of evaluation. How do we evaluate the learned features? 
-In this work we have shown that learned features may exhibit properties that they were not 
-explicitly trained to satisfy. For example, temporally coherent features are also weakly 
-semantically discriminative. Unsurprisingly, however, they are not as discriminative as 
-features explicitly trained to discriminate! Thus although they may exhibit useful properties, 
-they will never be as good as the features explicitly trained for the task on which they 
-are evaluated.      
+Unsupervised learning remains an unsolved, ill-defined problem. However the
+recent advent of deep learning has recast the problem as a representation, or
+feature learning problem. It is not clear what priors, supervision, or
+cross-sensor modalities are necessary for learning a generic representation
+that can be transferred across multiple problems.  In this work we have mainly
+focused on the role of time as a source of weak supervision for learning visual
+representations. Indeed it may be necessary to incorporate more sources of
+supervision (e.g. reinforcement learning), or perhaps it is matter of building
+up the necessary model priors (e.g. three-dimensional world) in our models.
+Another important problem in unsupervised feature learning is that of
+evaluation. How do we evaluate the learned features?  In this work we have
+shown that learned features may exhibit properties that they were not
+explicitly trained to satisfy. For example, temporally coherent features are
+also weakly semantically discriminative. Unsurprisingly, however, they are not
+as discriminative as features explicitly trained to discriminate! Although they
+may exhibit useful properties, they will never be as good as the features
+explicitly trained for the task on which they are evaluated. There are many
+important aspects of representation learning that were not explored in this
+thesis. For example, the role of memory in the form of recurrent neural
+networks has recently experienced a flurry of activity in the deep learning
+community. Other important issues include choosing the right loss. For example,
+we have seen in Chapter \ref{chapter:linear} that $L^2$ error is an inadequate
+loss when it comes to predicting under uncertainty. In general finding the
+appropriate loss can be as hard as finding the appropriate features. One
+promising approach is that of Adversarial Networks \cite{goodfellow2014}, which
+can potentially turn the task of finding an appropriate loss into a feature
+learning problem itself. Obviously, we do not know which combination of these
+seemingly necessary conditions for learning generic image representations lead
+to a sufficient condition. Perhaps we should look back at the recent history of
+supervised feature learning to make an educated guess on how the field of
+unsupervised feature learning may progress. The basic ideas behind supervised
+feature learning using convolutional nets  have been established at least since
+the early 1990s \cite{lecun1995}, however it was not until 2012 following
+Krizhevsky's great success on the ImageNet competition did the community begin
+to acknowledge deep feature learning as an essential component of vision
+\cite{ImageNet}.  Krizhevsky's success is mainly attributed to the culmination
+of multiple incremental contributions such as the use of convolutional
+architectures, data augmentation, dropout, and other ``tricks'', in addition to
+the use of GPUs to accelerate training. Perhaps unsupervised learning will be
+solved in the same manner: by the accumulation of small contributions in the
+form of priors and natural sources of supervision.  Perhaps the pieces are
+already in place and its just a mater of training at a sufficiently large
+scale...      
    

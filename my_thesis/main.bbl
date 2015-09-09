@@ -631,6 +631,50 @@
   \field{year}{1980}
 \endentry
 
+\entry{goodfellow2014}{inproceedings}{}
+  \name{author}{8}{%
+    {{Goodfellow}{G.}%
+     {Ian}{I.}%
+     {}{}%
+     {}{}}%
+    {{Pouget-Abadie}{P.-A.}%
+     {Jean}{J.}%
+     {}{}%
+     {}{}}%
+    {{Mirza}{M.}%
+     {Mehdi}{M.}%
+     {}{}%
+     {}{}}%
+    {{Xu}{X.}%
+     {Bing}{B.}%
+     {}{}%
+     {}{}}%
+    {{Warde-Farley}{W.-F.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{Ozair}{O.}%
+     {Sherjil}{S.}%
+     {}{}%
+     {}{}}%
+    {{Courville}{C.}%
+     {Aaron}{A.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GIPAJMMXBWFDOSCABY1}
+  \strng{fullhash}{GIPAJMMXBWFDOSCABY1}
+  \field{sortinit}{G}
+  \field{booktitle}{Advances in Neural Information Processing Systems}
+  \field{pages}{2672\bibrangedash 2680}
+  \field{title}{Generative adversarial nets}
+  \field{year}{2014}
+\endentry
+
 \entry{MaxOut}{inproceedings}{}
   \name{author}{5}{%
     {{Goodfellow}{G.}%
@@ -1108,6 +1152,27 @@
   \field{title}{Gradient-Based Learning Applied to Document Recognition}
   \field{volume}{86}
   \field{year}{1998}
+\endentry
+
+\entry{lecun1995}{article}{}
+  \name{author}{2}{%
+    {{LeCun}{L.}%
+     {Yann}{Y.}%
+     {}{}%
+     {}{}}%
+    {{Bengio}{B.}%
+     {Yoshua}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \field{journaltitle}{The handbook of brain theory and neural networks}
+  \strng{namehash}{LYBY1}
+  \strng{fullhash}{LYBY1}
+  \field{sortinit}{L}
+  \field{number}{10}
+  \field{title}{Convolutional networks for images, speech, and time series}
+  \field{volume}{3361}
+  \field{year}{1995}
 \endentry
 
 \entry{lecun2006}{article}{}
