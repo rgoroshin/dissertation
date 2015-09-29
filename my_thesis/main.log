@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.6.25)  9 SEP 2015 16:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2015.6.25)  25 SEP 2015 20:07
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -691,14 +691,14 @@ Package biblatex Warning: '\bibliographystyle' not supported.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 150.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 152.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 150.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 152.
  [2] [3]
 (./acknowledge.tex) [4] (./abstract.tex) [5] (./main.toc
 LaTeX Font Info:    Try loading font information for U+txsya on input line 3.
@@ -1216,7 +1216,7 @@ b></usr/share/texmf-texlive/fonts/type1/public/txfonts/txsyb.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8
 a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (100 pages, 4818590 bytes).
+Output written on main.pdf (100 pages, 4818768 bytes).
 PDF statistics:
  644 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

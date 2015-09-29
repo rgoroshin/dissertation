@@ -13,7 +13,7 @@ shown that learned features may exhibit properties that they were not
 explicitly trained to satisfy. For example, temporally coherent features are
 also weakly semantically discriminative. Unsurprisingly, however, they are not
 as discriminative as features explicitly trained to discriminate! Although they
-may exhibit useful properties, they will never be as good as the features
+may exhibit useful properties, they can not compete against features
 explicitly trained for the task on which they are evaluated. There are many
 important aspects of representation learning that were not explored in this
 thesis. For example, the role of memory in the form of recurrent neural
@@ -30,15 +30,15 @@ to a sufficient condition. Perhaps we should look back at the recent history of
 supervised feature learning to make an educated guess on how the field of
 unsupervised feature learning may progress. The basic ideas behind supervised
 feature learning using convolutional nets  have been established at least since
-the early 1990s \cite{lecun1995}, however it was not until 2012 following
-Krizhevsky's great success on the ImageNet competition did the community begin
+the early 1990s \cite{lecun1995,fukushima1980}, however it was not until 2012 following
+a great success on the ImageNet competition did the community begin
 to acknowledge deep feature learning as an essential component of vision
-\cite{ImageNet}.  Krizhevsky's success is mainly attributed to the culmination
+\cite{ImageNet}. This success is mainly attributed to the culmination
 of multiple incremental contributions such as the use of convolutional
 architectures, data augmentation, dropout, and other ``tricks'', in addition to
 the use of GPUs to accelerate training. Perhaps unsupervised learning will be
 solved in the same manner: by the accumulation of small contributions in the
 form of priors and natural sources of supervision.  Perhaps the pieces are
 already in place and its just a mater of training at a sufficiently large
-scale...      
+scale. 
    
